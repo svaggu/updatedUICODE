@@ -1,0 +1,678 @@
+<div class="container">
+	<div class="row">
+		<section class="content-header">
+		  <h1>Graphsume</h1>
+		</section>
+		<!--- Content start here-->
+		<div class="col-md-12 col-sm-12 col-lg-12">
+		  <link rel="stylesheet" href="/talhire/resources/css/visualresume.css" class="ng-scope">
+		  <script type="text/javascript" class="ng-scope">
+		    var tooltip, // global variables oh my! Refactor when deploying!
+		    hidetooltiptimer
+		    createtooltip();
+		    function copyfieldvalue(e, id)
+		    {
+		      //alert(id);
+		      var field = document.getElementById(id);
+		      field.focus();
+		      field.setSelectionRange(0, field.value.length);
+		      var copysuccess = copySelectionText();
+		      if (copysuccess){
+		        showtooltip(e);
+		      }
+		    }
+		    function copySelectionText()
+		    {
+		      var copysuccess;
+		      // var to check whether execCommand successfully executed
+		      try{
+		        copysuccess = document.execCommand("copy");
+		        // run command to copy selected text to clipboard
+		      }
+		      catch(e){
+		        copysuccess = false;
+		      }
+		      return copysuccess;
+		    }
+		    function createtooltip()
+		    {
+		      // call this function ONCE at the end of page to create tool tip object
+		      tooltip = document.createElement('div')
+		      tooltip.style.cssText = 
+		        'position:absolute; background:black; color:white; padding:4px;z-index:10000;'
+		        + 'border-radius:2px; font-size:12px;box-shadow:3px 3px 3px rgba(0,0,0,.4);'
+		        + 'opacity:0;transition:opacity 0.3s'
+		      tooltip.innerHTML = 'Copied!'
+		      document.body.appendChild(tooltip)
+		    }
+		    function showtooltip(e)
+		    {
+		      var evt = e || event
+		      clearTimeout(hidetooltiptimer)
+		      tooltip.style.left = evt.pageX - 10 + 'px'
+		      tooltip.style.top = evt.pageY + 15 + 'px'
+		      tooltip.style.opacity = 1
+		      hidetooltiptimer = setTimeout(function(){
+		        tooltip.style.opacity = 0
+		      }
+		       , 500)
+		    }
+		  </script>
+		  <div class="modal fade ng-scope" id="myModal12" role="dialog" style="display: none;">
+		    <div class="modal-dialog">
+		      <div class="modal-content modalstyle">
+		        <div class="modal-body">
+		          <img src="/talhire/resources/cvimages/blue-spinner.gif" width="100px">
+		          <h4 style="color: #fff">Please Wait...!
+		          </h4>   
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="body-content panel-body ng-scope">
+		    <div class="col-md-12 pd-l-0">
+		      
+		      <div class="row">
+		        
+		        <div class="col-md-12 col-lg-8 pd-lr-15 pd-r-3">
+		        <div class="panel panelheight" id="media  ">
+		          <div class="panel-heading">Resume Headline
+		          </div>
+		          <div class="new-body headline-sty" style="padding: 0px 15px;">
+		            <div class="textrwapdash ng-binding"> 1.5 Years of Experience in PHP, HTMl, CSS, Javascript, Bootstrap, AngularJs, Wordpress
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		
+		        <div class="col-md-12  col-lg-4  text-center pd-0 pd-lr-15 ">
+		          <div class="panel">
+		            <div class="panel-heading">Profile Percentage
+		              (40%)
+		            </div>
+		            <div class="new-body" style="padding: 15px 15px 0px;">
+		              <div class="progress mb-0">
+		                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+		                </div>
+		              </div>
+		              <div>
+		              </div>
+		            </div>
+		            <div class="panel-heading1" style="margin-top: -7px; background:transparent;">Public URL : 
+		              <a href="http://google.com" target="_blank" ng-hide="copy" style="    font-weight: normal;" class="ng-binding">Google
+		              </a>              
+		              <span ng-show="copy" class="ng-hide">
+		                <input type="hidden" id="url" value="http://tinyurl.com/hwcpww5" ng-show="copy" class="ng-hide"> 
+		                <!--<a href="" ng-click="copy=false"><i class="fa fa-times urlclose ng-hide" aria-hidden="true" ng-show="copy"></i></a>-->
+		              </span>
+		            </div>
+		            <div class="row">
+		              <div class="col-md-12 text-center">
+		                <a href="" data-toggle="modal" data-target="#myModal" title="Share" class="btn button  copybtn">Share URL
+		                </a>    
+		                <a href="" onclick="copyfieldvalue(event, 'url');return false"> 
+		                  <i class="fa fa-clipboard copyicon copynew" aria-hidden="true" ng-click="copy=true">
+		                  </i>
+		                </a> 
+		              </div>
+		              <div class="col-md-9 pd-r-0 text-left">
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="col-md-12 col-lg-8 pd-r-3 ">
+		          <div class="col-md-12  pd-0">
+		            <div class="panel">
+		              <div class="panel-heading">Education
+		              </div>
+		              <div class="new-body">
+		                <div class="row">
+		                  <div class="col-md-2 col-sm-2 ">
+		                    <i class="fa fa-book emailicon exp" aria-hidden="true">
+		                    </i>
+		                  </div>
+		                  <div class="col-md-3 pd-0 col-sm-4 col-xs-6 pd-l-15">
+		                    <label>
+		                      <b class="ng-binding">BE 
+		                      </b>
+		                    </label>
+		                    <h6 class="h6">Highest Degree
+		                    </h6>
+		                  </div>
+		                  <div class="col-md-3 pd-0 col-sm-6">
+		                    <label>
+		                      <b class="ng-binding">Computer Science
+		                      </b>
+		                    </label>
+		                    <h6 class="h6">Specialization
+		                    </h6>
+		                  </div>
+		                  <div class="col-sm-12 displaynone">
+		                    <hr>
+		                  </div>
+		                  <div class="col-md-2 pd-0 col-sm-6 col-xs-6 pd-l-15">
+		                    <label>
+		                      <b class="ng-binding">2013
+		                      </b>
+		                    </label>
+		                    <h6 class="h6">Passed Out
+		                    </h6>
+		                  </div>
+		                  <div class="col-md-2 pd-0 col-sm-6">
+		                    <label>
+		                      <b class="ng-binding">Regular
+		                      </b>
+		                    </label>
+		                    <h6 class="h6">Course Type
+		                    </h6>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 col-lg-12 pd-0 pd-r-15 pd-r-0 ">
+		            <div class="panel">
+		              <div class="panel-heading">Designation
+		              </div>
+		              <div class="new-body">
+		                <div class="row">
+		                  <div class="col-md-2 col-sm-3">
+		                    <i class="fa fa-briefcase emailicon loc" aria-hidden="true">
+		                    </i>
+		                  </div>
+		                  <div class="col-md-6 pd-0 col-sm-5 col-xs-6 pd-l-15">
+		                    <div class="wrap">
+		                      <b class="ng-binding" title="Web developer">Web developer
+		                      </b>
+		                    </div>
+		                    <h6 class="h6">Designation
+		                    </h6>
+		                  </div>
+		                  <div class="col-md-4 pd-0 col-sm-4 col-xs-6 pd-l-15" >
+		                    <div class="wrap">
+		                      <b class="ng-binding">IT
+		                      </b>
+		                    </div>
+		                    <h6 class="h6">Type of industry
+		                    </h6>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 col-lg-12 pd-0 ">
+		            <div class="panel">
+		              <div class="panel-heading">Location
+		              </div>
+		              <div class="new-body">
+		                <div class="row">
+		                  <div class="col-md-2 col-sm-3">
+		                    <i class="fa fa-map-marker emailicon locationnew " aria-hidden="true">
+		                    </i>
+		                  </div>
+		                  <div class="col-md-4 pd-0 col-sm-4 col-xs-6 pd-l-15">
+		                    <label>
+		                      <b class="ng-binding">Hosur
+		                      </b>
+		                    </label>
+		                    <h6 class="h6">Current Location
+		                    </h6>
+		                  </div>
+		                  <div class="col-md-5 pd-0 col-sm-5">
+		                    <label>
+		                      <b class="ng-binding">Bangalore
+		                      </b>
+		                    </label>
+		                    <h6 class="h6">Preffered Location
+		                    </h6>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="col-md-12 col-lg-4 pd-0 ">
+		          <div class="col-md-6 col-lg-6 pd-r-3 pd-0 pd-l-15">
+		            <div class="panel">
+		              <div class="panel-heading">DOB
+		              </div>
+		              <div class="new-body">
+		                <div class="row">
+		                  <div class="col-md-6  col-sm-3 col-xs-6">
+		                    <i class="fa fa-birthday-cake emailicon cake " aria-hidden="true">
+		                    </i>
+		                  </div>
+		                  <div class="col-md-6 pd-0 col-sm-9 col-xs-6 pd-l-15">
+		                    <label>
+		                      <b class="ng-binding">5/6/1992
+		                      </b>
+		                    </label>
+		                    <h6 class="h6">DOB
+		                    </h6>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-6 col-lg-6 pd-0 pd-r-15 pd-left-15">
+		            <div class="panel">
+		              <div class="panel-heading">Notice Period
+		              </div>
+		              <div class="new-body">
+		                <div class="row">
+		                  <div class="col-md-6 col-sm-6 col-xs-6">
+		                    <i class="fa fa-clock-o emailicon np " aria-hidden="true">
+		                    </i>
+		                  </div>
+		                  <div class="col-md-6 pd-0 col-sm-6 col-xs-6 pd-l-15">
+		                    <label ng-show="personalDetails.noticePeriod!=null" class="ng-hide">
+		                      <!--<b class="ng-binding">Days</b>-->
+		                    </label>
+		                     <label>
+		                      <b class="ng-binding">30
+		                      </b>
+		                    </label>
+		                    <!--
+		                    <label ng-show="personalDetails.noticePeriod==null" style="color: red; margin-left: -10px;">
+		                      <b>Not
+		                        Updated
+		                      </b>
+		                    </label>
+		                  -->
+		                    <h6 class="h6">No.of.days
+		                    </h6>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-12 pd-lr-15 pd-0">
+		            <div class="panel">
+		              <div class="panel-heading">Experience
+		              </div>
+		              <div class="new-body">
+		                <div class="row">
+		                  <div class="col-md-3 col-sm-3 col-xs-6">
+		                    <i class="fa fa-graduation-cap emailicon newbbexp" aria-hidden="true">
+		                    </i>
+		                  </div>
+		                  <div class="col-md-9 pd-0 col-sm-9">
+		                    <label ng-show="personalDetails.expInYears!=100">
+		                      <b class="ng-binding">1
+		                        years 4 Months
+		                      </b>
+		                    </label> 
+		                    <label ng-show="personalDetails.expInYears==100" class="ng-hide">
+		                      <b>Fresher
+		                      </b>
+		                    </label>
+		                    <h6 class="h6">Total Experience
+		                    </h6>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-12 pd-lr-15 pd-0 ">
+		            <div class="panel">
+		              <div class="panel-heading">Salary
+		              </div>
+		              <div class="new-body">
+		                <div class="row">
+		                  <div class="col-md-2 col-lg-3 col-sm-3 ">
+		                    <i class="fa fa-usd emailicon sal" aria-hidden="true">
+		                    </i>
+		                  </div>
+		                  <div class="col-md-5 pd-0 col-sm-4 col-lg-5 col-xs-6 pd-l-15">
+		                    <label> <!--  ng-show="personalDetails.currentCTC!=null &amp;&amp; personalDetails.currentCTCThousand!=null" class="" -->
+		                      <b class="ng-binding">1.40
+		                        Lakshs 
+		                      </b>
+		                    </label> 
+		                    <!-- <label > <!-- ng-show="personalDetails.currentCTC!=null &amp;&amp; personalDetails.currentCTCThousand==null" class="ng-hide"
+		                      <b class="ng-binding">1 Lakshs 
+		                      </b>
+		                    </label> 
+		                    -->
+		                    <!--
+		<label class="margin-bt-0 ng-hide" ng-show="personalDetails.currentCTC==null &amp;&amp; personalDetails.currentCTCThousand!=null">
+		<b class="ng-binding"> 0.40 Lakshs </b>
+		</label> 
+		<label class="margin-bt-0 ng-hide" style="color: red" ng-show="personalDetails.currentCTC==null &amp;&amp; personalDetails.currentCTCThousand==null"><b>
+		Not Updated </b> </label>-->
+		                    <h6 class="h6">Current CTC
+		                    </h6>
+		                  </div>
+		                  <div class="col-md-5 pd-0 col-sm-5 col-lg-4">
+		                    <!--<label ng-show="personalDetails.expectedCTC!=null &amp;&amp; personalDetails.expectedCTCThousand!=null" class="ng-hide"><b class="ng-binding">.
+		Lakshs </b></label> <label ng-show="personalDetails.expectedCTC!=null &amp;&amp; personalDetails.expectedCTCThousand==null" class="ng-hide">
+		<b>{{personalDetails.expectedCTC} Lakhs 0 Lakshs </b>
+		</label> <label class="margin-bt-0 ng-hide" ng-show="personalDetails.expectedCTC==null &amp;&amp; personalDetails.expectedCTCThousand!=null">
+		<b class="ng-binding"> 0. Lakshs </b>
+		</label> 
+		-->
+		                  <!--
+		
+		                    <label class="margin-bt-0" style="color: red" ng-show="personalDetails.expectedCTC==null &amp;&amp; personalDetails.expectedCTCThousand==null">
+		                      <b>
+		                        Not Updated 
+		                      </b> 
+		                    </label>
+		                  -->
+		                     <label> <!--  ng-show="personalDetails.currentCTC!=null &amp;&amp; personalDetails.currentCTCThousand!=null" class="" -->
+		                      <b class="ng-binding">2.40
+		                        Lakshs 
+		                      </b>
+		                    </label> 
+		
+		                    <h6 class="h6">Expected CTC
+		                    </h6>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="clearfix">
+		          </div>
+		        </div>
+		        <div class="clearfix">
+		        </div>
+		        <div class="col-md-12 pd-r-0 pd-r-15 pd-right-15">
+		          <div class="panel mypanel">
+		            <div class="panel-heading">Employment History
+		            </div>
+		            <div class="new-body ">
+		              <ul class="numberCircle">
+		                <!-- ngRepeat: employer in employmentDetails -->
+		                <li > <!-- ng-repeat="employer in employmentDetails" class="new1" -->
+		                  <div class="new">
+		                    <div class="buttonnew flag arrow box1">
+		                      <span class="fill fill1">1.4
+		                        <span style="font-size: 9px;">Yrs
+		                        </span>
+		                      </span>
+		                    </div>
+		                    <div class="line line1">
+		                    </div>
+		                    <div class="textdiv">
+		                      <h4>
+		                        <b class="ng-binding">MANJUNATHAN M
+		                        </b> 
+		                      </h4>
+		                      <!--   <h5>   {{employer.startMonth}} {{employer.startYear}} - Till Date</h5>  -->
+		                      <h6 class="desg ng-binding">Junior Web Developer
+		                      </h6>
+		                    </div>
+		                    <span class="yeartext ng-binding" ng-show="employer.status=='CURRENT'">
+		                      JUL 2015 - Till Date
+		                    </span> 
+		                    <span class="yeartext ng-binding ng-hide" ng-show="employer.status!='CURRENT'">
+		                      JUL 2015 -
+		                    </span>
+		                  </div>
+		                </li>
+		                <!-- end ngRepeat: employer in employmentDetails -->
+		              </ul>
+		              <!--<div ng-show="employmentDetails==null||employmentDetails.length==0" class="text-center nodata-colr ng-hide">No Employment Added</div>
+		              <div ng-show="employmentDetails!=null &amp;&amp; employmentDetails.length!=0" id="trapezoid" class=""></div>-->
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		    <div class="clearfix">
+		    </div>
+		    <div class="main">
+		      <div class="col-md-12 col-lg-4 pd-r-3 pd-l-0 ">
+		        <div class="panel ">
+		          <div class="panel-heading">Primary Skills
+		          </div>
+		          <div class="row">
+		            <!-- ngRepeat: primaryskill in primaryskills -->
+		            <div class="new-body skill-body ng-scope" > <!--ng-repeat="primaryskill in primaryskills" -->
+		              <div class="col-md-12" style="margin-bottom:5px;padding:0px;">
+		                <div class="col-md-5 arrow box1 skillfill pd-r-0">
+		                  <span class="fill fill1 skillspan">HTML
+		                  </span>
+		                </div>
+		                <div class="col-md-7 padding-0" style="margin-left: -10px;margin-top: 1px;">
+		                  <div class="progress skillprogress aftershape clr1">
+		                    <div class="progress-bar fill1" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:150%">
+		                      <span class="skillptext ng-binding">2
+		                        Years 
+		                        <!--(
+		<span ng-repeat="i in [1, 2, 3, 4,5]" class="ng-scope">
+		<img src="/talhire/resources/cvimages/Star_colo.png" ng-show="true">
+		<img src="/talhire/resources/cvimages/Star_Null.png" ng-show="false" class="ng-hide"> 
+		</span><span ng-repeat="i in [1, 2, 3, 4,5]" class="ng-scope">
+		<img src="/talhire/resources/cvimages/Star_colo.png" ng-show="true">
+		<img src="/talhire/resources/cvimages/Star_Null.png" ng-show="false" class="ng-hide"> 
+		</span><span ng-repeat="i in [1, 2, 3, 4,5]" class="ng-scope">
+		<img src="/talhire/resources/cvimages/Star_colo.png" ng-show="true">
+		<img src="/talhire/resources/cvimages/Star_Null.png" ng-show="false" class="ng-hide"> 
+		</span><span ng-repeat="i in [1, 2, 3, 4,5]" class="ng-scope">
+		<img src="/talhire/resources/cvimages/Star_colo.png" ng-show="true">
+		<img src="/talhire/resources/cvimages/Star_Null.png" ng-show="false" class="ng-hide"> 
+		</span><span ng-repeat="i in [1, 2, 3, 4,5]" class="ng-scope">
+		<img src="/talhire/resources/cvimages/Star_colo.png" ng-show="true">
+		<img src="/talhire/resources/cvimages/Star_Null.png" ng-show="false" class="ng-hide"> 
+		</span>)--->
+		                      </span>
+		                    </div>
+		                  </div>
+		                  <div class="clearfix">
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		          <!--<div ng-show="primaryskills==null||primaryskills.length==0" class="nodata ng-hide">No Primary Skills Added</div>-->
+		        </div>
+		      </div>
+		      <div class="col-md-12 col-lg-4 pd-l-0 pd-r-3">
+		        <div class="panel ">
+		          <div class="panel-heading">Secondary Skills
+		          </div>
+		          <div class="row">
+		            <!-- ngRepeat: secondaryskill in secondaryskills -->
+		          </div>
+		          <div>
+		          </div>
+		         <!-- ngRepeat: primaryskill in primaryskills -->
+		            <div class="new-body skill-body ng-scope" > <!--ng-repeat="primaryskill in primaryskills" -->
+		              <div class="col-md-12" style="margin-bottom:5px;padding:0px;">
+		                <div class="col-md-5 arrow box1 skillfill pd-r-0">
+		                  <span class="fill fill1 skillspan">PHP
+		                  </span>
+		                </div>
+		                <div class="col-md-7 padding-0" style="margin-left: -10px;margin-top: 1px;">
+		                  <div class="progress skillprogress aftershape clr1">
+		                    <div class="progress-bar fill1" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:150%">
+		                      <span class="skillptext ng-binding">2
+		                        Years 
+		                        <!--(
+									<span ng-repeat="i in [1, 2, 3, 4,5]" class="ng-scope">
+									<img src="/talhire/resources/cvimages/Star_colo.png" ng-show="true">
+									<img src="/talhire/resources/cvimages/Star_Null.png" ng-show="false" class="ng-hide"> 
+									</span><span ng-repeat="i in [1, 2, 3, 4,5]" class="ng-scope">
+									<img src="/talhire/resources/cvimages/Star_colo.png" ng-show="true">
+									<img src="/talhire/resources/cvimages/Star_Null.png" ng-show="false" class="ng-hide"> 
+									</span><span ng-repeat="i in [1, 2, 3, 4,5]" class="ng-scope">
+									<img src="/talhire/resources/cvimages/Star_colo.png" ng-show="true">
+									<img src="/talhire/resources/cvimages/Star_Null.png" ng-show="false" class="ng-hide"> 
+									</span><span ng-repeat="i in [1, 2, 3, 4,5]" class="ng-scope">
+									<img src="/talhire/resources/cvimages/Star_colo.png" ng-show="true">
+									<img src="/talhire/resources/cvimages/Star_Null.png" ng-show="false" class="ng-hide"> 
+									</span><span ng-repeat="i in [1, 2, 3, 4,5]" class="ng-scope">
+									<img src="/talhire/resources/cvimages/Star_colo.png" ng-show="true">
+									<img src="/talhire/resources/cvimages/Star_Null.png" ng-show="false" class="ng-hide"> 
+									</span>)-->
+		                      </span>
+		                    </div>
+		                  </div>
+		                  <div class="clearfix">
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="col-md-12 col-lg-4 pd-0 pd-r-15">
+		        <div class="panel ">
+		          <div class="panel-heading">Languages
+		          </div>
+		          <!-- ngRepeat: language in languages -->
+		         <div class="new-body">
+		            <!-- ngRepeat: language in languages -->
+		            <div>
+		              <!--<span style="color:red">Not Updated</span>-->
+		      			  <div>
+		                <div class="stepbar">
+		                    <table class="table newtable">
+		                    <tbody><tr><td width="25%"><label class="ng-binding"> English</label></td>
+		                        <td ng-show="language.read" class="ng-hide"><i class="fa fa-book selected"></i></td>
+		                        <td ng-show="!language.read" class=""><i class="fa fa-book not-selected"></i></td>
+		                        <td ng-show="language.write" class="ng-hide"><i class="fa fa-pencil selected"></i></td>
+		                        <td ng-show="!language.write" class=""><i class="fa fa-pencil not-selected"></i></td>
+		                        <td ng-show="language.speak" class="ng-hide"><i class="fa fa-volume-up selected"></i></td>
+		                        <td ng-show="!language.speak" class=""><i class="fa fa-volume-up not-selected"></i></td></tr>
+		                    </tbody></table>
+		                </div>
+		              </div>
+					       <div>
+		                <div class="stepbar">
+		                    <table class="table newtable">
+		                    <tbody><tr><td width="25%"><label class="ng-binding"> Thelugu</label></td>
+		                        <td ng-show="language.read" class="ng-hide"><i class="fa fa-book selected"></i></td>
+		                        <td ng-show="!language.read" class=""><i class="fa fa-book not-selected"></i></td>
+		                        <td ng-show="language.write" class="ng-hide"><i class="fa fa-pencil selected"></i></td>
+		                        <td ng-show="!language.write" class=""><i class="fa fa-pencil not-selected"></i></td>
+		                        <td ng-show="language.speak" class="ng-hide"><i class="fa fa-volume-up selected"></i></td>
+		                        <td ng-show="!language.speak" class=""><i class="fa fa-volume-up not-selected"></i></td></tr>
+		                    </tbody></table>
+		                </div>
+		              </div>
+		          </div>
+		        </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="modal fade ng-scope" id="myModal" role="dialog">
+		    <div class="modal-dialog">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">×
+		          </button>
+		          <h4 class="modal-title">Share Your Resume
+		          </h4>
+		        </div>
+		        <form name="shareform" ng-submit="shareform.$valid &amp;&amp; shareResume(share,'YIN16JNWN3B11893')" novalidate="" class="ng-pristine ng-invalid ng-invalid-required">
+		          <div class="modal-body">
+		            <div class="form-group">
+		              <label>Enter Emails
+		              </label>
+		              <textarea rows="4" cols="4" ng-model="share.sharedTo" name="sharedTo" id="sharedTo" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" placeholder="Enter emails with (,)commas separated" required="">
+		              </textarea>
+		              <div class="th-error ng-hide" ng-show="submitted &amp;&amp; shareform.sharedTo.$error.required">This field is required
+		              </div>
+		            </div>
+		            <div class="form-group text-right">
+		              <button type="submit" class="btn button" ng-click="submitted=true">Share
+		              </button>
+		            </div>
+		          </div>
+		        </form>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="modal fade ng-scope" id="videocvModal" role="dialog">
+		    <div class="modal-dialog">
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">×
+		          </button>
+		          <h4 class="modal-title">Share Your VideoCV
+		          </h4>
+		        </div>
+		        <form name="shareform" ng-submit="shareform.$valid &amp;&amp; shareVideoCV(share,'YIN16JNWN3B11893')" novalidate="" class="ng-pristine ng-invalid ng-invalid-required">
+		          <div class="modal-body">
+		            <div class="form-group">
+		              <label>Enter Emails
+		              </label>
+		              <textarea rows="4" cols="4" ng-model="share.sharedTo" name="sharedTo" id="sharedTo" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" placeholder="Enter emails with (,)commas separated" required="">
+		              </textarea>
+		              <div class="th-error ng-hide" ng-show="submitted &amp;&amp; shareform.sharedTo.$error.required">This field is required
+		              </div>
+		            </div>
+		            <div class="form-group text-right">
+		              <button type="submit" class="btn button" ng-click="submitted=true">Share
+		              </button>
+		            </div>
+		          </div>
+		        </form>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="modal fade ng-scope" id="practiceModal" role="dialog">
+		    <div class="modal-dialog">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">×
+		          </button>
+		          <h4 class="modal-title">Share Your Practiced Interviews
+		          </h4>
+		        </div>
+		        <form name="shareform" ng-submit="shareform.$valid &amp;&amp; sharePractice(share,'YIN16JNWN3B11893')" novalidate="" class="ng-pristine ng-invalid ng-invalid-required">
+		          <div class="modal-body">
+		            <div class="form-group">
+		              <label>Enter Emails
+		              </label>
+		              <textarea rows="4" cols="4" ng-model="share.sharedTo" name="sharedTo" id="sharedTo" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" placeholder="Enter emails with (,)commas separated" required="">
+		              </textarea>
+		              <div class="th-error ng-hide" ng-show="submitted &amp;&amp; shareform.sharedTo.$error.required">This field is required
+		              </div>
+		            </div>
+		            <div class="form-group text-right">
+		              <button type="submit" class="btn button" ng-click="submitted=true">Share
+		              </button>
+		            </div>
+		          </div>
+		        </form>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="modal fade ng-scope" id="speedModal" role="dialog">
+		    <div class="modal-dialog">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">×
+		          </button>
+		          <h4 class="modal-title">Share Your Rapid Interviews
+		          </h4>
+		        </div>
+		        <form name="shareform" ng-submit="shareform.$valid &amp;&amp; shareSpeedInterview(share,'YIN16JNWN3B11893')" novalidate="" class="ng-pristine ng-invalid ng-invalid-required">
+		          <div class="modal-body">
+		            <div class="form-group">
+		              <label>Enter Emails
+		              </label>
+		              <textarea rows="4" cols="4" ng-model="share.sharedTo" name="sharedTo" id="sharedTo" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" placeholder="Enter emails with (,)commas separated" required="">
+		              </textarea>
+		              <div class="th-error ng-hide" ng-show="submitted &amp;&amp; shareform.sharedTo.$error.required">This field is required
+		              </div>
+		            </div>
+		            <div class="form-group text-right">
+		              <button type="submit" class="btn button" ng-click="submitted=true">Share
+		              </button>
+		            </div>
+		          </div>
+		        </form>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!--Content End here -->
+	</div>
+</div>

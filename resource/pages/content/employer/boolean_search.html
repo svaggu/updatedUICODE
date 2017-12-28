@@ -1,0 +1,474 @@
+<style type="text/css">
+
+
+.listing-section.search-resume {
+    width: 100% !important;
+
+}
+.listing-section.search-resume .left-side1 {
+    padding-left: 0px !important;
+    padding-bottom: 0px !important;
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 0px;
+	
+}
+.listing-section.search-resume .description1 {
+    text-overflow: ellipsis;
+    margin-top: 10px;
+    line-height: 24px;
+    margin-bottom: 6px;
+    overflow: hidden;
+    word-break: break-word;
+    color: #B7B7B7;
+}
+ul#search_results .right-side2 {
+    margin: 0px 0 0px 0 !important;
+}
+i.fa.fa-black-tie {
+    color: #d8d8d8;
+    font-size: 18px;
+}
+
+ul#search_results {
+    list-style: none;
+    padding-left: 0px;
+}
+/*.subpanel::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: -5px;
+    top: 15%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid  rgba(204, 204, 204, 0.35);  
+}*/
+    .joblist:hover::before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: -5px;
+    top: 25%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid  rgba(204, 204, 204, 0.35);  
+}
+
+
+h1.preview_header {
+    margin-top: 0px !important;
+}
+h1.preview_header span.preview_name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+h1.preview_header span.preview_city {
+    color: #999;
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+p.preview_headline {
+    font-size: 14px;
+}
+h2.preview_title {
+    margin-top: 15px;
+    border-top: 1px solid #DDD;
+    color: #999;
+    font-weight: bold;
+    padding: 9px 0 0;
+    font-size: 18px;
+}
+.preview_item h3.workexp_title {
+    font-size: 16px;
+    font-weight: bold;
+}
+.preview_item span.work_dates {
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+}
+span.workexp_location {
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+}
+p.preview_description {
+    font-size: 14px;
+}
+
+h3.edu_title {
+    font-size: 16px;
+    font-weight: bold;
+}
+span.workexp_company {
+    font-size: 14px;
+}
+span.edu_location {
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+span.edu_school {
+    font-size: 14px;
+}
+    .text {
+  position: relative;
+  font-size: 14px;
+  color: black;
+  width: 388px; /* Could be anything you like. */
+}
+.text-concat {
+  position: relative;
+  display: inline-block;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em; /* (Number of lines you want visible) * (line-height) */
+  line-height: 1.2em;
+  text-align:justify;
+}
+
+.text.ellipsis::after {
+  content: "...";
+  position: absolute;
+  right: -12px; 
+  bottom: 4px;
+}
+
+/* test-css ends */
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+button.accordion:after {
+    content: "\2212";
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+    border-bottom: 1px solid #fafafa;
+}
+button.accordion.active:after {
+    content: '\002B';
+    
+}
+.name-user{
+margin-top:-4px;
+}
+</style>
+<div class="container">
+   <div class="row">
+      <section class="content-header">
+         <h1></h1>
+      </section>
+      <div class="col-md-12">
+         <div class="row">
+            <div class="col-md-12 col-sm-12 col-lg-12">
+               <div class="body-content panel-body ng-scope" ng-init="getDashBoardData('YIN16JNWN3B11893')">
+                  <div class="searchbar">
+                     <div class="searchjob">
+                        <form id="frm_jobs_filtration" class="search-area search-bg">
+                           <div class="col-lg-10 col-md-6 col-sm-5 pad_0">
+                              <div class="search-input search-icon" >
+                                 <span class="icon-search" style="background-image:url(resource/css/img/chair.png)">
+                                 </span>
+                                 <input type="text" ng-model="searchSkill" placeholder="Search by Skill Name" name="searchSkill" >
+                              </div>
+                           </div>
+                           <div class="col-lg-1 col-md-2 col-sm-3 pad_0"></div>
+                           <div class="col-lg-2 col-md-2 col-sm-3 pad_0">
+                              <div class="search-btn">
+                                 <input type="submit" ng-click="getResumesBySearch()" class="btncss" name="cs_" value="Search Job Seeker">
+                              </div>
+                              <div id="searchadvance" class="pull-right">
+                           <a href="#/advance-searchin"><i class="fa fa-search-plus" aria-hidden="true"></i> Advanced Search</a>
+                        </div>
+                           </div>
+                        </form>
+                     </div>
+					 
+					 <div class="col-md-2" style="margin-top:-20px;">
+        <h2>Filter Results</h2>
+
+  <button class="accordion">Last Updated</button>
+    <div class="panel1">
+      <div class="default">
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">With in Last Day</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">With in Last Week</a>
+        </div>
+		<div class="filter-option">
+          <input type="checkbox">
+          <a href="#">With in Last Month</a>
+        </div>
+      </div>
+    </div>
+<button class="accordion">Year of Experience</button>
+    <div class="panel1">
+      <div class="default">
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">Less than 1Year</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">1-2 Years</a>
+        </div>
+		<div class="filter-option">
+          <input type="checkbox">
+          <a href="#">3-5 Years</a>
+        </div>
+		<div class="filter-option">
+          <input type="checkbox">
+          <a href="#">6-10 Years</a>
+        </div>
+		<div class="filter-option">
+          <input type="checkbox">
+          <a href="#">More than 10Years</a>
+        </div>
+      </div>
+    </div>
+
+ 
+      </div>
+<div id="hideconten" class="col-lg-10 col-md-10 col-sm-12 col-xs-12 ">
+                     <!-- show resumes by search result -->
+                     <div class="bhoechie-tab" ng-if="searchedResumesList.length != '0'" ng-repeat="items in searchedResumesList | orderBy: 'parsedJson.ResumeParserData.ParsingDate': 'true'" >
+     		                <!-- flight section -->
+     		                <div class="bhoechie-tab-content active" id="hide">
+                        <div class="col-md-12">
+                             <div class="col-md-6 joblist" id="hoverdiv{{$index}}" data-content="contentdiv{{$index}}">
+                                 <div class="panel" style="overflow: auto;" >
+                            
+                      <!--     <div class="panel-heading">
+                   
+                           </div>-->
+                            <div class="new-body">
+                             <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12" >
+                               
+                                 
+                                    <img type="file" src="resource/css/img/default_user.png" class="img-responsive img-circle" alt="">
+                            
+                             </div>
+                              <div class="col-md-10 col-lg-10 col-sm-12 col-xs-12">
+                                <div>
+                                    <h2 class="name-user">
+									<b>
+                                      <a href="" ng-click="gotoGraphicalResume(items)">
+                                        {{items.parsedJson.ResumeParserData.FullName}}  &nbsp;  
+                                      </a>
+									  </b>
+                                    </h2>
+                                </div>
+                                 <div>
+                                     <label
+                                        class="ng-binding">{{items.parsedJson.ResumeParserData.WorkedPeriod.TotalExperienceInYear}} years of experience
+                                       
+                                     </label>
+                                   </div>
+                                 <div>
+                                  
+                                     </i>
+                                     <label
+                                        class="ng-binding">{{items.parsedJson.ResumeParserData.JobProfile}}
+                                       
+                                     </label>
+                                 </div>
+                                 <div>
+                                   
+                                     </i>
+                                     <label
+                                       class="ng-binding">{{items.parsedJson.ResumeParserData.SegregatedExperience.WorkHistory[0].JobLocation.EmployerCity  }}
+                                       
+                                     </label>
+                                 </div>
+                               </div>
+                           </div>
+                         </div>
+                    
+                       </div>
+    <div class="col-md-6">&nbsp;</div>
+    </div>
+                                                <div class="col-md-12" id="contentdiv{{$index}}">
+                                                    
+                                         <div class="panel subpanel ">
+    <div class="panel-heading">
+        <h3 class="panel-title">Updated on: {{items.parsedJson.ResumeParserData.ParsingDate}}</h3>
+    </div>
+    <div class="panel-body">
+      <div class="new-body">
+        <div class="preview">
+          <div class="resume_content">
+            <h1 class="preview_header">
+              <span class="preview_name ">
+          {{items.parsedJson.ResumeParserData.FullName}}
+              </span>
+              
+      
+            </h1>
+        <div class="text ellipsis">
+  <span class="text-concat">
+      {{items.parsedJson.ResumeParserData.ExecutiveSummary}}</span>
+              </div>
+            <h2 class="preview_title preview_wetitle">Work Experience
+            </h2>
+            <div class="preview_item">
+              <h3 class="workexp_title">
+                <span class="hl">{{items.parsedJson.ResumeParserData.CurrentEmployer}}
+                </span> 
+                  <br/>
+                <span class="work_dates">{{items.parsedJson.ResumeParserData.SegregatedExperience.WorkHistory[0].JobPeriod}}
+                </span>
+              </h3>
+            
+              <div class="text ellipsis">
+  <span class="text-concat">{{items.parsedJson.ResumeParserData.SegregatedExperience.WorkHistory[0].JobDescription}}
+                  </span>
+                </div>
+         
+            </div>
+
+            <h2 class="preview_title preview_edutitle">Education
+            </h2>
+            <div class="preview_item">
+              <p class="edu_title">{{items.parsedJson.ResumeParserData.Qualification}}
+              </p>
+     
+            </div>
+                 <h2 class="preview_title preview_edutitle">Skills
+            </h2>
+              {{items.parsedJson.ResumeParserData.PrimarySkills}}
+          </div>
+          <div class="preview_bg"> 
+          </div>
+        </div>
+      </div>
+</div>
+</div>           
+                                                
+                                                    
+       <script>
+    $("[id^='contentdiv']").hide();
+ 
+                  $("[id^='hoverdiv']").mouseenter(function() {
+   var id=$(this).attr("data-content");
+        $("[id^='contentdiv']").hide();
+        $("#"+id).show();
+  })
+  .mouseleave(function() {
+        $("[id^='contentdiv']").hide();
+  });                                   </script>                                                 
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+              
+                    
+                       </div>
+                     </div>
+					                           <div class="col-sm-5" >
+
+</div>
+                     <!-- show resumes ends here -->
+                     <!-- Content start here -->
+                     <!-- Content start here -->
+                     <!-- test-code starts here -->
+                    
+                  </div>
+                </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--  test code ends here -->
+   </div>
+</div>
+<script>
+   $(document).ready(function(){
+     $("#Booleansearch").hide();
+       $("#advancedsearch").click(function(){
+           $("#Booleansearch").toggle();
+       });
+   });
+
+      $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?')
+            .done (function(location)
+            {
+               var country=location.country_name;
+               var state=location.state;
+               var city=location.city;
+             $("#location").val(city+", "+state+", "+country);
+            });
+
+</script>
+<script>
+$(document).ready(function(){
+     $("#panel").hide();
+   $("#hide").mouseover(function(){
+    $("#panel").show();
+    $("#hide").mouseout(function(){
+    $("#panel").hide();
+});
+});
+});
+</script>
+<style>
+    #hideconten{
+        position: relative;
+       /* height: 400px;
+        overflow: auto;
+        width: 45%;*/
+    }
+    [id^='contentdiv']{
+        position: fixed;
+        left: 55.5%;
+    top: 33%;
+    width: 40%;
+    }
+    
+</style>
+<script>
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if(scroll >= 100) {
+         $("[id^='contentdiv']").css({"top":"12%","height": "80%"});
+         $("[id^='contentdiv'] .panel").css("height","100%");
+    } else {
+        $("[id^='contentdiv']").css("top","33%");
+         $("[id^='contentdiv'] .panel").css("height","auto");
+       
+    }
+});
+</script>

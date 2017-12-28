@@ -1,0 +1,151 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    Dashboard
+  </h1>
+  <ol class="breadcrumb">
+    <div class="stats page-title-buttons">
+      <div class="btn-group">
+        <button type="button" id="todayBtn" ng-click="getCount('1')" class="btn btn-default choose-period" data-target="#today">
+          Today
+        </button>
+        <button type="button" id="sevenDaysBtn" ng-click="getCount('7')" class="btn btn-default choose-period" data-target="#this-week" href="">
+          Last 7 days
+        </button>
+        <button type="button" id="thirtyDaysBtn" ng-click="getCount('30')" class="btn btn-default choose-period" data-target="#this-month" href="">
+          Last 30 days
+        </button>
+        <button type="button" id="totalDaysBtn" ng-click="getCount('total')" class="btn btn-default choose-period" data-target="#total" href="">
+          Total
+        </button>
+      </div>
+    </div>
+
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <!-- Info boxes -->
+<div class="row">
+  <div class="col-lg-4 col-xs-6">
+   <!-- small box -->
+    <div class="small-box bg-white">
+      <div class="inner">
+        <h3>$0.00
+        </h3>
+        <p>Sales
+        </p>
+      </div>
+      <div class="icon">
+        <i class="fa fa-usd" aria-hidden="true"></i>
+      </div>
+      <a href="" class="small-box-footer">More info
+        <i class="fa fa-arrow-circle-right">
+        </i>
+      </a>
+    </div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-4 col-xs-6">
+      <!-- small box -->
+      <div class="small-box bg-white">
+        <div class="inner">
+          <h3>{{jobsCount}}
+            <!--<sup style="font-size: 20px">%</sup>-->
+          </h3>
+          <p>Jobs Posted
+          </p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-briefcase" aria-hidden="true"></i>
+        </div>
+        <a href="" ng-click="gotoManageJobs()" class="small-box-footer">More info
+          <i class="fa fa-arrow-circle-right">
+          </i>
+        </a>
+      </div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-4 col-xs-6">
+      <!-- small box -->
+      <div class="small-box bg-white">
+        <div class="inner">
+          <h3>{{recruitersCount}}
+          </h3>
+          <p>Employer Profiles Created
+          </p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-user-o" aria-hidden="true"></i>
+        </div>
+        <a href="" ng-click="gotoEmployerList()" class="small-box-footer">More info
+          <i class="fa fa-arrow-circle-right">
+          </i>
+        </a>
+      </div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-4 col-xs-6">
+      <!-- small box -->
+      <div class="small-box bg-white">
+        <div class="inner">
+          <h3>{{jobSeekersCount}}
+          </h3>
+          <p>Job Seeker Profiles Created
+          </p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+        <a href="" ng-click="gotoJobSeekerList()" class="small-box-footer">More info
+          <i class="fa fa-arrow-circle-right">
+          </i>
+        </a>
+      </div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-4 col-xs-6">
+      <!-- small box -->
+      <div class="small-box bg-white">
+        <div class="inner">
+          <h3>{{jobApplicantsCount}}
+          </h3>
+          <p>Applications Sent
+          </p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+        </div>
+        <!--<a href="#/downloads" class="small-box-footer">-->
+        <a href="#/downloads" class="small-box-footer">
+          More info
+          <i class="fa fa-arrow-circle-right">
+          </i>
+        </a>
+      </div>
+  </div>
+  <!-- ./col -->
+  <div class="col-lg-4 col-xs-6">
+      <!-- small box -->
+      <div class="small-box bg-white">
+        <div class="inner">
+          <h3>{{jobAlertsCount}}
+          </h3>
+          <p>Job Alerts Created
+          </p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        </div>
+        <a href="" class="small-box-footer" ng-click="gotoJobAlerts()">More info
+          <i class="fa fa-arrow-circle-right">
+          </i>
+        </a>
+      </div>
+  </div>
+  <!-- ./col -->
+</div>
+   <!-- /.row -->
+</section>
+<!-- /.content -->

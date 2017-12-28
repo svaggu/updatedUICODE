@@ -1,0 +1,96 @@
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Functional Areas
+    </h1>
+  </section>
+    
+  <!-- Main content -->
+  <section class="content">
+    <!-- Info boxes -->
+    <div class="box">
+      <div class="box-body">
+        <div id="industryTypes" class="dataTables_wrapper dt-bootstrap">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="scroll-auto">
+                <table id="industryType" class="table table-bordered table-hover dataTable" role="grid">
+                  <thead>
+                    <tr role="row">
+                      <th class="sorting">
+                         Area Name
+                      </th>
+                      <th class="sorting">
+                        Actions
+                      </th>
+                      <!--<th class="sorting">
+                        <div style="float: right;">
+                          <a href="#/add-email-templates" title="Edit" class="btn btn-info">Add Template</a>
+                        </div>
+                      </th>-->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!--<tr ng-if="functionalAreasList.length < 1"><h5>No Data Found..</h5></tr>-->
+                    <tr ng-repeat="items in functionalAreasList" ng-if="functionalAreasList.length > 0">
+                      <td class="td-wide">
+                        {{items.name}}
+                      </td>
+                      <td class="td-wide">
+                        <!--<a href="" title="Edit" class="btn btn-info">Edit</a>-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="modal-dialog" style="width : 100%;">
+                    <div class="admin-signin">
+                    <div class="modal-content signin">
+                        <div class="modal-header">
+                        <h4 class="modal-title text-center" id="myModalLabel">Add</h4>
+                        </div>
+                        <div class="modal-body">
+
+                        <div id="adminSignin" class="tab-pane fade in active">
+                            <div class="register-box-body">
+                            <span class="error ng-binding"></span>
+                            <form name="fAreaForm" novalidate="" class="ng-pristine ng-submitted ng-invalid ng-invalid-required">
+                                <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group has-feedback">
+                                    <input type="text" minlength=4 name="name" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" ng-model="functionalArea.name" placeholder="Functional Area" required>
+                                    <span ng-show="fAreaForm.name.$touched &amp;&amp;fAreaForm.name.$invalid" class="ng-hide">Type Name is required</span>
+                                    </div>
+                                </div>
+                                </div>
+
+                                <div class="">
+                                <div class="row">
+                                    <div class="col-xs-12 form-group text-center">
+                                    <button ng-disabled="!fAreaForm.$valid" type="submit" ng-submitted="true" ng-click="addFunctionalArea();" class="btn button text-center" >Add Type</button>
+                                    </div>
+                                </div>
+                                </div>
+
+                                <p></p>
+                            </form>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- /.box-body -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+  

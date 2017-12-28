@@ -1,0 +1,101 @@
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Add New Admin
+    </h1>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Info boxes -->
+    <div class="box">
+      
+      <!-- /.box-header -->
+      <div class="box-body">
+        <div id="invoices" class="dataTables_wrapper dt-bootstrap">
+          <div class="row">
+            <div class="col-sm-12">
+			   <div class="col-sm-9">
+				  <form class="form-horizontal">
+					  <div class="form-group">
+						<label class="col-sm-3 control-label">Full Name</label>
+						<div class="col-sm-9">
+						  <input type="text" class="form-control" id="fullname" placeholder="" value="dinesh">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label class="col-sm-3 control-label">Email</label>
+						<div class="col-sm-9">
+						  <input type="email" class="form-control" id="email" placeholder="" value="dineshwalas@gmail.com">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label class="col-sm-3 control-label">Permission</label>
+						<div class="col-sm-9">
+						  <div class="btn-group admin-fields__permissions" data-toggle="buttons">
+							    <label class="btn btn-default active">
+							        <input type="radio" value="adminAccess" name="permissions_type" autocomplete="off" id="permissions_type"> Full Admin Access
+							    </label>
+							    <label class="btn btn-default">
+							        <input type="radio" value="limitedAccess" name="permissions_type" autocomplete="off" id="permissions_type"> Limited Access
+							    </label>
+							</div>
+						</div>
+					  </div>
+					  <div class="form-group" id="limitedAllowPermissions" style="display:none;">
+	                    <label class="col-sm-3 control-label">Allow Access to</label>
+	                    <div class="col-sm-9">
+	                     	 <label class="cr-styled">
+								<input type="checkbox" id="jobboard">
+								<i class="fa"></i> Job Board
+							</label>
+							 <label class="cr-styled">
+								<input type="checkbox" id="appearence">
+								<i class="fa"></i> Appearance
+							</label>
+							 <label class="cr-styled">
+								<input type="checkbox" id="content">
+								<i class="fa"></i> Content
+							</label>
+							<label class="cr-styled">
+								<input type="checkbox" id="ecommerce">
+								<i class="fa"></i> Ecommerce
+							</label>
+							<label class="cr-styled">
+								<input type="checkbox" id="settconfig">
+								<i class="fa"></i> Setting and Configuration
+							</label>
+	                    </div>
+	                  </div>
+					  <div class="form-group">
+						<div class="col-sm-offset-3 col-sm-9">
+						  <button type="submit" class="btn btn-primary">Send Invite</button>
+							</div>
+					  </div>
+					</form>
+				</div>
+			  </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+
+      <!-- /.box-body -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+<script>
+$(document).ready(function() {
+    $('input[type=radio][name=permissions_type]').change(function() {
+        if (this.value == 'limitedAccess') {
+            $('#limitedAllowPermissions').show();
+        }
+        else if (this.value == 'adminAccess') {
+            $('#limitedAllowPermissions').hide();
+        }
+    });
+});
+</script>
+  

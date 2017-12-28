@@ -1,0 +1,105 @@
+
+
+<style>
+.panel
+{
+margin-top:30px; 
+}
+ th a
+ {
+    color: #fff !important;
+}
+</style>
+
+	<div class="container" ng-controller="editProfileController">
+	<div class="col-md-12" style=" margin-top: 27px;margin-bottom: -28px;">
+		    <a href="#employer-dashboard" class="btn button ">
+		      <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>&nbsp;&nbsp; Back
+		    </a>
+		    <hr>
+		  </div>
+		<div class="col-md-12 pd-0">
+             <div id="employementhistroydetails">
+                 <div class="panel shadownone">
+                      <div class="panel-heading deatilednew ">
+                          Report
+                      </div>
+                      <div class="new-body">
+                        <div class="row">
+                          <div role="tabpanel">     
+							<div class="tab-content col-md-12 expmobheight">
+								<div class="tabpanel" id="tab">
+									<div class="block-container1 ng-hide" ng-show="loading">
+										<div class="img-cont">
+											<img src="/talhire/resources/cvimages/blue-spinner.gif" width="100px">
+										</div>
+									</div>
+										<form name="jobseekeremp" ng-submit="jobseekeremp.$valid &amp;&amp; saveEmployementData('YIN16JNWN3B11893','98')" novalidate="" class="ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength">
+											<div class="form-group col-md-3 pd-0" id="dobFormRow">
+												<label for="dobDay" class="col-md-12">Status
+												</label>
+												<div class="col-md-6 col-sm-12 col-xs-12">
+													<select class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-empty ng-valid" ng-model="empBean.startYear" id="startYear" name="startYear" required="">
+														<option value="">[Any]
+														</option>  
+													    <option value="">New</option>
+													    <option value="">Hold</option>
+														<option value="">Active</option>
+														<option value="">Close</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group col-md-3 pd-0" id="dobFormRow" style="margin-left: -144px;">
+												<label for="dobDay" class="col-md-12">Assigned To
+												</label>
+												<div class="col-md-6 col-sm-12 col-xs-12">
+													<select class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-empty ng-valid" ng-model="empBean.startYear" id="startYear" name="startYear" required="">
+														<option value="">[Any]
+														</option>  
+														<option value="">Harish</option>
+														<option value="">Rakesh</option>
+														<option value="">Adharsh</option>
+													</select>
+												</div>
+											</div>
+											
+											<div class="col-md-12 btn-group" style="margin-top:30px;">
+												<button type="submit" class="btn button save margin-2" style="margin-right:30px;border-radius:25px;" ng-click="addTab()">Add New
+												</button>
+												<button type="submit" class="btn button save margin-2" style="width:100px;border-radius: 25px;" ng-click="addTab()">Search
+												</button>
+											</div>
+										</form>        
+								</div>
+							</div>  
+						</div> 
+					</div>
+				</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+    <div class="container">	
+		<div class="table-responsive">          
+			<table class="table table-bordered">
+				<thead>
+				  <tr>
+					<th><a href="#"> Candidate Name</a></th>
+					<th><a href="#">Location</a></th>
+					<th><a href="#">Status</a></th>
+					<th><a href="#">Applied For</a></th>
+					<th><a href="#">Posted date</a></th>
+					<th><a href="#">Closed date</a></th>
+					<th><a href="#">views</a></th>
+					<th><a href="#">Applied</a></th>
+					<th><a href="#">Active</a></th>
+				  </tr>
+				</thead>
+				<tbody>
+				  
+				</tbody>
+			</table>
+		</div>
+	</div>	
+  
+</div>

@@ -1,0 +1,169 @@
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Add New Product
+    </h1>
+  </section>
+
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Info boxes -->
+    <div class="box">
+      <!-- /.box-header -->
+      <form class="form-horizontal ng-pristine ng-valid">
+        <div class="box-body">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Name * </label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Description </label>
+            <div class="col-sm-7">
+              <form>
+                <textarea class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                </textarea>
+              </form>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Price </label>
+            <div class="col-sm-7">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="0.00">
+                <span class="input-group-addon">$</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+               <label class="col-sm-2 control-label">Post Jobs</label>
+               <div class="col-sm-7">
+                 <label class="cr-styled">
+					<input type="checkbox" id="postJobs">
+					<i class="fa"></i>
+				 </label>
+               </div>
+          </div>
+          <div class="form-group">
+               <label class="col-sm-2 control-label">Featured Employer</label>
+               <div class="col-sm-7">
+                 <label class="cr-styled">
+					<input type="checkbox" id="featuredEmp">
+					<i class="fa"></i>
+				 </label>
+               </div>
+          </div>
+           <div class="form-group">
+               <label class="col-sm-2 control-label">Resume Access</label>
+               <div class="col-sm-7">
+                 <label class="cr-styled">
+					<input type="checkbox" id="resumeAccess">
+					<i class="fa"></i>
+				 </label>
+               </div>
+          </div>
+          <div class="form-group">
+                <label class="col-md-2 control-label">Product expires in</label>
+                <div class="col-md-2"> 
+	               <div class="input-group">
+	                <input type="text" class="form-control">
+	                <span class="input-group-addon">days</span>
+	              </div>
+				</div>
+				<div class="col-md-3">
+				After Purchase
+				</div>
+          </div>
+
+          <div class="form-group">
+                <label class="col-md-2 control-label">Available For Purchase</label>
+                <div class="col-md-3"> 
+		            <div class="input-group date">
+		               <div class="input-group-addon">
+		                 From <i class="fa fa-calendar"></i>
+		               </div>
+		               <input type="text" class="form-control pull-right" id="datepickerfrom">
+		           </div>
+				</div>
+				<div class="col-md-3"> 
+		            <div class="input-group date">
+		               <div class="input-group-addon">
+		                 To <i class="fa fa-calendar"></i>
+		               </div>
+		               <input type="text" class="form-control pull-right" id="datepickerto">
+		           </div>
+				</div>
+          </div>
+          
+          <div class="form-group">
+               <label class="col-sm-2 control-label">Assigned to employer upon registration</label>
+               <div class="col-sm-7">
+                 <label class="cr-styled">
+					<input type="checkbox" id="emp_reg">
+					<i class="fa"></i>
+				 </label>
+               </div>
+          </div>
+          
+          <div class="form-group">
+               <label class="col-sm-2 control-label">Trail Product</label>
+               <div class="col-sm-7">
+                 <label class="cr-styled">
+					<input type="checkbox" id="trail_product">
+					<i class="fa"></i>
+				 </label>
+               </div>
+          </div>
+          
+           <div class="form-group">
+               <label class="col-sm-2 control-label">Active</label>
+               <div class="col-sm-7">
+                 <label class="cr-styled">
+					<input type="checkbox" id="is_active" checked>
+					<i class="fa"></i>
+				 </label>
+               </div>
+          </div>
+          <div class="form-group">
+             <div class="col-sm-offset-3 col-sm-6">
+               <button type="submit" class="btn btn-primary">Submit</button>
+             </div>
+           </div>
+          
+        </div>
+        <!-- /.box-body -->
+      </form>
+
+      <!-- /.box-body -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+  <script>
+  $(document).ready(function ()
+   {
+   
+    //bootstrap WYSIHTML5 - text editor
+   	$(".textarea").wysihtml5();
+  });
+</script>
+<script>
+ 
+$(document).ready(function ()
+{
+
+  $('#datepickerfrom').datepicker(
+    {
+        autoclose: true
+    });
+
+  $('#datepickerto').datepicker(
+    {
+        autoclose: true
+    });
+});
+
+
+</script>

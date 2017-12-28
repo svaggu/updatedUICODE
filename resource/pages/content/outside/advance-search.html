@@ -1,0 +1,597 @@
+
+<style>
+.colLP {
+    padding-left: 0px !important;
+    margin-left: -2px;
+}
+.rowM {
+    margin: 20px -15px;
+}
+.colRP {
+    padding-right: 0px !important;
+}
+.steps-2 {
+    border: 1px solid transparent;
+    position: relative;
+    height: 30px;
+    margin-top: 4px;
+}
+ 
+.input-label {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    color: #999999;
+    display: table-cell;
+    font-size: 15px;
+    font-weight: 400;
+    height: 29px;
+    line-height: 1;
+    padding: 6px 12px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 1%;
+}
+
+
+
+
+   
+
+.form-control {
+    border: 1px solid #E5E5E5;
+	 transition: padding .3s ease-out;
+
+}
+.form-control {
+    width: 100%;
+padding: 6px 12px;
+background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    }
+
+ .form-control, output {
+    
+    line-height: 1.42857;
+    color: #555;
+    display: block;
+}   
+
+.row:after {
+    clear: both;
+}
+.container-fluid:after, .container-fluid:before, .container:after, .container:before, .row:after, .row:before {
+    display: table;
+    content: " ";
+}
+
+.ui-widget-content {
+    background: #b92719;
+    border: 1px solid #e9e9e9;
+}
+
+.ui-corner-all {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.ui-slider-horizontal {
+    height: .8em;
+}
+
+.ui-slider {
+    position: relative;
+    text-align: left;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: #ffffff;
+    border: 1px solid #e9e9e9;
+    font-weight: normal;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    cursor: pointer;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.6em;
+    margin-left: -.8em;
+}
+
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 1.5em;
+    height: 1.5em;
+    cursor: default;
+}
+
+
+.steps-2 {
+    border: 1px solid transparent;
+    position: relative;
+    height: 30px;
+    margin-top: 4px;
+}
+
+.tick {
+    border: 1px solid transparent;
+    position: absolute;
+    width: 2.0em;
+    margin-left: -.6em;
+    text-align: center;
+    left: -5px;
+    top: -7px;
+    font-size: 11px;
+    /* white-space: nowrap; */
+}
+
+.container-fluid:after, .container-fluid:before, .container:after, .container:before, .row:after, .row:before {
+    display: table;
+    content: " ";
+}
+
+.row:after {
+    clear: both;
+}
+
+
+<!-- test css code ends 2 -->   
+.radio-inline, .checkbox-inline {
+    color: #555555;
+}
+
+.radio-inline {
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.radio-inline input[type=radio] {
+    float: left;
+    margin-left: -20px;
+}
+
+input[type=radio] {
+    margin: 4px 0 0;
+    line-height: normal;
+    }
+
+input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}    
+
+.input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+
+.input-group .form-control:first-child {
+  border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.input-group .form-control {
+  display: table-cell;
+}
+
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.espan {
+    padding: 6px 7px !important;
+}
+
+.input-no-left-radius {
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    font-size: 15px;
+    height: 29px;
+    font-weight: 300;
+}
+
+.form-control {
+    transition: padding .3s ease-out;
+    -webkit-transition: padding .3s ease-out;
+}
+
+
+
+.input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+}
+
+.input-group-addon, .input-group-btn {
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.input-group-btn {
+    display: table-cell;
+}
+
+.ad-search .multiple .btn {
+    height: 48px;
+    background-color: #FFFFFF !important;
+    border: 1px solid #CCCCCC !important;
+    color: #999999 !important;
+}
+
+.btn {
+      margin-bottom: 0;
+      text-align: center;
+    cursor: pointer;
+    background-image: none;
+        padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 25px;
+    user-select: none;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+button {
+ont-family: inherit;
+}
+.caret {
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.caret, .glyphicon {
+    display: inline-block;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.ad-search .multiple .btn {
+  color: #999999 !important;
+}
+
+.ad-search .dropdown-menu {
+    min-width: 610px;
+    border-radius: 0px;
+    margin: 0;
+}
+
+.dropdown-menu.pull-right {
+    left: auto;
+    right: 0;
+}
+
+.pull-right {
+    float: right!important;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background-clip: padding-box;
+}
+
+</style>
+<div class="container">
+<div class="col-md-12 form-group">&nbsp;</div>
+<button onclick="goBack()" class="btn button editpadd pull-left "><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>&nbsp;&nbsp; Back</button>
+	<div class="row">
+		<div class="col-lg-12 bgcolors"style="margin-top:30px; margin-bottom:75px;">
+				          <div class="row">
+				            <div class="col-lg-7">
+				              <h2 class="ad-title">Keywords</h2>
+				            </div>
+				          </div>                <form  ng-submit="booleanSearch(search)" method="post">
+				          
+	<!--			          <div class="row rowM">
+				           <span class="hidden-xs hidden-sm">
+				            <div class="col-lg-3 colRP">
+				              <div class="input-label">with at least one of the words:</div>
+				            </div>
+				           </span>
+				           <div class="col-lg-7 colLP">
+				          	<span class="hidden-xs hidden-sm">
+				              <input type="text" class="form-control input-no-left-radius typeAhead" maxlength="512" name="for_one" id="for_one" autocomplete="off" ng-model="search.a">
+				            </span>
+				            <span class="hidden-md hidden-lg">
+				              <input type="text" class="form-control input-no-left-radius typeAhead" ng-model="search.b" placeholder="with at least one of the words:">
+				            </span>
+				           </div>
+				         </div>-->
+            
+            
+            <input type="text" class="form-control" ng-model="search.sameKeyWord" />
+            <input type="text" class="form-control" ng-model="search.allWord" />
+            <input type="text" class="form-control" ng-model="search.excatPharse" />
+            <input type="text" class="form-control" ng-model="search.noneOfTheWords" />
+             <input type="text" class="form-control" ng-model="search.jobTitle" />
+            <input type="text" class="form-control" ng-model="search.companyName" />
+                   <button class="btn button save margin-2" >Save</button>
+            </form>
+				         <div class="row rowM">
+				         	<span class="hidden-xs hidden-sm">
+				            <div class="col-lg-3 colRP">
+				              <div class="input-label">with all the words:</div>
+				            </div>
+				        </span>
+				        <div class="col-lg-7 colLP">
+				          		<span class="hidden-xs hidden-sm">
+				             		<input type="text" class="form-control input-no-left-radius typeAhead" maxlength="512" name="for_all" id="for_all" autocomplete="off">
+				           	</span>
+				           	<span class="hidden-md hidden-lg">
+				           		<input type="text" class="form-control input-no-left-radius typeAhead" maxlength="512" name="for_all" id="for_all" autocomplete="off" placeholder="with all the words:">
+				           	</span>
+				           </div>
+				         </div>
+				         <div class="row rowM">
+				         	<span class="hidden-xs hidden-sm">
+				            <div class="col-lg-3 colRP">
+				              <div class="input-label">with the exact phrase:</div>
+				            </div>
+				           </span>
+				           <div class="col-lg-7 colLP">
+				             <span class="hidden-xs hidden-sm">
+				             	<input type="text" class="form-control input-no-left-radius typeAhead" maxlength="512" name="for_exact" id="for_exact" autocomplete="off">
+				             </span>
+				             <span class="hidden-md hidden-lg">
+				             	<input type="text" class="form-control input-no-left-radius typeAhead" maxlength="512" name="for_exact" id="for_exact" autocomplete="off" placeholder="with the exact phrase:">
+				             </span>
+				           </div>
+				         </div>        
+				         <div class="row rowM">
+				         	<span class="hidden-xs hidden-sm">
+				            <div class="col-lg-3 colRP">
+				              <div class="input-label">with none of the words:</div>
+				            </div>
+				        </span>
+				        <div class="col-lg-7 colLP">
+				             <span class="hidden-xs hidden-sm">
+				             	<input type="text" class="form-control input-no-left-radius typeAhead" maxlength="512" name="for_none" id="for_none" autocomplete="off">
+				             </span>
+				             <span class="hidden-md hidden-lg">
+				             	<input type="text" class="form-control input-no-left-radius typeAhead" maxlength="512" name="for_none" id="for_none" autocomplete="off" placeholder="with none of the words:">
+				             </span>
+				           </div>
+				         </div>
+				         <div class="row rowM">
+				         	<span class="hidden-xs hidden-sm">
+				            <div class="col-lg-3 colRP">
+				              <div class="input-label">within job title:</div>
+				            </div>
+				           </span>
+				           <div class="col-lg-7 colLP">
+				           	<span class="hidden-xs hidden-sm">
+				             		<input type="text" class="form-control input-no-left-radius" maxlength="512" name="for_jt" id="for_jt" autocomplete="off">
+				             	</span>
+				             	<span class="hidden-md hidden-lg">
+				             		<input type="text" class="form-control input-no-left-radius" maxlength="512" name="for_jt" id="for_jt" autocomplete="off" placeholder="within job title:">
+				             	</span>
+				           </div>
+				         </div>
+				         <div class="row rowM">
+				         	<span class="hidden-xs hidden-sm">
+				            <div class="col-lg-3 colRP">
+				              <div class="input-label">within company name:</div>
+				            </div>
+				           </span>
+				           <div class="col-lg-7 colLP">
+				           	<span class="hidden-xs hidden-sm">
+				             		<input type="text" class="form-control input-no-left-radius" maxlength="512" name="for_com" id="for_com" autocomplete="off">
+				             	</span>
+				             	<span class="hidden-md hidden-lg">
+				             		<input type="text" class="form-control input-no-left-radius" maxlength="512" name="for_com" id="for_com" autocomplete="off" placeholder="within company name:">
+				             	</span>
+				           </div>
+				         </div>
+				          <div class="row">
+				            <div class="col-lg-7">
+				              <h2 class="ad-title">Location</h2>
+				            </div>
+				          </div>
+				          <div class="row rowM" id="defaultcityStateZipCode">
+					          <span class="hidden-xs hidden-sm">
+					           <div class="col-lg-3 colRP">
+					             <div class="input-label">city, state or zip code:</div>
+					           </div>
+					          </span>
+					          <div class="col-lg-7 colLP">
+					          	<span class="hidden-xs hidden-sm">
+					           		<input type="text" class="form-control input-no-left-radius" maxlength="512" name="for_loc" id="for_loc" autocomplete="off">
+					           	</span>
+					           	<span class="hidden-md hidden-lg">
+					           		<input type="text" class="form-control input-no-left-radius" maxlength="512" name="for_loc" id="for_loc" autocomplete="off" placeholder="city, state or zip code:">
+					           	</span>
+					          </div>
+				         </div>
+				          <div class="row rowM">
+				             <div class="col-lg-3 colRP">
+				               <div class="simple-label">radius in miles:</div>
+				             </div>  
+				             <div class="col-lg-7 colLP">
+				               <div id="radiusS" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+				                 <a class="ui-slider-handle ui-state-default ui-corner-all" id="radiusMileAnchor" href="#" style="left: 50%;"></a>
+				               </div> 
+				               <div class="steps-2">
+				                 <span class="tick Elmiles">|<br>Exact Location</span>
+				                 <span class="tick 5miles" style="left: 11.75%;">|<br>Within 5 miles</span>
+				                 <span class="tick 10miles" style="left: 24.25%;">|<br>Within 10 miles</span>
+				                 <span class="tick 20miles" style="left: 36.75%;">|<br>Within 20 miles</span>
+				                 <span class="tick 30miles" style="left: 49.00%;">|<br>Within 30 miles</span>
+				                 <span class="tick 40miles" style="left: 61.50%;">|<br>Within 40 miles</span>
+				                 <span class="tick 50miles" style="left: 74.00%;">|<br>Within 50 miles</span>
+				                 <span class="tick 75miles" style="left: 86.75%;">|<br>Within 75 miles</span>
+				                 <span class="tick 100miles" style="left: 99.00%;">|<br>Within 100 miles</span>
+				               </div>
+				               <input id="radius" type="hidden" value="0">
+				             </div>
+				          </div>
+				          <div class="row">
+				            <div class="col-lg-12">
+				              <h2 class="ad-title">Preferences</h2>
+				            </div>
+				          </div>
+				          <div class="row rowM">
+				           	<span class="hidden-xs hidden-sm">
+				             <div class="col-lg-3 colRP">
+				               <div class="input">employment type:</div>
+				             </div>
+				            </span>
+				            <div class="col-lg-7 colLP">
+				              <select class="form-control">
+	                          	<option>Select Employment type</option>
+	                          </select>
+				            </div>
+				          </div>          
+				          <div class="row rowM">
+				            <div class="col-lg-3 colRP postedDate">
+				              <div class="simple-label">within job posted:</div>
+				            </div>
+				            <div class="col-lg-7 colLP">
+				              <div id="postedDateS" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+				                <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a>
+				              </div> 
+				              <div class="steps-2">
+				                <span class="tick 3days">|<br>3 days</span>
+				                <span class="tick 7days" style="left: 16.11%;">|<br>7 days</span>
+				                <span class="tick 10days" style="left: 32.55%;">|<br>10 days</span>
+				                <span class="tick 15days" style="left: 49.33%;">|<br>15 days</span>
+				                <span class="tick 20days" style="left: 65.77%;">|<br>20 days</span>
+				                <span class="tick 25days" style="left: 82.44%;">|<br>25 days</span>
+				                <span class="tick 30days" style="left: 99.11%;">|<br>30 days</span>
+				              </div>
+				              <input id="postedDate" type="hidden" value="0">
+				            </div>
+				          </div>
+				         <div class="row rowM">
+				           <div class="col-lg-3 col-md-3 col-sm-3  col-xs-6 colRP">
+				             <div class="simple-label">sort by:</div>
+				           </div>
+				           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-6 colLP">
+				             <label class="radio-inline col-sm-4 col-xs-6"> 
+				             <input type="radio" name="sort" id="sort1" value="relevance" checked="checked">
+				               Relevance
+				             </label> 
+				             <label class="radio-inline col-sm-4 col-xs-6">
+				              <input type="radio" name="sort" id="sort2" value="date"> Date
+				             </label>
+				              <label id="disradio" class="radio-inline" style="display:none"> <input type="radio" name="sort" id="sort3" value="distance"> Distance
+				             </label>
+				           </div>
+				         </div>
+				         <div class="row rowM">
+				               <div class="col-lg-3 col-md-3 col-sm-3  col-xs-6 colRP">
+				               <div class="simple-label">telecommute:</div>
+				               </div>
+				               <div class="col-lg-7 col-md-7 col-sm-7 col-xs-6 colLP">
+				                 <label class="checkbox-inline"> <input type="checkbox" name="telecommute" id="telecommute2" value="true"> Yes
+				               </label>
+				               </div>
+				         </div>
+				          <!-- <div class="row rowM">
+				            <div class="col-lg-12 colRP">
+				              <div class="form-group ">
+				                            <span class=""><input type="checkbox">  Upon Requiter request will you provide your H1 Copy</span> 
+				                          </div>
+				            </div>
+				            
+				          </div>
+				          <div class="row rowM">
+				            <div class="col-lg-12 colRP">
+				              <div class="form-group ">
+				                            <span class=""><input type="checkbox">  Show me the profiles only with Picture</span> 
+				                          </div>
+				            </div>
+				            
+				          </div>
+				          <div class="row rowM">
+				            <div class="col-lg-12 colRP">
+				              <div class="form-group ">
+				                            <span class=""><input type="checkbox">  Show me the profiles only with Video</span> 
+				                          </div>
+				            </div>
+				            
+				          </div> -->
+				          <div class="row rowM">
+				            <div class="col-lg-3 colRP">
+				              <div class="simple-label">display jobs per page:</div>
+				            </div>
+				            <div class="col-lg-7 colLP">
+				              <div id="limitS" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+				                <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 40%;"></a>
+				              </div>
+				              <div class="steps-2">
+				                <span class="tick 10items">|<br>10 items</span>
+				                <span class="tick 20items" style="left: 19.22%;">|<br>20 items</span>
+				                <span class="tick 30items" style="left: 39.11%;">|<br>30 items</span>
+				                <span class="tick 50items" style="left: 59.22%;">|<br>50 items</span>
+				                <span class="tick 75items" style="left: 79.11%;">|<br>75 items</span>
+				                <span class="tick 100items" style="left: 99%;">|<br>100 items</span>
+				              </div>
+				              <input id="limit" type="hidden" value="0">
+				            </div>
+				            
+				          </div>
+				          <div class="row rowM">
+				            <div class="col-lg-3">
+							 <a href="#/saved-resumes">
+								<button type="button" class="btn button">Find Jobs</button>
+				              </a>
+				            </div>
+				          </div>
+				        </div>
+						</div>
+						</div>
+						<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+						
+						

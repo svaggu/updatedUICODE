@@ -1,0 +1,77 @@
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Site Admins
+    </h1>
+    <ol class="breadcrumb">
+     <div class="page-title-buttons pull-right">
+        <a href="#/add-admin" class="btn btn-primary">Add New Admin</a>
+      </div>
+     </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Info boxes -->
+    <div class="box">
+
+      <!-- /.box-header -->
+      <div class="box-body">
+        <div id="invoices" class="dataTables_wrapper dt-bootstrap">
+          <div class="row">
+            <div class="col-sm-12">
+            	 <div class="scroll-auto">
+                <table id="managejobs" class="table table-bordered table-hover dataTable" role="grid">
+                  <thead>
+                    <tr role="row">
+                      <th class="sorting">
+                          Name
+                       </th>
+                      <th class="sorting">
+                          Email
+                        </th>
+                      <th class="sorting">
+                        Permissions
+                      </th>
+                      <th class="sorting">
+                        Status
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="td-wide">
+                       <a href="#/edit-admin">
+                       	Admin
+                       </a>
+                      </td>
+                      <td>
+                     	 <a href="#/edit-admin">
+                      		{{returnData.email}}
+                      	</a>
+                      </td>
+                      <td>
+                        <span class="nowrap">
+                          Owner
+                        </span>
+                      </td>
+                      <td>
+                        <span class="label label--active">Active
+                        </span>
+                      </td>
+                    </tr>
+                 </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- /.box-body -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->

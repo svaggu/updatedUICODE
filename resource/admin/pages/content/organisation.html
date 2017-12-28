@@ -1,0 +1,89 @@
+<section class="workwithus">
+  <div class="layer1">
+    <div class="container">
+
+      <div class="modal-dialog">
+        <div class="admin-signin">
+          <div class="modal-content signin">
+            <div class="modal-header">
+              <h4 class="modal-title text-center" id="myModalLabel">Add Organisation</h4>
+            </div>
+            <div class="modal-body">
+
+              <div id="adminSignin" class="tab-pane fade in active">
+                <div class="register-box-body">
+                  <span class="error ng-binding"></span>
+                  <form name="myform" novalidate="" class="ng-pristine ng-submitted ng-invalid ng-invalid-required">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group has-feedback">
+                          <input type="text" minlength=4 name="name" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" ng-model="organisation.name" placeholder="Admin Name" required>
+                          <span ng-show="myform.name.$touched &amp;&amp;myform.name.$invalid" class="ng-hide">Admin Name is required</span>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <input type="email" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="email" ng-model="organisation.email" placeholder="Email" required>
+                          <span ng-show="myform.email.$touched &amp;&amp; myform.email.$invalid" class="ng-hide">Email(Format) is required</span>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-model="organisation.phoneNumber" placeholder="Phone Number" required>
+                          <span ng-show="myform.phoneNumber.$touched &amp;&amp; myform.phoneNumber.$invalid" class="ng-hide">Phone Number is required</span>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="zipCode" ng-model="organisation.zipCode" placeholder="Zip Code" required>
+                          <span ng-show="myform.zipCode.$touched &amp;&amp; myform.zipCode.$invalid" class="ng-hide">Zip Code is required</span>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <textarea rows="4" cols="50" type="textarea" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="address" ng-model="organisation.address" placeholder="Address" required />
+                          <span ng-show="myform.address.$touched &amp;&amp; myform.address.$invalid" class="ng-hide">Address is required</span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group has-feedback">
+                          <input type="text" minlength=4 name="companyName" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" ng-model="organisation.companyName" placeholder="Company Name" required>
+                          <span ng-show="myform.companyName.$touched &amp;&amp;myform.companyName.$invalid" class="ng-hide">Company Name is required</span>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <input type="password" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="password" ng-model="organisation.password" placeholder="Password" required>
+                          <span ng-show="myform.password.$touched &amp;&amp; myform.password.$invalid" class="ng-hide">Password is required</span>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="cityName" ng-model="organisation.cityName" placeholder="City Name" required>
+                          <span ng-show="myform.cityName.$touched &amp;&amp; myform.cityName.$invalid" class="ng-hide">City Name is required</span>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="state" ng-model="organisation.state" placeholder="State" required>
+                          <span ng-show="myform.state.$touched &amp;&amp; myform.state.$invalid" class="ng-hide">State is required</span>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="country" ng-model="organisation.country" placeholder="Country" required>
+                          <span ng-show="myform.country.$touched &amp;&amp; myform.country.$invalid" class="ng-hide">Country is required</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="">
+                      <div class="row">
+                        <div class="col-xs-12 form-group text-center">
+                          <button ng-disabled="!myform.$valid" type="submit" ng-submitted="true" ng-click="addOrganisation();" class="btn button text-center" >Create Organisation</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="clearfix">
+    </div>
+  </div>
+</section>
+
+<script>
+
+</script>

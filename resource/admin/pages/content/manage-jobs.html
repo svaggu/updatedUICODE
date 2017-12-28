@@ -1,0 +1,454 @@
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Job Postings
+    </h1>
+    <ol class="breadcrumb">
+      <div class="page-title-buttons pull-right">
+        <div class="btn-group">
+          <a href="#/import-jobs" class="btn btn-info text-center">Import</a>
+          <a href="#/export-jobs" class="btn btn-info text-center">Export</a>
+        </div>
+        <a href="#/add-new-job" class="btn btn-primary">Add New Job</a>
+      </div>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Info boxes -->
+    <div class="box">
+      <div class="box-header">
+        <h3 class="box-title">{{jobsCount}} jobs found</h3>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+        <div id="jobposting" class="dataTables_wrapper dt-bootstrap">
+          <div class="row">
+            <div class="col-sm-4">
+              <div id="actions" class="form-group" style="display:none;">
+                <div class="bulk inline-block">
+                  <button class="btn btn-default bulk-action" name="selectedAction_header" data-action="activate">
+                    <i class="fa fa-eye" aria-hidden="true">
+                    </i> Activate
+                  </button>
+                  <button class="btn btn-default bulk-action" name="selectedAction_header" data-action="deactivate">
+                    <i class="fa fa-eye-slash" aria-hidden="true">
+                    </i> Deactivate
+                  </button>
+                  <button class="btn btn-default bulk-action" name="selectedAction_header" data-action="delete">
+                    <i class="fa fa-trash-o" aria-hidden="true">
+                    </i> Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="dropdown form-group">
+                <a class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-search" aria-hidden="true"></i>Filter Jobs
+                  <span class="caret">
+                  </span>
+                </a>
+                <div class="dropdown-menu">
+                  <form method="post" name="search_form" class="panel-body">
+                    <div class="form-group col-xs-12">
+                      <input type="text" class="form-control" placeholder="Keywords" value="" name="idKeyword" id="idkeyword">
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <select name="PostingDate" class="form-control">
+                        <option value="">Any Date
+                        </option>
+                        <option value="0">Today
+                        </option>
+                        <option value="7">Last 7 days
+                        </option>
+                        <option value="14">Last 14 days
+                        </option>
+                        <option value="30">Last 30 days
+                        </option>
+                      </select>
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <input type="text" value="" class="form-control" name="company_name" placeholder="Company name or email">
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <select name="product_info_sid" class="form-control">
+                        <option value="">Any Product
+                        </option>
+                        <option value="13">Free job posting
+                        </option>
+                      </select>
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <select name="active" class="form-control">
+                        <option value="">Any Status
+                        </option>
+                        <option value="1">Active
+                        </option>
+                        <option value="2">Pending Approval
+                        </option>
+                        <option value="0">Not active
+                        </option>
+                      </select>
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <label class="cr-styled">
+                        <input type="checkbox" class="" name="featured" value="1">
+                        <i class="fa">
+                        </i>
+                      </label> Featured
+                    </div>
+                    <div class="form-group col-xs-12 text-center">
+                      <button type="submit" value="Find" class="btn btn-info">Filter
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="dataTables_length text-right" id="length">
+                <label>
+                  <select name="example1_length" aria-controls="example1" class="form-control input-sm">
+                    <option value="10">10
+                    </option>
+                    <option value="25">25
+                    </option>
+                    <option value="50">50
+                    </option>
+                    <option value="100">100
+                    </option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="scroll-auto">
+                <table id="managejobs" class="table table-bordered table-hover dataTable" role="grid">
+                  <thead>
+                    <tr role="row">
+
+                      <th class="text-center">
+                        <label class="cr-styled">
+                          <input type="checkbox" class="checks" id="checkall">
+                          <i class="fa"></i>
+                        </label>
+                      </th>
+                      <th class="sorting">
+                        <a href="javascript::void(0);">
+                          Title
+                          <div class="sorting-icons">
+                            <i class="fa fa-long-arrow-down" aria-hidden="true">
+                            </i>
+                            <i class="fa fa-long-arrow-up" aria-hidden="true">
+                            </i>
+                          </div>
+                        </a>
+                      </th>
+                      <th class="sorting">
+                        <a href="javascript::void(0);">
+                          Employer
+                          <div class="sorting-icons">
+                            <i class="fa fa-long-arrow-down" aria-hidden="true">
+                            </i>
+                            <i class="fa fa-long-arrow-up" aria-hidden="true">
+                            </i>
+                          </div>
+                        </a>
+                      </th>
+                      <th class="sorting">
+                        Product
+                      </th>
+                      <th class="sorting">
+                        <a href="javascript::void(0);">
+                          Posting Date
+                          <div class="sorting-icons">
+                            <i class="fa fa-sort-amount-desc" aria-hidden="true">
+                            </i>
+                          </div>
+                        </a>
+                      </th>
+                      <th class="sorting">
+                        Applications
+                      </th>
+                      <th class="sorting">
+                        Status
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="items in jobsList">
+                      <td class="text-center">
+                        <label class="cr-styled">
+                          <input type="checkbox" class="checks" name="listings[22]" value="1" id="checkbox_1">
+                          <i class="fa">
+                          </i>
+                        </label>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#/edit-job">{{items.parsedJson.JobData.JobProfile[0]}}
+                        </a>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#/edit-employer">
+                          {{items.employerDetails[0].organizationDetails[0].name}}
+                        </a>
+                      </td>
+                      <td class="td-wide">Free job posting
+                      </td>
+                      <td>{{items.parsedJson.JobData.ParsingDate[0] | date}}
+                      </td>
+                      <td>
+                        <span class="nowrap">
+                          0 applications
+                        </span>
+                      </td>
+                      <td>
+                        <span class="label label--active" ng-if="items.status == 'active'">
+                          Active
+                        </span>
+                        <span class="label label--inactive" ng-if="items.status == 'inactive'">
+                          Inactive
+                        </span>
+                        <span class="label label--active" style="background-color: #d2cd17" ng-if="items.status == 'hold'">
+                          Hold
+                        </span>
+                        <span class="label label--active" style="background-color: crimson" ng-if="items.status == 'closed'">
+                          Closed
+                        </span>
+                      </td>
+                    </tr>
+                    <!-- <tr>
+                      <td class="text-center">
+                        <label class="cr-styled">
+                          <input type="checkbox" class="checks" name="listings[22]" value="1" id="checkbox_1">
+                          <i class="fa">
+                          </i>
+                        </label>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#/edit-job">Angularjs Developer
+                        </a>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#/edit-employer">
+                          Chilisoft Sample Employer
+                        </a>
+                      </td>
+                      <td class="td-wide">Free job posting
+                      </td>
+                      <td>Jan 24, 2013 09:57
+                      </td>
+                      <td>
+                        <span class="nowrap">
+                          0 applications
+                        </span>
+                      </td>
+                      <td>
+                        <span class="label label--active">Active
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <label class="cr-styled">
+                          <input type="checkbox" class="checks" name="listings[22]" value="1" id="checkbox_1">
+                          <i class="fa">
+                          </i>
+                        </label>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#">Accountant [Job Sample]
+                        </a>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#">
+                          Chilisoft Sample Employer
+                        </a>
+                      </td>
+                      <td class="td-wide">Free job posting
+                      </td>
+                      <td>Jan 24, 2013 09:57
+                      </td>
+                      <td>
+                        <span class="nowrap">
+                          0 applications
+                        </span>
+                      </td>
+                      <td>
+                        <span class="label label--inactive">Not Active
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <label class="cr-styled">
+                          <input type="checkbox" class="checks" name="listings[22]" value="1" id="checkbox_1">
+                          <i class="fa">
+                          </i>
+                        </label>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#">Accountant [Job Sample]
+                        </a>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#">
+                          Chilisoft Sample Employer
+                        </a>
+                      </td>
+                      <td class="td-wide">Free job posting
+                      </td>
+                      <td>Jan 24, 2013 09:57
+                      </td>
+                      <td>
+                        <span class="nowrap">
+                          0 applications
+                        </span>
+                      </td>
+                      <td>
+                        <span class="label label--active">Active
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <label class="cr-styled">
+                          <input type="checkbox" class="checks" name="listings[22]" value="1" id="checkbox_1">
+                          <i class="fa">
+                          </i>
+                        </label>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#">Accountant [Job Sample]
+                        </a>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#">
+                          Chilisoft Sample Employer
+                        </a>
+                      </td>
+                      <td class="td-wide">Free job posting
+                      </td>
+                      <td>Jan 24, 2013 09:57
+                      </td>
+                      <td>
+                        <span class="nowrap">
+                          0 applications
+                        </span>
+                      </td>
+                      <td>
+                        <span class="label label--active">Active
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">
+                        <label class="cr-styled">
+                          <input type="checkbox" class="checks" name="listings[22]">
+                          <i class="fa"></i>
+                        </label>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#">Accountant [Job Sample]
+                        </a>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#">
+                          Chilisoft Sample Employer
+                        </a>
+                      </td>
+                      <td class="td-wide">Free job posting
+                      </td>
+                      <td>Jan 24, 2013 09:57
+                      </td>
+                      <td>
+                        <span class="nowrap">
+                          0 applications
+                        </span>
+                      </td>
+                      <td>
+                        <span class="label label--active">Active
+                        </span>
+                      </td>
+                    </tr> -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!--<div class="row">
+            <div class="col-sm-5">
+              <div class="dataTables_info pagination" id="example1_info" role="status" aria-live="polite">Showing 1 to 5 of 10 entries
+              </div>
+            </div>
+            <div class="col-sm-7">
+              <div class="dataTables_paginate paging_simple_numbers pull-right" id="example1_paginate">
+                <ul class="pagination">
+                  <li class="paginate_button previous disabled" id="example1_previous">
+                    <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous
+                    </a>
+                  </li>
+                  <li class="paginate_button active">
+                    <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0">1
+                    </a>
+                  </li>
+                  <li class="paginate_button ">
+                    <a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0">2
+                    </a>
+                  </li>
+                  <li class="paginate_button ">
+                    <a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0">3
+                    </a>
+                  </li>
+                  <li class="paginate_button ">
+                    <a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0">4
+                    </a>
+                  </li>
+                  <li class="paginate_button ">
+                    <a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0">5
+                    </a>
+                  </li>
+                  <li class="paginate_button ">
+                    <a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0">6
+                    </a>
+                  </li>
+                  <li class="paginate_button next" id="example1_next">
+                    <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0">Next
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>-->
+        </div>
+      </div>
+
+      <!-- /.box-body -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+
+<script>
+
+$(document).ready(function ()
+{
+  $('#checkall').click(function ()
+  {
+   $('.checks').prop('checked', this.checked);
+    var $checks = $('.checks').change(function ()
+    {
+      var flag = $checks.filter(':checked').length == 0;
+      $("#actions").toggle(!flag);
+    });
+
+      $checks.first().change();
+  });
+});
+
+
+</script>

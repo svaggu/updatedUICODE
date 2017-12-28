@@ -1,0 +1,462 @@
+<style>
+   @media only screen and (min-width: 769px) and (max-width: 1281px) {
+   [class="padding-top-15"] {
+   padding-top: 25px;
+   }
+   }
+   @media only screen and (max-widh:767px) {
+   [class="padding-top-15"] {
+   padding-top: 25px;
+   }
+   }
+   
+    .profilepercentage {
+    background: #fafafa;
+    padding: 0px;
+    margin-bottom: 1vw;
+}
+    
+    .percentage .icon {
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    position: absolute;
+    top: -10px;
+    right: 26px;
+    z-index: 0;
+    font-size: 90px;
+    color: rgba(0, 0, 0, 0.15);
+}
+    .percentage {
+    background: #ddd !important;
+}
+    
+    .percentage:hover .icon {
+    font-size: 85px;
+}
+    .percentage > .inner {
+    padding: 10px;
+    text-align: left;
+}
+    .percentage .inner h3 {
+    color: #333;
+    font-weight: 600;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+    .percentage p {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+    
+    .profileicon {
+    font-size: 75px;
+    width: 100%;
+    height: 100%;
+}
+    
+    .iconred {
+    color: #b92719;
+}
+    
+    .icongreen {
+    color: #80ba01;
+}
+</style>	
+</style>
+<div class="container">
+<div class="row">
+<div class="col-md-12 form-group">&nbsp;</div>
+    <div class="col-md-12 form-group">&nbsp;</div>
+    <div class="clearfix"> </div>
+<div class="col-md-12">
+   <div class="row">
+      <div class="col-md-12 col-sm-12 col-lg-12">
+         <div class="body-content panel-body ng-scope" ng-init="getDashBoardData('YIN16JNWN3B11893')">
+            <div class="searchbar">
+               <div class="searchjob">
+                  <form id="frm_jobs_filtration" method="get" class="search-area search-bg">
+                     <div class="col-lg-6 col-md-6 col-sm-5 pad_0">
+                        <div class="search-input search-icon" >
+                           <span class="icon-search" style="background-image:url(resource/css/img/chair.png)">
+                           </span>
+                           <input type="text" placeholder="Company Name or Job Title or Key word" name="job_title" >
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-4 col-sm-4 pad_0">
+                        <div class="search-input">
+                           <i class="icon-search7">
+                           </i>
+                           <input type="text" id="location" placeholder="Preferred Locations" name="locations">
+                        </div>
+                     </div>
+                     <div class="col-lg-2 col-md-2 col-sm-3 pad_0">
+                        <div class="search-btn">
+                           <a href="#/search-results" class="btncss" name="cs_">
+                           Search All Jobs
+                           </a>
+                        </div>
+                        <div id="searchadvance" class="pull-right">
+                           <a href="#/advance-search"><i class="fa fa-search-plus" aria-hidden="true"></i> Advanced Search</a>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               
+            </div>
+            <!-- Dash Boaed Content Start -->
+             
+             <div class="clearfix"> </div>
+            <div class="profilepercentage">
+               <div class="row">
+                  <div class="col-md-2 col-sm-12 col-xs-12">
+                     <div class="percentage">
+                        <div class="inner">
+                           <h3>65
+                           </h3>
+                           <p class="profilecom">Profile Completeness
+                           </p>
+                        </div>
+                        <div class="icon">
+                           <i class="fa fa-percent" aria-hidden="true">
+                           </i>
+                        </div>
+                     </div>
+                     <!--
+                        <div class="bgccolor">
+                        <div class="profilecomp">
+                        Profile Completeness
+                        </div>
+                        <div class="numbercss">
+                        75%
+                        </div>
+                        </div>
+                        <!-- /.info-box -->
+                  </div>
+                  <!-- /.col -->
+                  <div class="">
+          <div class="col-md-2 col-sm-12 col-xs-12 ">
+              <div class="col-md-12 col-sm-12 text-center">
+                        <div class="profileicon iconred">
+                          <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                        </div> 
+						</div>
+                <div class="col-md-12 col-sm-12">
+                        <div class="text-center">
+                          <p class="profilep">Resume
+                          </p>
+                    </div>
+                        </div>
+                      </div>
+                     <div class="col-md-2 col-sm-12 col-xs-12">
+                 <div class="col-md-12 col-sm-12 text-center">
+                        <div class="profileicon icongreen">
+                         <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+						</div>
+                                  <div class="col-md-12 col-sm-12">
+                        <div class="text-center">
+                          <p class="profilep">Education Details
+                          </p>
+                    </div>
+                        </div>
+                      
+                     </div>          
+                   <div class="col-md-2 col-sm-12 col-xs-12">
+                 <div class="col-md-12 col-sm-12 text-center">
+                        <div class="profileicon icongreen">
+                         <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+						</div>
+                                  <div class="col-md-12 col-sm-12">
+                        <div class="text-center">
+                          <p class="profilep">Employment Details
+                          </p>
+                    </div>
+                        </div>
+                      
+                     </div>
+					 <div class="col-md-2 col-sm-12 col-xs-12 ">
+              <div class="col-md-12 col-sm-12 text-center">
+                        <div class="profileicon iconred">
+                          <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                        </div> 
+						</div>
+                <div class="col-md-12 col-sm-12">
+                        <div class="text-center">
+                          <p class="profilep">Project Details
+                          </p>
+                    </div>
+                        </div>
+                      </div>
+                    <div class="col-md-2 col-sm-12 col-xs-12">
+                 <div class="col-md-12 col-sm-12 text-center">
+                        <div class="profileicon icongreen">
+                         <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+						</div>
+                                  <div class="col-md-12 col-sm-12">
+                        <div class="text-center">
+                          <p class="profilep"> Others
+                          </p>
+                    </div>
+                        </div>
+                      
+                     </div>
+                   
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="stats page-title-buttons  pull-right">
+                     <div class="btn-group">
+                        <button type="button" class="btn btn-default choose-period active" data-target="#today">
+                        Today
+                        </button>
+                        <button type="button" class="btn btn-default choose-period" data-target="#this-week" href="#">
+                        Last 7 days
+                        </button>
+                        <button type="button" class="btn btn-default choose-period" data-target="#this-month" href="#">
+                        Last 30 days
+                        </button>
+                        <button type="button" class="btn btn-default choose-period" data-target="#total" href="#">
+                        Total
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <br>
+            <div class="row">
+               <!------
+                  <div class="col-lg-4 col-xs-6">
+
+                                     <div class="small-box bg-aqua">
+                                       <div class="inner">
+                                         <h3>07
+                                         </h3>
+                                         <p>Applied Jobs
+                                         </p>
+                                       </div>
+                                       <div class="icon">
+                                         <i class="fa fa-share" aria-hidden="true">
+                                         </i>
+                                       </div>
+                                       <a href="#/my-jobs" class="small-box-footer">More info
+                                         <i class="fa fa-arrow-circle-right">
+                                         </i>
+                                       </a>
+                                     </div>
+                                 </div>
+
+                                 <div class="col-lg-4 col-xs-6">
+
+                                     <div class="small-box bg-aqua">
+                                       <div class="inner">
+                                         <h3>10
+
+                                         </h3>
+                                         <p>Recommended Jobs
+                                         </p>
+                                       </div>
+                                       <div class="icon">
+                                         <i class="fa fa-thumbs-up" aria-hidden="true">
+                                         </i>
+                                       </div>
+                                       <a href="#/my-jobs" class="small-box-footer">More info
+                                         <i class="fa fa-arrow-circle-right">
+                                         </i>
+                                       </a>
+                                     </div>
+                                 </div>
+
+                                 <div class="col-lg-4 col-xs-6">
+
+                                     <div class="small-box bg-aqua">
+                                       <div class="inner">
+                                         <h3>44
+                                         </h3>
+                                         <p>Saved Jobs
+                                         </p>
+                                       </div>
+                                       <div class="icon">
+                                         <i class="fa fa-floppy-o" aria-hidden="true">
+                                         </i>
+                                       </div>
+                                       <a href="#/my-jobs" class="small-box-footer">More info
+                                         <i class="fa fa-arrow-circle-right">
+                                         </i>
+                                       </a>
+                                     </div>
+                                 </div>
+                  ------------->
+               <!-- ./col -->
+               <div class="col-lg-3 col-xs-6">
+                  <!-- small box -->
+                  <div class="small-box bg-aqua">
+                     <div class="inner">
+                        <h3>09
+                        </h3>
+                        <p>Views
+                        </p>
+                     </div>
+                     <div class="icon">
+                        <i class="fa fa-eye" aria-hidden="true">
+                        </i>
+                     </div>
+                     <a href="#/profileviews" class="small-box-footer">More info
+                     <i class="fa fa-arrow-circle-right">
+                     </i>
+                     </a>
+                  </div>
+               </div>
+               <!-- ./col -->
+               <div class="col-lg-3 col-xs-6">
+                  <!-- small box -->
+                  <div class="small-box bg-aqua">
+                     <div class="inner">
+                        <h3>09
+                        </h3>
+                        <p>Downloads
+                        </p>
+                     </div>
+                     <div class="icon">
+                        <i class="fa fa-download" aria-hidden="true">
+                        </i>
+                     </div>
+                     <a href="#/downloads" class="small-box-footer">More info
+                     <i class="fa fa-arrow-circle-right">
+                     </i>
+                     </a>
+                  </div>
+               </div>
+               <!-- ./col -->
+               <div class="col-lg-3 col-xs-6">
+                  <!-- small box -->
+                  <div class="small-box bg-aqua">
+                     <div class="inner">
+                        <h3>00
+                        </h3>
+                        <p>Schedules
+                        </p>
+                     </div>
+                     <div class="icon">
+                        <i class="fa fa-calendar-plus-o" aria-hidden="true">
+                        </i>
+                     </div>
+                     <a href="#/client_schedules" class="small-box-footer">More info
+                     <i class="fa fa-arrow-circle-right">
+                     </i>
+                     </a>
+                  </div>
+               </div>
+               <!-- ./col -->
+                               <div class="col-lg-3 col-xs-6">
+                  <!-- small box -->
+                  <div class="small-box bg-aqua">
+                     <div class="inner">
+                        <h3>00
+                        </h3>
+                        <p>Favourite
+                        </p>
+                     </div>
+                     <div class="icon">
+                        <i class="fa fa fa-gratipay" aria-hidden="true">
+                        </i>
+                     </div>
+                     <a href="#/client_schedules" class="small-box-footer">More info
+                     <i class="fa fa-arrow-circle-right">
+                     </i>
+                     </a>
+                  </div>
+             
+             <!-- Dash Board Content Start -->
+         </div>
+      </div>
+   </div>
+</div>
+<div class="modal fade ng-scope" id="myModal" role="dialog">
+   <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">�
+            </button>
+            <h4 class="modal-title">Upload Profile Image
+            </h4>
+         </div>
+         <div class="modal-body">
+            <form name="uploadForm" ng-submit="uploadLogo('YIN16JNWN3B11893')" class="ng-pristine ng-valid">
+               <div class="">
+                  <div class="form-group text-center">
+                     <input type="file" id="file" name="file" accept="image/*" class="upload" onchange="javascript: document.getElementById ('fileName').value = this.value">
+                     <!--  <input type="text" id="fileName" readonly="readonly" style="  border: none;  background-color: transparent;  text-align: center;" placeholder="Choose File"> -->
+                  </div>
+                  <div class="col-md-12">
+                     <span class="help-inline" id="uploadDivError" style="display:none;">Select file to upload
+                     </span>
+                     <span class="help-inline" id="extensionDivError" style="display:none;">only jpeg,png,gif formats are allowed
+                     </span>
+                  </div>
+               </div>
+               <div class="col-md-12">&nbsp;
+               </div>
+               <div class="form-group">
+                  <button class="btn button save margin-2" type="submit">Upload
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="modal fade ng-scope" id="myModal1" role="dialog">
+   <div class="modal-dialog modal-sm">
+      <!-- Modal content-->
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">�
+            </button>
+            <h4 class="modal-title">Verify Mobile Number
+            </h4>
+         </div>
+         <div class="modal-body">
+            <form name="verify" ng-submit="verify.$valid &amp;&amp; verifyOTP(otp,'YIN16JNWN3B11893')" novalidate="" class="ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength">
+               <div class="form-group text-center">
+                  <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength" id="otp" placeholder="Enter otp" ng-model="otp" name="otp" ng-maxlength="4" required="">
+                  <div class="th-error ng-hide" ng-show="submitted &amp;&amp; verify.otp.$error.required">Enter OTP
+                  </div>
+                  <div class="th-error ng-hide" ng-show="wrongotp==1">Enter Correct OTP
+                  </div>
+               </div>
+               <div class="col-md-12">&nbsp;
+               </div>
+               <div class="form-group text-center">
+                  <button type="submit" class="btn button save margin-2" ng-click="submitted=true">Verify
+                  </button>
+               </div>
+            </form>
+         </div>
+         <!--content end here -->
+      </div>
+   </div>
+</div>
+<script>
+   $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?')
+         .done (function(location)
+         {
+            var country=location.country_name;
+            var state=location.state;
+            var city=location.city;
+          $("#location").val(city+", "+state+", "+country);
+         });
+
+   $(document).ready(function(){
+        $("#searchjobs").hide();
+          $("#searchadvance").click(function(){
+              $("#searchjobs").toggle();
+          });
+      });
+</script>

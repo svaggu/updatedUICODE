@@ -1,0 +1,123 @@
+ 
+      <!-- container start here-->
+      <div class="container">
+        <div class="row">
+          <!-- angular view start here-->
+         
+      <div class="col-md-12 col-sm-12 col-lg-12">
+        <!--Body Content Add here-->
+        <!-- ngView: undefined -->
+        
+
+          
+          <div class="col-md-12 ng-scope">&nbsp;
+          </div>
+          <div class="body-content ng-scope" id="visualResumeCtrl">
+            <div class="row">
+              <section class="content-header">
+                <h1>Employer Register</h1>
+              </section>
+                         
+			<div class="col-md-12">
+                <div class="panel shadownone">
+                  <div class="panel-heading deatilednew ">
+                    Employer Details
+                    <span > <!-- ng-show="personalStatus=='View'" class="ng-hide" -->
+                      
+                    </span>
+                  </div>
+                  <div class="new-body">
+                    <div > <!-- ng-show="personalStatus=='Creation'" class="" -->
+                      <form name="jobseekersOther" ng-submit="jobseekersOther.$valid &amp;&amp; savePersonalData('98')" novalidate="" class="ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength ng-submitted">
+                        <div class="row">
+							<div class="form-group col-md-6 ">
+								<label for="title">Full Name:
+								</label>
+								<input type="text" class="form-control" name="full name">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label for="title">Company Name:
+								</label>
+								<input type="text" class="form-control" name="Company Name">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label for="title">Website:
+								</label>
+								<input type="text" class="form-control" name="Website">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label for="title">Phone:
+								</label>
+								<input type="text" class="form-control" name="Phone">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label for="title">Location:
+								</label>
+								<input type="text" class="form-control" name="Location">
+							</div>
+							<div class="form-group col-md-6 ">
+								<label for="title">Logo:
+								</label>
+								<input type="file" class="form-control" name="Location">
+							</div>
+					
+							<div class="form-group col-md-12">
+								<label for="title">Company Description:
+								</label>
+								<textarea class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength" cols="3" rows="3" ng-model="personalDetails.resumeTitle" name="title" id="title" maxlength="250" required="">
+								</textarea>
+							</div>
+						  
+                           
+                          <div class="row col-md-12 text-center">
+                            <button type="submit" class="btn button save margin-2" ng-click="submitted=true">Save
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+            </div>
+               
+                  
+                    
+      
+      
+  
+  
+  
+  <script type="text/javascript">
+
+  $(document).ready(function()
+  {  
+    $("#tab1").addClass("active");
+    $("#tab2").removeClass("active");
+    $("#tab3").removeClass("active");
+      
+    $("#tab1").click(function()
+    {
+      $("#tab1").addClass("active");
+      $("#tab2").removeClass("active");
+      $("#tab3").removeClass("active");
+    });
+    
+    $(".tab2").click(function()
+    { 
+        $("#tab2").addClass("active");
+      $("#tab1").removeClass("active");
+      $("#tab3").removeClass("active");
+    });
+    
+    $("#tab3").click(function()
+    {
+        $("#tab3").addClass("active");
+      $("#tab1").removeClass("active");
+      $("#tab2").removeClass("active");
+    });
+  });
+    
+  </script>
+    <script> $.widget.bridge('uibutton', $.ui.button);</script>
+    
+
+

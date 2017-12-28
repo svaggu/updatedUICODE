@@ -1,0 +1,516 @@
+ <style>
+ .modal-content{
+width:500px;
+border-radius:25px;
+}
+.modal-header h4, .modal-content .paneldeleteheading {
+    color: #b92917 !important;
+}
+ 
+ button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+h1.pull-left.h1.jobs-page-header-h1 {
+    margin: 0;
+    font-style: normal;
+    font-size: 24px;
+    color: #333;
+    text-transform: none;
+}
+.jobs-page-header h4, .page-header-custom h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+}
+.listing-section.search-result {
+    width: 100% !important;
+}
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+    border-bottom: 1px solid #fafafa;
+}
+
+button.accordion:after {
+    content: "\2212";
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: '\002B';
+
+}
+.filter-option {
+    padding: 5px;
+}
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+}
+</style>
+
+<div class="container">
+  <div class="row">
+    <section class="content-header ">
+        <h1> </h1>
+    </section>
+    <!-- Search  jobs table start here-->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="searchjob">
+
+
+        <form id="frm_jobs_filtration" action="#" method="get" class="search-area search-bg">
+          <div class="col-lg-6 col-md-6 col-sm-5 pad_0">
+            <div class="search-input search-icon" >
+              <span class="icon-search" style="background-image:url(resource/css/img/outside/chair.png)">
+              </span>
+
+              <input type="text" placeholder="Company Name or Job Title or Key word" name="job_title" >
+
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-4 pad_0">
+            <div class="search-input">
+              <i class="icon-search7">
+              </i>
+              <input type="text" id="location" placeholder="Preferred Locations" name="locations">
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-3 pad_0">
+            <div class="search-btn">
+              <input type="button" class="btncss" name="cs_" value="Search All Jobs">
+            </div>
+          </div>
+		  <div id="searchadvance" class="pull-right">
+                           <a href="#/advance-search"><i class="fa fa-search-plus" aria-hidden="true"></i> Advanced Search</a>
+                        </div>
+        </form>
+      </div>
+    </div>
+    <div class="">
+      <div class="col-md-3">
+        <h2>Filter Results</h2>
+
+  <button class="accordion">Company Segment</button>
+    <div class="panel1">
+      <div class="default">
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">Recruiter</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">DirectHire</a>
+        </div>
+      </div>
+    </div>
+
+  <button class="accordion">Company</button>
+    <div class="panel1">
+      <div class="default">
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">UnitedHealth Group</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">Activesoft, Inc.</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">JPMorgan Chase</a>
+        </div>
+        <div class="filter-option">
+         <input type="checkbox">
+          <a href="#">ASCII Group LLC</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">Acclaim Systems</a>
+        </div>
+      </div>
+    </div>
+
+  <button class="accordion">Title</button>
+    <div class="panel1">
+      <div class="default">
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">Java Developer</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">HTML Developer</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">Javascript Developer</a>
+        </div>
+        <div class="filter-option">
+         <input type="checkbox">
+          <a href="#">AngularJS Developer</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">PHP Developer</a>
+        </div>
+      </div>
+    </div>
+
+  <button class="accordion">Location</button>
+    <div class="panel1">
+      <div class="default">
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">New York, NY</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">Chicago, IL</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">Atlanta, GA</a>
+        </div>
+        <div class="filter-option">
+         <input type="checkbox">
+          <a href="#">San Francisco, CA</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">Washington, DC</a>
+        </div>
+      </div>
+    </div>
+
+  <button class="accordion">Employment Type</button>
+    <div class="panel1">
+      <div class="default">
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">Full-Time</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">Part-Time</a>
+        </div>
+        <div class="filter-option">
+          <input type="checkbox">
+          <a href="#">Contracts</a>
+        </div>
+        <div class="filter-option">
+         <input type="checkbox">
+          <a href="#">Third Party</a>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="col-md-9">
+        <div class="jobs-page-header">
+          <!-- search result section right Header Start -->
+          <div class="row hidden-xs hidden-sm">
+            <div class="col-md-9">
+              <h1 class="pull-left h1 jobs-page-header-h1">
+                All Tech jobs in Usa,
+              </h1>
+            </div>
+            <div class="col-md-3">
+              <!-- Replacing for job notification page -->
+              <a class="btn button job-alert pull-right" data-toggle="modal" data-target="#createalert">
+                <span class="icon-mail-1">
+                </span><i class="fa fa-envelope-o" aria-hidden="true"></i> Create Job Alert
+              </a>
+            </div>
+          </div>
+          <div class="row visible-xs visible-sm">
+            <div class="col-md-12">
+              <h2 class="h1 jobs-page-header-h1">
+                All Tech jobs in Usa,
+              </h2>
+            </div>
+          </div>
+          <div class="row visible-xs visible-sm">
+            <div class="col-md-12 col-lg-12">
+              <h4 class="pull-left posiCount sort mobile">
+                <span>1 - 30
+                </span> of
+                <span>100
+                </span> positions
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <hr>
+            </div>
+            <div class="visible-xs visible-sm col-md-6 col-lg-6 mT10">
+              <div class="dataTables_paginate paging_simple_numbers">
+                <ul class="pagination">
+                  <li class="paginate_button previous" ng-class="{disabled : currPageNo == 1}" id="example2_previous">
+                    <a href="" aria-controls="example2" ng-click="previousPage(items)" data-dt-idx="0" tabindex="0">Previous
+                    </a>
+                  </li>
+                  <li class="paginate_button" ng-repeat="items in pageNumbers" ng-class="{active : activeMenu === items}">
+                    <a href="" aria-controls="example2" ng-click="changePage(items)" data-dt-idx="1" tabindex="0">{{items}}
+                    </a>
+                  </li>
+                  <li class="paginate_button next" ng-class="{disabled : currPageNo != pageNumbers.length-1}" id="example2_next">
+                    <a href="" aria-controls="example2" ng-click="nextPage(items)" data-dt-idx="7" tabindex="0">Next
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3 mT10">
+            </div>
+
+          </div>
+          <div class="row visible-xs visible-sm hidden-md hidden-lg mobile-btns">
+            <div class="col-md-12">
+              <!-- Replacing for job notification page -->
+              <a class="btn button job-alert pull-right" data-toggle="modal" data-target="#createalert">
+                <span class="icon-mail-1">
+                </span><i class="fa fa-envelope-o" aria-hidden="true"></i> Create Job Alert
+              </a>
+            </div>
+          </div>
+           <div class="row hidden-xs hidden-sm">
+            <div class="col-md-12 col-lg-12">
+              <h4 class="pull-left posiCount sort">
+                <span>1 - 30
+                </span> of
+                <span>100
+                </span> positions
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-lg-12">
+              <hr>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-6 col-lg-6 mT10">
+              <div class="dataTables_paginate paging_simple_numbers">
+                <ul class="pagination">
+                  <li class="paginate_button previous" ng-class="{disabled : currPageNo == 1}" id="example2_previous">
+                    <a href="" aria-controls="example2" ng-click="previousPage(items)" data-dt-idx="0" tabindex="0">Previous
+                    </a>
+                  </li>
+                  <li class="paginate_button" ng-repeat="items in pageNumbers" ng-class="{active : activeMenu === items}">
+                    <a href="" aria-controls="example2" ng-click="changePage(items)" data-dt-idx="1" tabindex="0">{{items}}
+                    </a>
+                  </li>
+                  <li class="paginate_button next" ng-class="{disabled : currPageNo != pageNumbers.length-1}" id="example2_next">
+                    <a href="" aria-controls="example2" ng-click="nextPage(items)" data-dt-idx="7" tabindex="0">Next
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3 mT10">
+            </div>
+
+          </div> 
+          <!-- search result section right Header End -->
+        </div>
+
+        <br>
+
+        <!-- show empty when list is empty -->
+        <div ng-hide="!showEmptyMsg" style="padding: 15px;">
+          <h5>No Jobs Retrieved</h5>
+        </div>
+
+        <!-- <div class="listing-section search-result" ng-repeat="items in showAllJobs | startFrom: (currentPages - 1) * pageSize | limitTo : pageSize" ng-hide="!showJobsList"> -->
+        <div class="listing-section search-result" ng-repeat="items in showAllJobs | orderBy : 'timestamp': 'true' | limitTo : '10' : fromArray" ng-hide="!showJobsList">
+          <div class=" row listing-info">
+            <div class="col-sm-12 col-md-3 col-lg-2 col-xs-12">
+              <div class="right-side2">
+                <a href="">
+                  <center>
+                    <!-- <img src="resource/css/img/outside/logo.jpg" class="img-responsive" alt=""> -->
+                    <!--<img src="http://snigdha.co.in/images/logo.png" class="img-responsive" style="width:140px; padding: 8px; margin-top: 25px;" />-->
+                    <img src="{{defaultImgPath.path}}" class="img-responsive img-forJobsLogo" />
+                  </center>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-9 col-lg-10 col-xs-12">
+              <div class="row">
+                <div class="left-side1">
+                  <div class="listing-title" ng-click="gotoSingleJobDetails(items)">
+                    <div class="job-title">
+                      <a href="">{{items.updateParsedJson.JobData.JobProfile[0]}}
+                      </a>
+                      <span class="activatedate">
+                        <span class="captions-field">{{items.updateParsedJson.JobData.ParsingDate[0] | limitTo: '10'}}
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="locationcss">
+                    <ul class="list-inline" style="text-align:left">
+                      <li>
+                        <i class="fa fa-suitcase" aria-hidden="true"></i>
+                        <span class="ng-binding"> {{items.updateParsedJson.JobData.Organization[0] | limitTo: '10'}}
+                        </span>
+                      </li>
+                      <li>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span class="ng-binding"> {{items.updateParsedJson.JobData.Location[0] | limitTo: '10'}}
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="show-brief">
+                    <div class="description">
+                      <!-- {{items.JobDescription[0]}} -->
+                      Required {{items.updateParsedJson.JobData.ExperienceRequired[0]}} experienced candidate, as a {{items.updateParsedJson.JobData.JobProfile[0]}}
+                        in skills like -- {{items.updateParsedJson.JobData.Skills[0].Skill[0].name}}, {{items.updateParsedJson.JobData.Skills[0].Skill[1].name}},
+                        {{items.updateParsedJson.JobData.Skills[0].Skill[2].name}}, {{items.updateParsedJson.JobData.Skills[0].Skill[3].name}}, {{items.updateParsedJson.JobData.Skills[0].Skill[4].name}}
+                        , {{items.updateParsedJson.JobData.Skills[0].Skill[5].name}}, {{items.updateParsedJson.JobData.Skills[0].Skill[6].name}}, {{items.updateParsedJson.JobData.Skills[0].Skill[7].name}}
+                    </div>
+                  </div>
+                  <br>
+                  <div class="locationcss">
+                    <ul class="list-inline" style="text-align:left">
+                      <li>
+                        <i class="fa fa-usd" aria-hidden="true"></i>
+                        <span class="ng-binding" ng-if="items.updateParsedJson.JobData.SalaryOffered[0] == ''"> --- </span>
+                          <span class="ng-binding" ng-if="items.updateParsedJson.JobData.SalaryOffered[0] != ''"> {{items.updateParsedJson.JobData.SalaryOffered[0]}}</span>
+                      </li>
+                      <li>
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span class="ng-binding"> Management
+                        </span>
+                      </li>
+                      <li>
+                        <i class="fa fa-thermometer-full" ng-if="items.updateParsedJson.JobData.HotCool[0] == 'Hot'" aria-hidden="true"></i>
+                        <i class="fa fa-thermometer-full" ng-if="items.updateParsedJson.JobData.HotCool[0] != 'Hot'" style="color: #b7b7b7;" aria-hidden="true"></i>
+                        <span class="ng-binding"> Hot Job
+                        </span>
+                      </li>
+                      <li>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span class="ng-binding" ng-if="items.updateParsedJson.JobData.JobType[0] == ''">Full time</span>
+                          <span class="ng-binding" ng-if="items.updateParsedJson.JobData.JobType[0] != ''">{{items.updateParsedJson.JobData.JobType[0]}}</span>
+                      </li>
+                      <li>
+                        <i class="fa fa-graduation-cap" aria-hidden="true">
+                        </i>
+                        <span class="ng-binding" ng-if="items.updateParsedJson.JobData.Qualifications[0] == ''">Not Mentioned</span>
+                          <span class="ng-binding" ng-if="items.updateParsedJson.JobData.Qualifications[0] != ''">{{items.updateParsedJson.JobData.Qualifications[0]}}</span>
+                      </li>
+                      <a href="" ng-click="saveJob(items)" ng-hide="!checkUser">
+                        <li class="pull-right">
+                          <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                          <span class="ng-binding">Save job</span>
+                        </li>
+                      </a>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
+
+
+
+<div class="modal fade" id="createalert" role="dialog">
+  <div class="modal-dialog margin-top-90">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center">Create an alert</h4>
+      </div>
+      <div class="modal-body">
+        <form name="jobAlert" class="form-horizontal" id="CreateAlertForm_1">
+            <div class="form-group">
+              <div class="col-sm-2">
+                <label class="control-label">Title</label>
+              </div>
+              <div class="col-sm-10">
+                <input type="text" placeholder="Enter a title" value="" maxlength="100" ng-model="alertTitle" name="name" id="alertname" class="form-control">
+                <div class="help-block hidden validTitle">Please enter a title.</div>
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+              <div class="col-sm-2">
+                <label class="control-label" for="">Email</label>
+              </div>
+              <div class="col-sm-10">
+                <input type="text" placeholder="Enter an email" ng-model="alertEmail" value="" name="email" id="alertEmail" class="form-control">
+                <input type="text" class="form-control hidden" id="alertDisabled" name="disabled" value="false">
+                <input type="text" class="form-control hidden" id="emailFrequency" name="emailFrequency" value="never">
+                <div class="help-block hidden validEmail">Please enter a valid email (email@domain.com).</div>
+              </div>
+            </div>
+          </form>
+      </div>
+
+
+      <div class="modal-footer">
+        <div class="col-xs-12 form-group text-center">
+        <button type="button" class="btn button" ng-click="createJobAlert()" data-dismiss="modal"> Create Alert</button>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+
+$.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?')
+      .done (function(location)
+      {
+         var country=location.country_name;
+         var state=location.state;
+         var city=location.city;
+       $("#location").val(city+", "+state+", "+country);
+      });
+</script>

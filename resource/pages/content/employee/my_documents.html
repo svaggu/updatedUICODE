@@ -1,0 +1,155 @@
+
+<section class="content-header">
+  <h1> My Video</h1>
+</section>
+
+<!--- content start here -->
+<div class="col-md-12 col-sm-12 col-lg-12">
+  <div class="panel">
+    <div class="panel-heading new-panel-heading"> My Video
+      <a href="" data-toggle="modal" data-target="#myModal1" title="Share" class="btn button pull-right" ng-show="eduDocList!=null|| empDocList!=null || personalDocList!=null || crtDocList==null ">Share
+      </a>
+    </div>
+    <div class="new-body">
+      <div class="row">
+	  
+	  
+	  
+	 
+        <div class="col-md-8  ">
+
+
+		<div class="col-sm-12 ng-scope">
+				<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/ggb9uhFV8NY' frameborder='0' allowfullscreen></iframe></div>
+		</div>
+		
+	  
+          <form name="uploadForm" ng-submit="uploadDocument(doctypeId,'98','YIN16JNWN3B11893')" class="ng-pristine ng-invalid ng-invalid-required">
+            <div class="form-group col-md-12">
+            <br>
+			 <div class="form-group col-md-6 ">
+			  <label for="title">Video:</label>
+			   <input type="file" name="keyword" class="form-control">
+			</div>
+			
+			
+              <div class="th-error ng-hide" ng-show="submitted &amp;&amp; uploadForm.doctype.$error.required">This field is required
+              </div>
+            </div>
+            <div class="col-md-12  ng-hide" ng-show="doctypeId!= null &amp;&amp; doctypeId!=''">
+              <div class="form-group  ">
+                <input type="file" id="file" name="file" class="upload" onchange="javascript: document.getElementById ('fileName').value = this.value">
+                <!--  <input type="text" id="fileName" readonly="readonly" style="  border: none;  background-color: transparent;  text-align: center;" placeholder="Choose File"> -->
+              </div>
+              <div class="col-md-12">
+                <span class="help-inline" id="uploadDivError" style="display:none;">Select file to upload
+                </span>
+                <span class="help-inline" id="extensionDivError" style="display:none;">only jpeg,png,gif formats are allowed
+                </span>
+              </div>
+            </div>
+            <br>
+            <div class="form-group col-md-12 ">
+              <button class="btn button save margin-2" type="submit">Upload
+              </button>
+            </div>
+          </form>
+		  
+		  <div class="col-sm-12 ng-scope">
+			  <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+				<thead>
+				  <tr role="row">
+					<th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">S.No
+					</th>
+					<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Video
+					</th>
+					
+					<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Status
+					</th>
+				   
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr role="row" class="odd">
+					<td class="sorting_1">1
+					</td>
+					<td>
+						<iframe width="100" height="50" src="https://www.youtube.com/embed/iD5zxjySOzw?autoplay=0" frameborder="0" allowfullscreen></iframe>
+					</td>
+					
+					<td style="color:green;">Active
+					</td>
+					
+				  </tr>
+				  <tr role="row" class="even">
+					<td class="sorting_1">2
+					</td>
+					<td>
+						<iframe width="100" height="50" src="https://www.youtube.com/embed/LO-WCZ-jF7o?autoplay=0" frameborder="0" allowfullscreen></iframe>
+					</td>
+					
+					<td style="color:red;">Inactive
+					</td>
+					
+				  </tr>
+				  <tr role="row" class="odd">
+					<td class="sorting_1">3
+					</td>
+					<td>
+					<iframe width="100" height="50" src="https://www.youtube.com/embed/xzvScRnF6MU?autoplay=0" frameborder="0" allowfullscreen></iframe>
+					</td>
+					
+					<td style="color:red;">Inactive
+					</td>
+        
+      </tr>
+      
+    </tbody>
+   
+  </table>
+</div>
+		  
+		  
+         
+        </div> 
+		
+		
+		
+		
+		
+		
+        <div class="col-md-4 col-sm-12 pd-l-0 pd-left-15">
+          <div class="panel shadownone  ">
+            <div class="panel-heading deatilednew helpheading">
+              Help
+            </div>
+            <div class="new-body">
+				<p>First few seconds of screen time is where the employer will make their first impression of you. Before taking in what you say, an employer will notice your tone, body-language, and attire -- all of which should convey confidence, liveliness, and professionalism. This is also the time in your script where you introduce yourself and explicitly state your intentions.</p>
+			   <p>Example: "Hello, my name is ____ and I had 10 years of experience in IT...."</p>
+				<p>
+					<strong>Time Limit</strong>
+				</p>
+				<p>2 mins (120 secs)</p>
+				  <p>
+					<strong>Storage Limitations</strong>
+				</p>
+				<ul>
+					<li>7 days on My Video CV server. You also have an option to store your videos on Google Drive (<a href="#/jobseekerStorage/YIN16JNWN3B11893">Click here</a>).</li>
+					<li><b>No Limit</b> on creating / deleting / re-creating the videos.</li>
+				</ul>
+				<p>
+					<strong>Share</strong>
+				</p>
+				<ul>
+					<li> You can share this interview with your friends &amp; employer. ( <a href="#/shareinfo/YIN16JNWN3B11893">Click here</a> to track who viewed your videos).</li>
+	 
+				</ul>
+		 
+			</div>
+          </div>
+        </div> 
+      </div>
+    </div> 
+  </div>
+</div>
+<!-- content end here-->

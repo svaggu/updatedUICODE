@@ -1,0 +1,214 @@
+<div class="container">
+  <div class="row">
+    <section class="content-header">
+      <h1>Create Job Alert</h1>
+    </section>
+    
+    <!-- Content start here -->
+    <div class="col-md-12">
+      <div class="panel shadownone">
+        <div class="panel-heading deatilednew ">What type of job are you looking for? Create up to 5 alerts.</div>
+        <div class="new-body">
+          <div class="row">
+            <form name="jobseekersOther">
+              
+              <div class="form-group col-md-12 ">
+                <label for="title">Your email :</label>
+                <input type="email" name="title" class="form-control" cols="3" rows="3"  name="title" id="title" maxlength="250" required="">
+              </div>
+
+              <div class="form-group col-md-12 ">
+                <label for="title">Keywords:</label>
+                <input type="text" name="title" class="form-control" cols="3" rows="3"  name="title" id="title" maxlength="250" required="">
+              </div>
+
+              <div class="form-group col-md-8 ">
+                <label for="title">Location:</label>
+                <input type="text" id="location" name="title" class="form-control" cols="3" rows="3"  name="title" id="title" maxlength="250" required="">
+              </div>
+
+              <div class="form-group col-md-4 ">
+                <label for="title"><br></label>
+                <select class="form-control" id="RadialLocation"> 
+                  <option value="0">Within 0 miles</option>
+                  <option value="1">Within 1 miles</option>
+                  <option value="3">Within 3 miles</option>
+                  <option value="5" selected="selected">Within 5 miles</option>
+                  <option value="10">Within 10 miles</option>
+                  <option value="15">Within 15 miles</option>
+                  <option value="20">Within 20 miles</option>
+                  <option value="25">Within 25 miles</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-12 ">
+                <label for="title"></label>
+                <span class=""><input type="checkbox"> Nationwide</span>
+              </div>
+
+              <div class="form-group col-md-12 ">
+                <label for="title"></label>
+                <span class=""><input type="checkbox"> Homeworking</span>
+              </div>
+
+              <div class="form-group col-md-12 ">
+                <label for="title">Sector :</label>
+                <select class="form-control" multiple="multiple" id="sectors"> 
+                  <option value="0">Accountancy</option>
+                  <option value="1">Admin, Secretarial & PA</option>
+                  <option value="3">Agriculture & Outdoor</option>
+                  <option value="5" selected="selected">Apprenticeships</option>
+                  <option value="10">Automotive & Driving</option>
+                  <option value="15">Aviation</option>
+                  <option value="20">Banking & Financial Services</option>
+                  <option value="25">Business Opportunities</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-12 ">
+                <label for="title">Salary Band :</label>
+                <select class="form-control" multiple="multiple" id="salaryband"> 
+                  <option value="0">Up to $10,000</option>
+                  <option value="1">$10,000 - $14,999</option>
+                  <option value="3">$15,000 - $19,999</option>
+                  <option value="5" selected="selected">$20,000 - $24,999</option>
+                  <option value="10">$25,000 - $29,999</option>
+                  <option value="15">$30,000 - $39,999</option>
+                  <option value="20">$40,000 - $49,999</option>
+                  <option value="25">$50,000 - $59,999</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-12 ">
+                <div id="morefields" class="pull-right">
+                  <a href="javascript:void(0)"><i class="fa fa-plus-circle" aria-hidden="true"></i> More options</a>
+                </div>
+              </div>
+
+              <div id="postajob">
+                  
+                <div class="form-group col-md-12 ">
+                  <label for="title">Contract Type :</label>
+                  <div class="default">
+                    <div class="filter-option">
+                      <input type="checkbox"> Permanent </input>
+                    </div>
+                    <div class="filter-option">
+                      <input type="checkbox"> Contract</input>
+                    </div>
+                    <div class="filter-option">
+                      <input type="checkbox"> Temporary</input>
+                    </div>
+                    <div class="filter-option">
+                     <input type="checkbox"> Self Employed</input>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group col-md-12 ">
+                  <label for="title">Hours :</label>
+                  <div class="default">
+                    <div class="filter-option">
+                      <input type="checkbox"> Full Time</input>
+                    </div>
+                    <div class="filter-option">
+                      <input type="checkbox"> Part Time </input>
+                    </div>
+                    <div class="filter-option">
+                      <input type="checkbox"> Flexible Hours </input>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group col-md-12 ">
+                  <label for="title">Recruiter Type :</label>
+                  <div class="default">
+                    <div class="filter-option">
+                      <input type="checkbox"> Recruitment Consultant </input>
+                    </div>
+                    <div class="filter-option">
+                      <input type="checkbox"> Direct Employer </input>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group col-md-12 ">
+                <div id="lessfields" class="pull-right">
+                      <a href="javascript:void(0)"><i class="fa fa-minus-circle" aria-hidden="true"></i> Less fields</a>
+                    </div>
+                  </div>
+
+              <div class="col-md-12 text-center">
+                <button type="submit" class="btn button save margin-2" ng-click="submitted=true">Email me jobs like this</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>        
+    <!-- Content start here -->
+  </div>
+</div>
+
+<script type="text/javascript">
+$("html,body").scrollTop(0);
+</script>
+
+<script>
+$(document).ready(function(){
+  $("#postajob").hide();
+  $("#lessfields").hide();
+    $("#morefields").click(function(){
+      $("#lessfields").show();
+      $("#morefields").hide();
+        $("#postajob").toggle();
+    });
+
+    $("#lessfields").click(function(){
+      $("#morefields").show();
+      $("#lessfields").hide();
+        $("#postajob").toggle();
+    });
+});
+
+</script>
+ 
+ <script>
+  $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?') 
+     .done (function(location)
+     {
+        var country=location.country_name;
+        var state=location.state;
+        var city=location.city;
+      $("#location").val(city+", "+state+", "+country);
+     });
+    
+
+$(function () { 
+    $('#sectors').multiselect({ 
+        buttonText: function(options, select) {
+            console.log(select[0].length);
+            if (options.length === 0) {
+                return 'None selected';
+            }
+            if (options.length === select[0].length) {
+                return 'All selected ('+select[0].length+')';
+            }
+            else if (options.length >= 4) {
+                return options.length + ' selected';
+            }
+            else {
+                var labels = [];
+                console.log(options);
+                options.each(function() {
+                    labels.push($(this).val());
+                });
+                return labels.join(', ') + '';
+            }
+        }
+    
+    });
+});
+
+</script>

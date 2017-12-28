@@ -1,0 +1,126 @@
+
+<!---Sign In start here -->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content signin">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">SIGN IN</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-pills">
+          <li class="active"><a data-toggle="tab" href="#employee_signin">Employee</a></li>
+          <li><a data-toggle="tab" href="#employer_signin">Employer</a></li>
+          
+        </ul>
+
+        <div class="tab-content">
+    
+          <!-- Employee start-->
+            <div id="employee_signin" class="tab-pane fade in active">
+              <div class="register-box-body">
+                <form action="#" method="post">
+                  <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="Email">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <input type="password" class="form-control" placeholder="Password">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-5">
+                      <div class="checkbox icheck">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox"> Remember me
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-xs-7">
+                      <div class="checkbox icheck">
+                        <div class="checkbox text-right">
+                          <a href="forgotpassword.html">I forgot my password</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 text-center">  
+                      <button type="submit" class="btn button text-center">Sign In</button>
+                    </div>
+                    <!-- /.col -->
+                  </div>
+                </form>
+
+                <div class="social-auth-links text-center">
+                <p>- OR -</p>
+                <a class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
+                <a class="btn btn-social-icon btn-google"><i class="fa fa-google-plus"></i></a>
+                </div>
+                <div class="col-sm-12 text-center">
+                <!--<a href="javascript::void();" data-toggle="modal" data-target="#myModal" class="text-center already_emp_employer">I already have a Employee / Employer</a>-->
+                <a href="signup.html"  class="text-center">Register a new Employee / Employer</a>
+                </div>
+              </div>
+            </div>
+          <!-- Employee end-->
+      
+          <!-- Employer start-->
+            <div id="employer_signin" class="tab-pane fade">
+             <div class="register-box-body">
+              <form action="#" method="post">
+                <div class="form-group has-feedback">
+                  <input type="text" class="form-control" placeholder="Email">
+                  <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                  <input type="password" class="form-control" placeholder="Password">
+                  <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-5">
+                    <div class="checkbox icheck">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Remember me
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-xs-7">
+                    <div class="checkbox icheck">
+                      <div class="checkbox text-right">
+                        <a href="forgotpassword.html">I forgot my password</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 form-group text-center">  
+                    <button type="submit" class="btn button text-center">Sign In</button>
+                  </div>
+                  <!-- /.col -->
+                </div>
+              </form>
+
+             
+              <div class="col-sm-12 text-center">
+              <!--<a href="javascript::void();" data-toggle="modal" data-target="#myModal" class="text-center">I already have a Employee / Employer</a>-->
+              <a href="signup.html"  class="text-center">Register a new Employee / Employer</a>
+              </div>
+              </div>
+            </div>
+          <!-- Employer end-->
+       
+        </div>
+
+     
+
+      </div>
+    </div>
+  </div>
+</div>
+<!---Sign In end here--->

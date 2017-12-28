@@ -1,0 +1,280 @@
+<style>
+ .bg-image {
+ background-image: url(resource/css/img/home-banner.jpg);
+ background-repeat:no-repeat;
+ background-size:cover;
+ height:400px;
+ width: 100%;
+ margin-bottom:45px;
+ }
+ .title-image {
+  position:absolute;
+  top:200px;
+  left:450px;
+  transform:transalte(-50,-50);
+  color: white;
+  text-align: center;
+ }
+ 
+ .title-image p{
+ margin-bottom:30px;
+ height:72px;
+ font-size:25px;
+ text-align:center;
+ color:#fff;
+ }
+ .title-image h2{
+ font-size:54px;
+ color:#fff;
+ margin-bottom:30px;
+ }
+ .ssBox
+{
+	width: 100%;
+	height: 246px;
+	position: relative;
+	z-index: 1;
+	display:block;
+	text-decoration:none;
+	margin-bottom:30px;
+	text-align:center;
+	overflow:hidden;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+	background: #fe8181; /* Old browsers */
+	background: -moz-linear-gradient(top, 	#222d32 0%, 	#222d32 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, 	#222d32 0%,	#222d32 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, 	#222d32 0%,	#222d32 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='	#222d32', endColorstr='	#222d32',GradientType=0 ); /* IE6-9 */
+	transition: all 3s;
+}
+.ssBox:hover,.ssBox:focus
+{
+	text-decoration:none;
+}
+.ssBox .ssImg
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	margin: auto;
+	vertical-align: middle;
+	opacity: 0.2;
+	z-index: -1;
+	transform: scale(1.0);
+	transition: all 3s;
+}
+.ssTable,.ssTable-hvr
+{
+	display: table;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	transition: all 1s;
+	position: relative;
+}
+.ssTableCell,.ssTableCell-hvr
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+.ssTable
+{
+	top:-100%;
+}
+.ssTable-hvr
+{
+	padding-left: 40px;
+    padding-right: 40px;
+	opacity: 0;
+	top:-100%;
+}
+.ssBox:hover .ssTable
+{
+	top:100%;
+}
+.ssBox:hover .ssTable-hvr
+{
+	top:0%;
+	opacity: 1;
+}
+.ssBox:hover
+{
+	background: #242424; /* Old browsers */
+	background: -moz-linear-gradient(top, #242424 0%, #00000 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #242424 0%,#00000 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #242424 0%,#00000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+.ssBox:hover .ssImg
+{
+	opacity: 0.4;
+	transform: scale(1.1);
+}
+.ssTable-hvr p
+{
+	color: #fff;
+}
+.ssBox .ssIcn i
+{
+	color: #fff;
+	font-size: 60px;
+}
+.ssBox .ssName h4
+{
+	color: #fff;
+	font-size: 24px;
+	margin-top: 20px;
+}
+</style> 
+ <div class="bg-image">
+	<div class="title-image">
+		<h2> <b>Products</b> </h2>
+			<p> Recruiting,Interview room, background check,Hiring help,Branding </p>
+	</div>
+ </div>
+		    <div class="sixServices section-padding">
+    <!-- start sixServices -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <a href="#/recruiting" class="ssBox">
+              <div class="ssTable-hvr">
+                <div class="ssTableCell-hvr">
+                  <p>
+                    Nonumes habemus pri no, mucius aliquando eu sea. Te eum omnes ase urience.
+										Nonumes habemus pri no, mucius aliquando eu sea. Te eum omnes ase urience.
+                  </p>
+                </div>
+              </div>
+              <div class="ssTable">
+                <div class="ssTableCell">
+                  <div class="ssIcn">
+                    <i class="icon-gears"></i>
+                  </div>
+                  <div class="ssName">
+                    <h4>
+                      Recruiting
+                    </h4>
+                  </div>
+                </div>
+              </div>
+             <img src="resource/css/img/ss-1.jpg" class="img-fluid ssImg" />
+            </a>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <a href="#/interview-rooms" class="ssBox">
+              <div class="ssTable-hvr">
+                <div class="ssTableCell-hvr">
+                  <p>
+                    Nonumes habemus pri no, mucius aliquando eu sea. Te eum omnes ase urience.
+										Nonumes habemus pri no, mucius aliquando eu sea. Te eum omnes ase urience.
+                  </p>
+                </div>
+              </div>
+              <div class="ssTable">
+                <div class="ssTableCell">
+                  <div class="ssIcn">
+                    <i class="icon-tools"></i>
+                  </div>
+                  <div class="ssName">
+                    <h4>
+                     Interview Room
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <img src="resource/css/img/ss-2.jpg" class="img-fluid ssImg" />
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="#/background-check" class="ssBox">
+              <div class="ssTable-hvr">
+                <div class="ssTableCell-hvr">
+                  <p>
+                    Nonumes habemus pri no, mucius aliquando eu sea. Te eum omnes ase urience.
+										Nonumes habemus pri no, mucius aliquando eu sea. Te eum omnes ase urience.
+                  </p>
+                </div>
+              </div>
+              <div class="ssTable">
+                <div class="ssTableCell">
+                  <div class="ssIcn">
+                    <i class="icon-pencil"></i>
+                  </div>
+                  <div class="ssName">
+                    <h4>
+                     Background Check
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <img src="resource/css/img/ss-3.jpg" class="img-fluid ssImg" />
+            </a>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <a href="#/hiring-help" class="ssBox">
+              <div class="ssTable-hvr">
+                <div class="ssTableCell-hvr">
+                  <p>
+                    Nonumes habemus pri no, mucius aliquando eu sea. Te eum omnes ase urience.
+										Nonumes habemus pri no, mucius aliquando eu sea. Te eum omnes ase urience.
+                  </p>
+                </div>
+              </div>
+              <div class="ssTable">
+                <div class="ssTableCell">
+                  <div class="ssIcn">
+                    <i class="icon-magnifying-glass"></i>
+                  </div>
+                  <div class="ssName">
+                    <h4>
+                      Hiring Help
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <img src="resource/css/img/ss-4.jpg" class="img-fluid ssImg" />
+            </a>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <a href="#/branding" class="ssBox">
+              <div class="ssTable-hvr">
+                <div class="ssTableCell-hvr">
+                  <p>
+                    Nonumes habemus pri no, mucius aliquando eu sea. Te eum omnes ase urience.
+										Nonumes habemus pri no, mucius aliquando eu sea. Te eum omnes ase urience.
+                  </p>
+                </div>
+              </div>
+              <div class="ssTable">
+                <div class="ssTableCell">
+                  <div class="ssIcn">
+                    <i class="icon-linegraph"></i>
+                  </div>
+                  <div class="ssName">
+                    <h4>
+                      Branding
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <img src="resource/css/img/ss-5.jpg" class="img-fluid ssImg" />
+            </a>
+          </div>
+          
+         
+          
+        </div>
+      </div>
+    </div>
+    <!-- close sixServices -->
+
+ 
+ 
+    

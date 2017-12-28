@@ -1,0 +1,386 @@
+<style>
+.text-center {
+    padding: 15px;
+    color: #b92719;
+}
+.close {
+    margin-right: 20px;
+    color: #b92719 !important;
+    opacity: .8 !important;
+    margin-top: !important;
+    margin-top: 14px;
+}
+
+ .sub-profiles 
+{
+cursor:pointer;
+
+}
+<!-- .sub-profiles a:hover{
+color:#fff;
+} -->
+.sub-profiles a{
+color:#000;
+}
+
+ .list-group .sub-profiles:hover
+{
+background-color:#696969 !important;
+color:#fff !important;
+}
+
+a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #696969 !important;
+}
+.editpadding {
+    width: 90px;
+    margin-bottom: 0px !important;
+    background-color: #696969;
+}
+
+.sorting_1{
+
+cursor:pointer;
+}
+.resumebtns{
+
+text-align:center;
+background-color:#696969;
+}
+
+</style>
+<div ng-controller="profileViewsController" ng-init="hideShow=true">
+<div class="container" >
+	<div class="row">
+	    <!-- angular view start here-->
+		    <!-- ngView:  -->
+            <section class="content-header ng-scope">
+	          
+	  
+	        </section>
+
+	        <div class="col-md-12 col-sm-12 col-lg-12 ng-scope">
+		        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bhoechie-tab-container">
+		            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 bhoechie-tab-menu">
+		              <div class="list-group">
+		         <!--       <a href="#" class="list-group-item active">
+                      		<i class="fa fa-user" aria-hidden="true">
+			                </i>
+		                    <span class="hidden-xs">Profile</span>
+		                </a>-->
+                                   <a href="" class="list-group-item " ng-click="showDiv = false"  >
+                      	
+		                    <span class="hidden-xs"  ng-click="hideShow=(hideShow ? false : true) " style="display:block">	<i class="fa fa-user" aria-hidden="true">
+			                </i> Profile</span>
+		                </a> 
+						<ul  ng-show="hideShow" class="list-group " id="sidedivbar">
+                        <li ng-repeat="items in resumesList.resumes | orderBy: 'timestamp': true"  class="list-group-item sub-profiles " ng-click="showProfile($index)" >
+                            <a href=""  > <span >{{items.jobProfile}}</span></a></li></ul>
+						<!--
+		                <a href="#" class="list-group-item">
+                      		<i class="fa fa-comment" aria-hidden="true">
+			                </i>
+		                    <span class="hidden-xs">Alerts</span>
+				        </a>
+						-->
+				        <a href="" class="list-group-item" ng-click="showDiv = true;hideShow=false">
+                      		<i class="fa fa-envelope" aria-hidden="true">
+			                </i>
+		                    <span  class="hidden-xs">Cover Letters</span>
+		                </a>
+						<!--
+		                <a href="#" class="list-group-item">
+                      		<i class="fa fa-cog" aria-hidden="true">
+			                </i>
+		                    <span  class="hidden-xs">Settings</span>
+		                </a>
+						-->
+						
+		              </div>
+		            </div>
+		            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 ">
+		                <!-- flight section -->
+										<!--<input type="file" file-model = "myFileReplace" id="resumeupload" style="display: none;" accept=".doc, .docx, .pdf" name="resume" required />-->
+		                <div ng-hide="showDiv" >
+											<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-right" style="margin-bottom:10px;">
+												<a class="btn button" href="#register"> Create New Profile
+												</a>
+											</div><br><br>
+											<div ng-if="resumesList.resumes.length < 1" style="padding: 2%;"><h5>No Resumes Uploaded</h5></div>
+												<div class="panel profilepanel " ng-repeat="items in resumesList.resumes | orderBy: 'timestamp': true" 
+                                                 ng-if="resumesList.resumes.length > 0"   id="panel{{$index}}" >
+			                  <div class="panel-heading">{{items.jobProfile}}
+			                  	<div class="pull-right">
+							 							<input type="radio" ng-change="setDefaultResume(items)" name="default" ng-model="defaultResumeId" value="default_resume"><small> Default Resume</small>
+								 	 				</div>
+			                  </div>
+				                 <div class="new-body">
+													<div class="col-md-2 col-lg-2 col-sm-12 col-xs-12">
+							               <a href="#">
+							                 <center>
+							                   <img type="file" src="resource/css/img/dinesh.png" class="img-responsive img-circle" alt="">
+							                 </center>
+							               </a>
+						           		</div>
+								           <div class="col-md-10 col-lg-10 col-sm-12 col-xs-12"style="margin-bottom:20px;">
+								            	<div>
+																<h2>{{items.fullname}}</h2>
+																<!--<div class="pull-right">
+																	<a class="btn button" data-toggle="modal" data-target="#coverletter" ng-click="toCoverLetter(items)">
+																		Add Cover Letter
+                           				</a>
+																</div>-->
+															</div>
+								            	<div>
+									            	<i class="fa fa-phone" aria-hidden="true"></i>
+								                	<label>
+									                  <b class="ng-binding">{{items.mobile}} &nbsp; &nbsp; {{items.phone}}
+									                  </b>
+									                </label>
+								                </div>
+								            	<div>
+								            		<i class="fa fa-envelope-o" aria-hidden="true"></i>
+									                </i>
+									                <label>
+									                  <b class="ng-binding">{{userobj.userName}}
+									                  </b>
+									                </label>
+								            	</div>
+								            	<div>
+								            		<i class="fa fa-home" aria-hidden="true"></i>
+									                </i>
+									                <label>
+									                  <b class="ng-binding">{{items.address}}
+									                  </b>
+									                </label>
+								            	</div>
+				                    </div>
+									        		<div class="clearfix">
+													
+						                  			</div>
+												</div>
+                    <div class="resumebtns"><!--href="#edit_profile"-->
+									<a class="btn button editpadding"  ng-click="gotoEditResume(items)" title="Edit Resume"> <i class="fa fa-pencil" aria-hidden="true" style=" font-size: 25px;"></i>
+									</a>
+									<a class="btn button editpadding" ng-click="gotoGraphicalResume(items)" data-toggle="tooltip" title="View Resume"> <i class="fa fa-eye" aria-hidden="true" style=" font-size: 25px;"></i>  
+									</a>
+									
+									<a class="btn button editpadding" href="#view_resume" data-toggle="tooltip" title="Download Resume">  <i class="fa fa-download" aria-hidden="true" style=" font-size: 25px;"></i>
+									</a>
+									<a class="btn button editpadding"  href="#view_resume" data-toggle="tooltip" > <i class="fa fa-remove" aria-hidden="true" style=" font-size: 25px;"></i> 
+									</a>
+	                  			</div>
+											</div>
+					            <div class="clearfix">
+			                </div>
+
+		                </div>
+
+		                <div ng-show="showDiv" >
+											<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-right" style="margin-bottom:10px;">
+												<a class="btn button" data-toggle="modal" data-target="#coverletter">
+													Add Cover Letter
+												</a>
+											</div><br><br>
+											<div class="panel" style="overflow: auto;">
+												<div class="panel-heading">Cover Letters
+												</div>
+												<div class="new-body">
+													<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="overflow-x:auto;">
+														<div ng-if="coverLetterArr2.length < 1" style="padding: 2%;"><h5>No Cover Letters Added</h5></div>
+														<table ng-if="coverLetterArr2.length > 0" id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+															<thead>
+																<tr role="row">
+																	<th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Title
+																	</th>
+																	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Description
+																	</th>
+																	<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Remove
+																	</th>
+																</tr>
+															</thead>
+
+															<tbody>
+																<tr role="row" class="odd" ng-repeat="items in coverLetterArr2">
+																	<td class="sorting_1">
+																		<a href="" data-toggle="modal" data-target="#coverletter_preview" ng-click="toDisplayCoverLetter(items)">
+																			{{items.title}}
+																		</a>
+																	</td>
+																	<td>{{items.description}}</td>
+																	<td><span class="glyphicon glyphicon-trash"  style="color:red;"></span></td>
+																	<!--<td>
+																		<a class="btn button" data-toggle="modal" data-target="#coverletter_preview" ng-click="toDisplayCoverLetter(items)">PREVIEW
+																		</a>
+																	</td>-->
+															</tr>
+																	<!-- <tr role="row" class="odd">
+																		<td class="sorting_1">PHP DEVELOPER</td>
+																		<td>01-12-2016</td>
+																		<td>Daily</td>
+																		<td><span class="glyphicon glyphicon-trash"  style="color:red;"></span></td>
+																</tr>
+																<tr role="row" class="even">
+																		<td class="sorting_1">WEB DEVELOPER</td>
+																		<td>06-01-2017</td>
+																		<td>Daily</td>
+																		<td><span class="glyphicon glyphicon-trash" style="color:red;"></span></td>
+																</tr> -->
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+		                </div>
+	<!--	                <div class="bhoechie-tab-content">
+		                <div class="panel">
+		                  <div class="panel-heading">Cover Letters
+		                  </div>
+			               <div class="new-body">
+			               <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="overflow-x:auto;">
+		                     <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+			                    <tbody>
+				                      <tr role="row" class="odd">
+					                      <td class="sorting_1">PHP DEVELOPER</td>
+					                      <td>01-12-2016</td>
+					                      <td>Daily</td>
+					                      <td>
+					                      	<a class="btn button" data-toggle="modal" data-target="#coverletter_preview">PREVIEW
+ 	 																</a>
+					                      </td>
+					                      <td><span class="glyphicon glyphicon-trash"  style="color:red;"></span></td>
+				                     </tr>
+				                     <tr role="row" class="even">
+					                      <td class="sorting_1">WEB DEVELOPER</td>
+					                      <td>06-01-2017</td>
+					                      <td>Daily</td>
+					                      <td>
+					                      	<a class="btn button"  data-toggle="modal" data-target="#coverletter_preview">PREVIEW
+ 	 															</a>
+					                      </td>
+					                      <td><span class="glyphicon glyphicon-trash" style="color:red;"></span></td>
+				                     </tr>
+			                    </tbody>
+			                  </table>
+			               	</div>
+			                  <div>
+				                  <a class="btn button" data-toggle="modal" data-target="#coverletter">Add Cover Letter
+	 	 						  </a>
+ 	 						  </div>
+ 	 						 </div>
+			                </div>
+		                </div>-->
+		
+		            </div>
+	        	</div>
+	    	</div>
+
+
+
+<div class="modal fade" id="coverletter" role="dialog">
+  <div class="modal-dialog margin-top-90">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center">Add Cover Letter</h4>
+      </div>
+      <div class="modal-body">
+        <form name="coverletter" class="form-horizontal" id="coverLetter_1">
+            <div class="form-group">
+							<div class="col-sm-12">
+                <input class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength" ng-model="coverLetterTitle" name="title" id="cltitle" required="" placeholder="Title">
+              </div>
+            </div>
+						<div class="form-group">
+              <div class="col-sm-12">
+                <textarea class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength" ng-model="coverLetterData" cols="3" rows="3"  name="acheivements" id="acheivements" maxlength="250" required="" placeholder="Description">
+                 </textarea>
+              </div>
+            </div>
+        </form>
+      </div>
+
+
+      <div class="modal-footer">
+        <div class="col-xs-12 form-group text-center">
+        <button type="button" class="btn button" data-dismiss="modal" ng-click="addCoverLetter()"> Save</button>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="modal fade" id="coverletter_preview" role="dialog">
+  <div class="modal-dialog margin-top-90">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center">Edit Cover Letter</h4>
+      </div>
+      <div class="modal-body">
+        <form name="coverletter" class="form-horizontal" id="coverLetter_1">
+            <div class="form-group">
+              <!--<div class="col-sm-12">
+                <span>Title
+									<br>
+									<br>
+									Description
+                 </span>
+              </div>-->
+
+							<div class="form-group">
+								<div class="col-sm-10" style="margin-left: 8%;">
+									<input class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength" ng-model="editCoverLetter.coverLetterTitle" name="title" id="cltitle" required="" placeholder="Title">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-10" style="margin-left: 8%;">
+									<textarea class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength" ng-model="editCoverLetter.coverLetterData" cols="3" rows="3"  name="acheivements" id="acheivements" maxlength="250" required="" placeholder="Description">
+									</textarea>
+								</div>
+							</div>
+
+            </div>
+        </form>
+      </div>
+
+			<div class="modal-footer">
+        <div class="col-xs-12 form-group text-center">
+					<button type="button" class="btn button" data-dismiss="modal" ng-click="editCoverLetter()"> Save</button>
+				</div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!--<script>
+$(document).ready(function() {
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+});
+</script>-->
+<style>
+    [id^='panel']{
+        display: none;
+    }
+    [id^='panel']:first-child{
+        display: block;
+    }
+</style>

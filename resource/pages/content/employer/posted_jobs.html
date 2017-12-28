@@ -1,0 +1,1009 @@
+
+  <style>
+    .text-center.form-group {
+      margin-top: 15px;
+    }
+
+
+  .filter_job{float:right;}
+  .job_type_link{padding: 20px;}
+
+
+.activejobs{
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+div#divNotifi a.activejobs {
+    padding-bottom: 0px;
+}
+div#divShowOnActive a.activejobsAI {
+    padding-bottom: 0px;
+}
+.text-center.form-group h4 {
+    text-align: left !important;
+    padding-left: 10px !important;
+}
+.c100.small.active {
+    background: #307bbb;
+}
+.c100.small.active:after {
+    background: #307bbb;
+}
+.c100.small.active span {
+    color: #fff;
+}
+.c100.small.active .bar {
+    background: #fff !important;
+}
+.c100.small.active .fill {
+    background: #fff;
+}
+
+
+.c100.small.hold {
+    background: #ff0000;
+}
+.c100.small.hold:after {
+    background: #ff0000;
+}
+.c100.small.hold span {
+    color: #fff;
+}
+.c100.small.hold .bar {
+    background: #fff !important;
+}
+.c100.small.hold .fill {
+    background: #fff;
+}
+
+
+.c100.small.closed {
+    background: #000;
+}
+.c100.small.closed:after {
+    background: #000;
+}
+.c100.small.closed span {
+    color: #fff;
+}
+.c100.small.closed .bar {
+    background: #fff !important;
+}
+.c100.small.closed .fill {
+    background: #fff;
+}
+
+span.activeclass {
+    background: #307bbb;
+  border: 1px solid #ddd;
+    padding: 5px 15px;
+    border-radius: 6px;
+        margin-left: -10px;
+    color: #fff;
+
+    width: 73px;
+    height: 50px;
+    border-radius: 60%;
+
+}
+.hidediv{
+        position: absolute;
+    z-index: 1024;
+    bottom: 50px;
+    left: 5px;
+    color: #000;
+    border: none;
+    transition: 1s all;
+    display: none;
+}
+
+#hoveract:hover .hidediv{
+    display: block;
+    transition: 1s all;
+}
+.hidediv ul{
+    list-style: none;
+    padding: 0px;
+}
+.hidediv ul li{
+    padding: 0px !important;
+    cursor: pointer;
+    border: none !important;
+    background: red;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    margin-bottom: 5px;
+        font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.holdchild{
+    background: orange !important;
+    
+}
+.closedchild{
+    background: red !important;
+    
+}
+.activechild{
+    background: green !important;
+    
+}
+.flexsearch--input {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 30px;
+    padding: 0 46px 0 10px;
+    border-color: #ddd;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+
+    width: 100%;
+    color: #333;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.flexsearch--submit {
+    position: absolute;
+    right: 0;
+    top:-15px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    margin-top: 0px;
+    margin-right: 5px;
+    background: transparent;
+    color: #888;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 20px;
+    line-height: 60px;
+}
+#divNotifi {
+    width: 117px;
+    position: absolute;
+    top: 25px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    z-index: 10;
+    padding: 0px;
+    background: #fff;
+}
+
+#divShowOnActive {
+    width: 117px;
+    position: absolute;
+    top: 25px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    z-index: 10;
+    padding: 0px;
+    background: #fff;
+}
+
+div#divNotifi a:hover {
+    background: #ddd;
+    width: 100%;
+
+}
+
+div#divNotifi li {
+    padding: 0px 10px;
+}
+
+div#divNotifi li:hover {
+    background: #ddd;
+}
+
+div#divNotifi ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+div#divShowOnActive a:hover {
+    background: #ddd;
+    width: 100%;
+
+}
+
+div#divShowOnActive li {
+    padding: 0px 10px;
+}
+
+div#divShowOnActive li:hover {
+    background: #ddd;
+}
+
+div#divShowOnActive ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+@media (max-width:991px){
+.flexsearch--submit {
+    margin-top: 10px;
+    margin-right: 5px;
+    }
+}
+.jobmaindiv:hover {
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+
+
+  </style>
+
+ 
+   <div class="container  margin-t">
+    <div class="row">
+      <div class="col-sm-12">
+        <section class="content-header">
+          <div class="col-md-4 row">
+            <!--<h1>Posted Job</h1>-->
+          </div>
+
+          <div class="col-md-4">
+            <div id="searchstatus">
+              <form class="flexsearch--form" action="#" method="post">
+                <div class="flexsearch--input-wrapper">
+                  <input class="flexsearch--input" ng-model="searchJob" type="search" placeholder="Search by any keyword">
+                </div>
+                  <!--<input class="flexsearch--submit" type="submit" value="➜">-->
+              </form>
+            </div>
+          </div
+          <div class="col-md-4">
+            <div class="filter_job">
+
+              <div class="filter">
+                <a href="javascript:void(0)" title="Filter" id="btnNoti5">
+                  <img src="resource/css/img/Employer/filter.png" width="24px" height="24px">
+                </a>
+              </div>
+              <br>
+
+              <div class="job_type_link" id="divNotifi">
+              <ul>
+                <li><a href="javascript:void(0)" class="alljobs">All Jobs</a></li>
+                <li><a href="javascript:void(0)" class="activejobs">Active Jobs</a></li>
+                <li><a href="javascript:void(0)" class="holdjobs">Hold Jobs</a></li>
+                <li><a href="javascript:void(0)" class="closedjobs">Closed Jobs</a></li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+
+         <!-- All jobs start here-->
+
+      <div class="all_jobs">
+        <section>
+
+         <!-- <div class="container"  ng-show="myDropDown=='all'">-->
+        <div class="container">
+         <!-- <div class="container">-->
+            <div class="col-md-12">
+
+            </div>
+            <ul id="sortable_all" class="row">
+              <h5 ng-hide="!showEmptyMsg" style="padding: 25px;">No Posted Jobs</h5>
+              <!-- <li class="ui-state-default col-md-3" ng-repeat="items in getJobsByPostedUser | orderBy: 'ParsingDate[0]' : true" ng-hide="!showList"> -->
+              <li class="ui-state-default col-md-3" ng-repeat="items in getJobsByPostedUser | filter : searchJob" ng-hide="!showList">
+                <div class="jobmaindiv">
+                  <div class="box box-block bg-white tile tile-1 m-b-2">
+                  <div class="t-icon right">
+                <!--<a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">-->
+                <a ng-click="gotoEditPostedJob(items)">
+                  <span class="bg-primary"></span>
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                </a>
+                    </div>
+                    <div class="t-content">
+
+                      <div class="panel-heading" ng-if="items.jobDetails.updateParsedJson.JobData.JobProfile[0] != ''" style="min-height: 40px;">
+                        {{items.jobDetails.updateParsedJson.JobData.JobProfile[0] | limitTo : '20'}}
+                      </div>
+                      <div class="panel-heading" ng-if="items.jobDetails.updateParsedJson.JobData.JobProfile[0] == ''" style="min-height: 40px;">
+                        Unknown
+                      </div>
+              
+              <a href="javascript:void(0)" style="float:right; margin-right: 5px" title="Sticky Note" ng-if="items.jobDetails.updateParsedJson.JobData.Notes">
+                <img src="resource/css/img/Employer/sticky.png" width="16px" height="16px">
+              </a>
+                      <div class="text-center form-group">
+                        <!--<img src="../images/01.png" />-->
+                       </div>
+                      <div class="pstyle">
+                        <p style="min-height: 125px; max-height:150px; overflow: hidden;">
+                          Required {{items.jobDetails.updateParsedJson.JobData.ExperienceRequired[0]}} experienced candidate,
+                           as a {{items.jobDetails.updateParsedJson.JobData.JobProfile[0]}} in skills like &nbsp;&nbsp;
+                           {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[0].name}}  &nbsp;&nbsp;
+                           {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[1].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[2].name}}   &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[3].name}}   &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[4].name}}   &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[5].name}}   &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[6].name}}   &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[7].name}}
+                        </p>
+                      </div>
+                      <ul class="list-inline" id="li">
+                        <li class="col-md-4">
+                          <a ng-click="gotoApplicantsList(items, noOfSingleJobApplicants[$index])">
+                            <div class="c100 p20 small green">
+                              <span>{{noOfSingleJobApplicants[$index]}}
+                                </span>
+                                <div class="slice">
+                                <div class="bar">
+                                </div>
+                                <div class="fill">
+                                </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li>
+                      <li class="col-md-4">
+                        <!--<a href="" id="btnShowActive" ng-click="gotoJobDetail(items)">-->
+                        <a href="" id="btnShowActive">                          
+                            <div class="c100 small active" ng-if="items.jobDetails.status == 'active'">
+                              <span>
+                                <!--Active-->
+                                <div id="hoveract">
+                                  Active
+                                  <div class="hidediv">
+                                    <ul>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','active')"  class="activechild">Active</li>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','hold')"  class="holdchild">Hold</li>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','closed')"  class="closedchild">Closed</li>
+                                      </ul>
+                                  </div>
+                                  </div>
+                              </span>
+                              <div class="slice">
+                                <div class="bar">
+                                </div>
+                                <div class="fill">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="c100 small hold" ng-if="items.jobDetails.status == 'hold'">
+                              <span>
+                                <!--Hold-->
+                                 <div id="hoveract">
+                                  Hold
+                                  <div class="hidediv">
+                                    <ul>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','active')"  class="activechild">Active</li>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','hold')"  class="holdchild">Hold</li>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','closed')"  class="closedchild">Closed</li>
+                                      </ul>
+                                  </div>
+                                  </div>
+                              </span>
+                              <div class="slice">
+                                <div class="bar">
+                                </div>
+                                <div class="fill">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="c100 small closed" ng-if="items.jobDetails.status == 'closed'">
+                              <span>
+                                <!--Closed-->
+                                 <div id="hoveract">
+                                  Closed
+                                  <div class="hidediv">
+                                    <ul>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','active')"  class="activechild">Active</li>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','hold')"  class="holdchild">Hold</li>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','closed')"  class="closedchild">Closed</li>
+                                      </ul>
+                                  </div>
+                                  </div>
+                              </span>
+                              <div class="slice">
+                                <div class="bar">
+                                </div>
+                                <div class="fill">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="c100 small inactive" ng-if="items.jobDetails.status == 'inactive'">
+                              <span>Inactive</span>
+                              <div class="slice">
+                                <div class="bar">
+                                </div>
+                                <div class="fill">
+                                </div>
+                              </div>
+                            </div>
+                        </a>
+                        <br>
+
+                        <!-- <div class="job_type_link" id="divShowOnActive">
+                        <ul>
+                          <li><a href="javascript:void(0)" class="alljobsAI">All Jobs</a></li>
+                          <li><a href="javascript:void(0)" class="activejobsAI">Active Jobs</a></li>
+                          <li><a href="javascript:void(0)" class="holdjobsAI">Hold Jobs</a></li>
+                          <li><a href="javascript:void(0)" class="closedjobsAI">Closed Jobs</a></li>
+                        </ul>
+                        </div> -->
+                        </li>
+                        <li class="col-md-4">
+                          <div class="c100 p40 small orange">
+                            <span>40%
+                            </span>
+                            <div class="slice">
+                              <div class="bar">
+                              </div>
+                              <div class="fill">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- All jobs end here-->
+
+      <!-- Active jobs start here (old)-->
+
+      <div class="active_jobs">
+        <section>
+          <!--<div class="container"  ng-show="myDropDown=='old'">-->
+          <div class="container">
+         <!-- <div class="container">-->
+            <div class="col-md-12">
+
+            </div>
+            <ul id="sortable_new" class="row">
+              <h5 ng-if="getActiveNo == 0" style="padding: 25px;">No Active Jobs</h5>
+              <!-- <li class="ui-state-default col-md-3" ng-repeat="items in getJobsByPostedUser | orderBy: 'ParsingDate[0]' : true" ng-hide="!showList"> -->
+              <li class="ui-state-default col-md-3" ng-repeat="items in getActiveJobs | filter : searchJob.jobDetails.updateParsedJson.JobData.JobProfile[0]" ng-if="getActiveNo > 0">
+                <div class="jobmaindiv">
+                  <div class="box box-block bg-white tile tile-1 m-b-2">
+                  <div class="t-icon right">
+                <!--<a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">-->
+                <a ng-click="gotoEditPostedJob(items)">
+                  <span class="bg-primary"></span>
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                </a>
+                    </div>
+                    <div class="t-content">
+
+                      <div class="panel-heading" ng-if="items.jobDetails.updateParsedJson.JobData.JobProfile[0] != ''" style="min-height: 40px;">
+                        {{items.jobDetails.updateParsedJson.JobData.JobProfile[0] | limitTo : '20'}}
+                      </div>
+                      <div class="panel-heading" ng-if="items.jobDetails.updateParsedJson.JobData.JobProfile[0] == ''" style="min-height: 40px;">
+                        Unknown
+                      </div>
+              
+              <a href="javascript:void(0)" title="Sticky Note" ng-if="items.jobDetails.updateParsedJson.JobData.Notes">
+                <img src="resource/css/img/Employer/sticky.png" style="position: absolute; right: 6px; margin-top: 5px;" width="16px" height="16px" ng-click="gotoEditPageWithNote(items)">
+              </a>
+                      <div class="text-center form-group">
+                        <!--<img src="../images/01.png" />-->
+                       </div>
+                      <div class="pstyle">
+                        <p style="min-height: 125px; max-height:150px; overflow: hidden;">
+                          Required {{items.jobDetails.updateParsedJson.JobData.ExperienceRequired[0]}} experienced candidate,
+                           as a {{items.jobDetails.updateParsedJson.JobData.JobProfile[0]}} in skills like   &nbsp;&nbsp;
+                           {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[0].name}}  &nbsp;&nbsp;
+                           {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[1].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[2].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[3].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[4].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[5].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[6].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[7].name}}
+                        </p>
+                      </div>
+                      <ul class="list-inline" id="li">
+                        <li class="col-md-4">
+                          <a ng-click="gotoApplicantsList(items, noOfSingleJobApplicants[$index])">
+                            <div class="c100 p20 small green">
+                              <span>{{noOfSingleJobApplicants[$index]}}
+                                </span>
+                                <div class="slice">
+                                <div class="bar">
+                                </div>
+                                <div class="fill">
+                                </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li>
+                          
+                      <li class="col-md-4">
+                            
+                        <!--<a href="" id="btnShowActive" ng-click="gotoJobDetail(items)">-->
+                        <a href="" id="btnShowActive">
+                              
+                                  
+                             
+                            <div class="c100 small active">
+                              <span>
+                                  
+                              <div id="hoveract">
+                                  Active
+                                  <div class="hidediv">
+                                    <ul>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','active')"  class="activechild">Active</li>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','hold')"  class="holdchild">Hold</li>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','closed')"  class="closedchild">Closed</li>
+                                      </ul>
+                                  </div>
+                                  </div>
+                               <!-- <select ng-model="statusActiveJobArr[$index]" ng-change="changeJobStatus(items, $index, 'fromActive')" style="background: none; border: none; width:50px;">
+                                      <option value="active" ng-selected="true" style="color:#000">Active</option>
+                                      <option value="hold" style="color:#000">Hold</option>
+                                      <option value="closed" style="color:#000">Closed</option>
+                                </select>-->
+                              </span>
+                             
+                              <div class="slice">
+                                <div class="bar">
+                                </div>
+                                <div class="fill">
+                                </div>
+                              </div>
+                            </div>
+                        </a>
+                        <br>
+
+                        <!-- <div class="job_type_link" id="divShowOnActive">
+                        <ul>
+                          <li><a href="javascript:void(0)" class="alljobsAI">All Jobs</a></li>
+                          <li><a href="javascript:void(0)" class="activejobsAI">Active Jobs</a></li>
+                          <li><a href="javascript:void(0)" class="holdjobsAI">Hold Jobs</a></li>
+                          <li><a href="javascript:void(0)" class="closedjobsAI">Closed Jobs</a></li>
+                        </ul>
+                        </div> -->
+                        </li>
+                        <li class="col-md-4">
+                          <div class="c100 p40 small orange">
+                            <span>40%
+                            </span>
+                            <div class="slice">
+                              <div class="bar">
+                              </div>
+                              <div class="fill">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- Active jobs end here (old)-->
+
+
+
+
+      <!-- Hold jobs start here-->
+      <div class="hold_jobs">
+        <section>
+         <!-- <div class="container"  ng-show="myDropDown=='new'">-->
+          <div class="container">
+            <div class="col-md-12">
+
+            </div>
+            <ul id="sortable" class="row">
+              <h5 ng-if="getHoldNo == 0" style="padding: 25px;">No Jobs in Hold</h5>
+              <li class="ui-state-default col-md-3" ng-repeat="items in getHoldJobs | filter : searchJob.jobDetails.updateParsedJson.JobData.JobProfile[0]" ng-if="getHoldNo > 0">
+                <div class="jobmaindiv">
+                  <div class="box box-block bg-white tile tile-1 m-b-2">
+                    <div class="t-icon right">
+                      <span class="bg-primary">
+                      </span>
+                      <a ng-click="gotoEditPostedJob(items)">
+                        <span class="bg-primary"></span>
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                    <div class="t-content">
+                      <div class="panel-heading" ng-if="items.jobDetails.updateParsedJson.JobData.JobProfile[0] != ''" style="min-height: 40px;">
+                        {{items.jobDetails.updateParsedJson.JobData.JobProfile[0] | limitTo : '20'}}
+                      </div>
+                      <div class="panel-heading" ng-if="items.jobDetails.updateParsedJson.JobData.JobProfile[0] == ''" style="min-height: 40px;">
+                        Unknown
+                      </div>
+
+                      <a href="javascript:void(0)" style="float:right; margin-right: 5px" title="Sticky Note" ng-if="items.jobDetails.updateParsedJson.JobData.Notes">
+                        <img src="resource/css/img/Employer/sticky.png" width="16px" height="16px">
+                      </a>
+
+                      <div class="text-center form-group">
+                        <!--<img src="../images/06.png" />-->
+                       </div>
+                      <div class="pstyle">
+                        <p style="min-height: 125px; max-height:150px; overflow: hidden;">
+                          Required {{items.jobDetails.updateParsedJson.JobData.ExperienceRequired[0]}} experienced candidate,
+                           as a {{items.jobDetails.updateParsedJson.JobData.JobProfile[0]}} in skills like   &nbsp;&nbsp;
+                           {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[0].name}}  &nbsp;&nbsp;
+                           {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[1].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[2].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[3].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[4].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[5].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[6].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[7].name}}
+                        </p>
+                      </div>
+                      <ul class="list-inline" id="li">
+
+                        <li class="col-md-4">
+                          <a ng-click="gotoApplicantsList(items, noOfSingleJobApplicants[$index])">
+                            <div class="c100 p20 small green">
+                              <span>{{noOfSingleJobApplicants[$index]}}
+                                </span>
+                                <div class="slice">
+                                <div class="bar">
+                                </div>
+                                <div class="fill">
+                                </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-4">
+                          <!--<a href="" id="btnShowHold" ng-click="gotoJobDetail(items)">-->
+                          <a href="" id="btnShowHold">                            
+                            <div class="c100 small hold">
+                              <span>
+                                <!--Hold-->
+                                  <div id="hoveract">
+                                  Hold
+                                  <div class="hidediv">
+                                    <ul>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','active')"  class="activechild">Active</li>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','hold')"  class="holdchild">Hold</li>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','closed')"  class="closedchild">Closed</li>
+                                      </ul>
+                                  </div>
+                                  </div>
+                                <!--<select ng-model="statusHoldArr[$index]" ng-change="changeJobStatus(items, $index, 'fromHold')" style="background: none; border: none; width:50px;">
+                                    <option>{{items.jobDetails.status}}</option>
+                                    <option value="hold" ng-selected="true" style="color:#000">Hold</option>
+                                    <option value="active" style="color:#000">Active</option>
+                                    <option value="closed" style="color:#000">Closed</option>
+                              </select>-->
+                              </span>
+                              <div class="slice">
+                                <div class="bar">
+                                </div>
+                                <div class="fill">
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-4">
+                          <div class="c100 p90 small orange">
+                            <span>90%
+                            </span>
+                            <div class="slice">
+                              <div class="bar">
+                              </div>
+                              <div class="fill">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- Hold jobs end here-->
+
+      <!-- Closed jobs start here-->
+      <div class="closed_jobs">
+        <section>
+         <!-- <div class="container"  ng-show="myDropDown=='closed'">-->
+          <div class="container">
+            <div class="col-md-12">
+
+            </div>
+            <ul id="sortable_closed" class="row">
+              <h5 ng-if="getClosedNo == 0" style="padding: 25px;">No Closed Jobs</h5>
+              <li class="ui-state-default col-md-3" ng-repeat="items in getClosedJobs | filter : searchJob.jobDetails.updateParsedJson.JobData.JobProfile[0]" ng-if="getClosedNo > 0">
+                <div class="jobmaindiv">
+                  <div class="box box-block bg-white tile tile-1 m-b-2">
+                    <div class="t-icon right">
+                      <span class="bg-primary">
+                      </span>
+                      <a ng-click="gotoEditPostedJob(items)">
+                        <span class="bg-primary"></span>
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </a>
+                    </div>
+                    <div class="t-content">
+                      <div class="panel-heading" ng-if="items.jobDetails.updateParsedJson.JobData.JobProfile[0] != ''" style="min-height: 40px;">
+                        {{items.jobDetails.updateParsedJson.JobData.JobProfile[0] | limitTo : '20'}}
+                      </div>
+                      <div class="panel-heading" ng-if="items.jobDetails.updateParsedJson.JobData.JobProfile[0] == ''" style="min-height: 40px;">
+                        Unknown
+                      </div>
+
+                      <a href="javascript:void(0)" style="float:right; margin-right: 5px" title="Sticky Note" ng-if="items.jobDetails.updateParsedJson.JobData.Notes">
+                        <img src="resource/css/img/Employer/sticky.png" width="16px" height="16px">
+                      </a>
+
+                      <div class="text-center form-group">
+                        <!--<img src="../images/06.png" />-->
+                       </div>
+                      <div class="pstyle">
+                        <p style="min-height: 125px; max-height:150px; overflow: hidden;">
+                          Required {{items.jobDetails.updateParsedJson.JobData.ExperienceRequired[0]}} experienced candidate,
+                           as a {{items.jobDetails.updateParsedJson.JobData.JobProfile[0]}} in skills like  &nbsp;&nbsp;
+                           {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[0].name}}  &nbsp;&nbsp;
+                           {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[1].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[2].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[3].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[4].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[5].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[6].name}}  &nbsp;&nbsp;
+                          {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[7].name}}
+                        </p>
+                      </div>
+                      <ul class="list-inline" id="li">
+
+                        <li class="col-md-4">
+                          <a ng-click="gotoApplicantsList(items, noOfSingleJobApplicants[$index])">
+                            <div class="c100 p20 small green">
+                              <span>{{noOfSingleJobApplicants[$index]}}
+                                </span>
+                                <div class="slice">
+                                <div class="bar">
+                                </div>
+                                <div class="fill">
+                                </div>
+                                </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-4">
+                          <!--<a href="" id="btnShowClosed" ng-click="gotoJobDetail(items)">-->
+                          <a href="" id="btnShowClosed">                            
+                            <div class="c100 small closed">
+                              <span>
+                                <!--Closed-->
+                                  <div id="hoveract">
+                                  Closed
+                                  <div class="hidediv">
+                                    <ul>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','active')"  class="activechild">Active</li>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','hold')"  class="holdchild">Hold</li>
+                                      <li ng-click="changeJobStatus(items, $index, 'fromActive','closed')"  class="closedchild">Closed</li>
+                                      </ul>
+                                  </div>
+                                  </div>
+                                <!--<select ng-model="statusClosedArr[$index]" ng-change="changeJobStatus(items, $index, 'fromClosed')" style="background: none; border: none; width:50px;">
+                                    <option>{{items.jobDetails.status}}</option>
+                                    <option value="active" style="color:#000">Active</option>
+                                    <option value="hold" style="color:#000">Hold</option>
+                                    <option value="closed" ng-selected="true" style="color:#000">Closed</option>
+                              </select>-->
+                              </span>
+                              <div class="slice">
+                                <div class="bar">
+                                </div>
+                                <div class="fill">
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="col-md-4">
+                          <div class="c100 p90 small orange">
+                            <span>90%
+                            </span>
+                            <div class="slice">
+                              <div class="bar">
+                              </div>
+                              <div class="fill">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- closed jobs end here-->
+
+        <br>
+        <br>
+    </div>
+  </div>
+
+
+
+  <script>
+    $(document).on('click', function(e) {
+      var elem = $(e.target).closest('#btnNoti5'),
+        box  = $(e.target).closest('#divNotifi');
+
+      if ( elem.length )
+      {
+        //e.preventDefault();
+        $('#divNotifi').show();
+      }
+      else if (!box.length)
+      {
+        $('#divNotifi').hide();
+      }
+    });
+
+    // $(document).on('click', function(e) {
+    //   var elem = $(e.target).closest('#btnShowActive'),
+    //     box  = $(e.target).closest('#divShowOnActive');
+    //
+    //   if ( elem.length )
+    //   {
+    //     //e.preventDefault();
+    //     $('#divShowOnActive').show();
+    //   }
+    //   else if (!box.length)
+    //   {
+    //     $('#divShowOnActive').hide();
+    //   }
+    // });
+
+    $( document ).ready(function()
+    {
+      $(".active_jobs" ).show();
+      $(".all_jobs" ).hide();
+      $(".hold_jobs" ).hide();
+      $(".closed_jobs" ).hide();
+
+      $(".job_type_link" ).hide();
+
+      /*$( ".filter" ).click(function()
+      {
+        $(".job_type_link").slideToggle("slow");
+      });*/
+
+      $( ".alljobs" ).click(function()
+      {
+
+        $(".all_jobs" ).show();
+        $(".active_jobs" ).hide();
+        $(".hold_jobs" ).hide();
+        $(".closed_jobs" ).hide();
+      });
+
+      $( ".activejobs" ).click(function()
+      {
+        $(".active_jobs" ).show();
+        $(".all_jobs" ).hide();
+        $(".hold_jobs" ).hide();
+        $(".closed_jobs" ).hide();
+      });
+
+      $( ".holdjobs" ).click(function()
+      {
+        $(".hold_jobs" ).show();
+        $(".all_jobs" ).hide();
+        $(".active_jobs" ).hide();
+        $(".closed_jobs" ).hide();
+      });
+
+      $( ".closedjobs" ).click(function()
+      {
+        $(".closed_jobs" ).show();
+        $(".hold_jobs" ).hide();
+        $(".all_jobs" ).hide();
+        $(".active_jobs" ).hide();
+      });
+
+    });
+
+    // Search bar Hide and Show Start here
+    $( document ).ready(function()
+    {
+      $("#searchstatus" ).show();
+
+      $( ".alljobs" ).click(function()
+      {
+        $("#searchstatus" ).show();
+      });
+
+      $( ".activejobs" ).click(function()
+      {
+        $("#searchstatus" ).show();
+      });
+
+      $( ".holdjobs" ).click(function()
+      {
+        $("#searchstatus" ).show();
+      });
+
+      $( ".closedjobs" ).click(function()
+      {
+        $("#searchstatus" ).show();
+      });
+    });
+
+    // Search bar Hide and Show End here
+
+
+    $( function()  //all jobs
+      {
+        $( "#sortable_all" ).sortable();
+        $( "#sortable_all" ).disableSelection();
+      }
+    );
+
+    $( function()  //hold jobs
+      {
+        $( "#sortable" ).sortable();
+        $( "#sortable" ).disableSelection();
+      }
+    );
+
+    $( function()  //active jobs
+      {
+        $( "#sortable_new" ).sortable();
+        $( "#sortable_new" ).disableSelection();
+      }
+    );
+
+    $( function()  //closed jobs
+      {
+        $( "#sortable_closed" ).sortable();
+        $( "#sortable_closed" ).disableSelection();
+      }
+    );
+
+    $('select[name="dept"]').val('all'); // all
+    $('select[name="dept"]').val('old');// active
+    $('select[name="dept"]').val('new'); //hold
+    $('select[name="dept"]').val('closed'); //closed
+      
+      
+      
+      $("#hoveract").hover(function () {
+          alert();
+    $(".hidediv").toggleClass('disp-blk');
+});
+
+
+    </script>
+
+

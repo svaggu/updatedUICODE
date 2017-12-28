@@ -1,0 +1,398 @@
+<div class="container">
+   <div class="row">
+      <section class="content-header">
+         <h1> Detailed Resumes </h1>
+         <a class="btn button editpadding pull-right" href="#edit_profile"> <i class="fa fa-pencil" aria-hidden="true"></i> Edit
+         </a>
+      </section>
+      <!--- content start here-->
+      <div class="col-md-12 col-sm-12 col-lg-12">
+         <div class="modal fade ng-scope" id="myModal12">
+            Resume Headline
+            <div class="modal-content modalstyle">
+               <div class="modal-body">
+                  <img src="/talhire/resources/cvimages/blue-spinner.gif" width="100px">
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="body-content container ng-scope" id="visualResumeCtrl">
+         <div class="row">
+            <!--- 
+               <div class="col-md-3 col-lg-2 pd-r-0 col-sm-4">
+                 <div class="panel shadownone imgheight">
+                   <div class="new-body">
+                     <img ng-src="{}" alt="" width="100px" title="by tresMunkeys" src="{}">
+                   </div>
+                 </div>
+               </div>
+               -->
+            <div class="col-md-12 col-lg-12">
+               <div class="col-md-2 text-center col-lg-offset-1 col-sm-6 col-lg-2 detailedcol-md-2">
+                  <div class="job-icondetailed">
+                     <span class="jobspantext">
+                        <!-- <b style="color:red;">  
+                           </b>-->
+                     </span>
+                     <span class="jobspan color2" ng-show="personalDetails.currentCTC==null &amp;&amp; personalDetails.currentCTCThousand==null">
+                        <span class="jobspantext">
+                           <!-- <b style="color:red;">  
+                              </b>-->
+                        </span>
+                        <span class="jobspantext" style="font-size: 18px;">3 Years
+                        </span>
+                     </span>
+                     <span class="jobspan color1 ng-hide" ng-show="personalDetails.expInYears==100">Fresher
+                     </span>
+                  </div>
+                  <p class="sm-text-left">Experience
+                  </p>
+               </div>
+               <div class="col-md-2 text-center col-sm-6 col-lg-2 detailedcol-md-2">
+                  <div class="job-icondetailed">
+                     <span class="jobspan color2 ng-binding ng-hide" ng-show="personalDetails.currentCTC!=null &amp;&amp; personalDetails.currentCTCThousand!=null">. 
+                     <span class="jobspantext">Lakhs
+                     </span>
+                     </span>
+                     <span class="jobspan color2" ng-show="personalDetails.currentCTC==null &amp;&amp; personalDetails.currentCTCThousand==null">
+                        <span class="jobspantext">
+                           <!-- <b style="color:red;">  
+                              </b>-->
+                        </span>
+                        <span class="jobspantext" style="font-size: 18px;">18,000 Per Month
+                        </span>
+                     </span>
+                  </div>
+                  <p class="sm-text-left">Salary
+                  </p>
+               </div>
+               <div class="col-sm-12 displaynone">&nbsp;
+               </div>
+               <div class="col-md-2 text-center col-sm-6 col-lg-2 detailedcol-md-2">
+                  <div class="job-icondetailed text-center">
+                     <span class="jobspan color3 ng-binding ng-hide" ng-show="personalDetails.noticePeriod!=null">
+                     <span class="jobspantext">Days
+                     </span>
+                     </span>
+                     <span class="jobspan" ng-show="personalDetails.noticePeriod==null">
+                        <span class="jobspantext" style="font-size: 18px;">20 Days
+                        </span>
+                        <!--<b style="color:red;">  Not Updated 
+                           </b>-->
+                     </span>
+                  </div>
+                  <p class="sm-text-left">Notice Period
+                  </p>
+               </div>
+               <div class="col-md-2 text-center col-sm-6 col-lg-2 detailedcol-md-2">
+                  <div class="job-icondetailed">
+                     <span class="jobspan color4 ng-binding" style="font-size: 18px;">Coimbatore
+                     </span>
+                  </div>
+                  <p class="sm-text-left">Current Location
+                  </p>
+               </div>
+               <div class="col-sm-12 displaynone">&nbsp;
+               </div>
+               <div class="col-md-2 text-center col-sm-12 col-lg-2 detailedcol-md-2">
+                  <div class="job-icondetailed">
+                     <span class="jobspan color5 ng-binding" style="font-size: 18px;"> Bangalore
+                     </span>
+                  </div>
+                  <p class="sm-text-left">Preffered Location
+                  </p>
+               </div>
+            </div>
+            <div class="col-md-12">&nbsp;
+            </div>
+            <div class="col-md-5 pd-r-0 pd-right-15" >
+               <div class="panel shadownone resumetitlepanelheight">
+                  <div class="panel-heading deatilednew detailedpanelheading"> Resume Headline
+                  </div>
+                  <div class="new-body">
+                     <div>
+                        <p class="ng-binding">{{detailsToPreview.ExecutiveSummary}}</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-7 ">
+               <div class="panel shadownone">
+                  <div class="panel-heading deatilednew detailedpanelheading"> Education
+                  </div>
+                  <div class="new-body">
+                     <div class="row">
+                        <div class="form-group col-md-4 text-center">
+                           <label class="margin-bt-0 ng-binding">{{detailsToPreview.EducationSplit[0].Degree}}</label><br>  
+                           <span class="labelspan">Highest Degree</span>
+                        </div>
+                        <div class="form-group col-md-4 text-center">
+                           <label class="margin-bt-0 ng-binding">{{detailsToPreview.EducationSplit[0].Aggregate.Value}}</label><br>  
+                           <span class="labelspan">Percentage</span>
+                        </div>
+                        <div class="form-group col-md-4 text-center">
+                           <label class="margin-bt-0 ng-binding">  {{detailsToPreview.EducationSplit[0].Others.Specialization}}</label><br> 
+                           <span class="labelspan">Specialization</span>
+                        </div>
+                        <div class="form-group col-md-4 text-center">
+                           <label class="margin-bt-0 ng-binding">   {{detailsToPreview.EducationSplit[0].Institution.Name}}</label><br>  
+                           <span class="labelspan">  University</span>
+                        </div>
+                        <div class="form-group col-md-4 text-center">
+                           <label class="margin-bt-0 ng-binding">{{detailsToPreview.EducationSplit[0].EndDate}}</label><br>  
+                           <span class="labelspan">Completed Year</span>
+                        </div>
+                        <div class="form-group col-md-4 text-center">
+													<label class="margin-bt-0 ng-binding" ng-if="detailsToPreview.EducationSplit[0].Others.CourseType == 'regular'">    Regular</label>
+													<label class="margin-bt-0 ng-binding" ng-if="detailsToPreview.EducationSplit[0].Others.CourseType == 'correspondance'">    Correspondance</label><br> 
+                          <span class="labelspan">        Course Type</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-12 ">
+               <div class="panel shadownone">
+                  <div class="panel-heading deatilednew detailedpanelheading">Key Skills
+                  </div>
+                  <div class="new-body">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <div id="skill">
+                              <h5>Primary Skills</h5>
+                              <ul class="list-inline">
+                                 <!-- ngRepeat: primaryskill in primaryskills -->
+                              </ul>
+															<div class="col-md-1 col-sm-3 label col-xs-6  label-default" ng-repeat="items in primarySkills">
+                                 <div class="wrapnew ng-binding">{{items.Skill}}</div>
+                              </div>
+                              <!--<div class="col-md-1 col-sm-3 label col-xs-6  label-default">
+                                 <div class="wrapnew ng-binding">HTML</div>
+                              </div>
+                              <div class="col-md-1 col-sm-3 label col-xs-6 label-default">
+                                 <div class="wrapnew ng-binding">CSS</div>
+                              </div>
+                              <div class="col-md-1 col-sm-3 label col-xs-6 label-default">
+                                 <div class="wrapnew ng-binding">PHP</div>
+                              </div>-->
+                              <!--span style="color:red">Not Updated</span>-->
+                           </div>
+                           <div class="col-md-12">
+                              <div id="skill">
+                                 <h5>Secondary Skills</h5>
+                                 <ul class="list-inline">
+                                    <!-- ngRepeat: secondaryskill in secondaryskills -->
+                                 </ul>
+																 <div class="col-md-1 col-sm-3 label col-xs-6 label-default" ng-repeat="items in secSkills">
+                                    <div class="wrapnew ng-binding">{{items.Skill}}</div>
+                                 </div>
+                                 <!--<div class="col-md-1 col-sm-3 label col-xs-6 label-default">
+                                    <div class="wrapnew ng-binding">HTML</div>
+                                 </div>
+                                 <div class="col-md-1 col-sm-3 label label-default col-xs-6 ">
+                                    <div class="wrapnew ng-binding">CSS</div>
+                                 </div>
+                                 <div class="col-md-1 col-sm-3 label label-default col-xs-6 ">
+                                    <div class="wrapnew ng-binding">PHP</div>
+                                 </div>-->
+                                 <!--<span style="color:red">Not Updated</span>-->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-12 pd-left-right-0">
+            <div class="panel shadownone">
+               <div class="panel-heading deatilednew detailedpanelheading">Employment history
+               </div>
+               <div class="new-body ">
+                  <ul class="numberCircle">
+                     <!-- ngRepeat: employer in employmentDetails -->
+                     <li >
+                        <!-- ng-repeat="employer in employmentDetails" class="new1" -->
+                        <div class="new">
+                           <div class="buttonnew flag arrow box1">
+                              <span class="fill fill1">1.4
+                              <span style="font-size: 9px;">Yrs
+                              </span>
+                              </span>
+                           </div>
+                           <div class="line line1">
+                           </div>
+                           <div class="textdiv">
+                              <h4>
+                                 <b class="ng-binding">{{detailsToPreview.firstName}} {{detailsToPreview.lastName}}
+                                 </b> 
+                              </h4>
+                              <h6 class="desg ng-binding">{{detailsToPreview.JobProfile}}
+                              </h6>
+                           </div>
+                           <span class="yeartext ng-binding" ng-show="employer.status=='CURRENT'">
+                           JUL 2015 - Till Date
+                           </span> 
+                           <span class="yeartext ng-binding ng-hide" ng-show="employer.status!='CURRENT'">
+                           JUL 2015 -
+                           </span>
+                        </div>
+                     </li>
+                     <!-- end ngRepeat: employer in employmentDetails -->
+                  </ul>
+                  <!--<div ng-show="employmentDetails==null||employmentDetails.length==0" class="text-center nodata-colr ng-hide">No Employment Added</div>
+                     <div ng-show="employmentDetails!=null &amp;&amp; employmentDetails.length!=0" id="trapezoid" class=""></div>-->
+               </div>
+            </div>
+         </div>
+         <div class="clearfix">
+         </div>
+         <div class="col-md-12 pd-left-right-0">
+            <div class="panel shadownone heightlangcer">
+               <div class="panel-heading deatilednew detailedpanelheading">Languages
+               </div>
+               <div class="new-body">
+                  <!-- ngRepeat: language in languages -->
+                  <div >
+                     <!--<span style="color:red">Not Updated</span>-->
+                     <div>
+                        <div class="stepbar">
+                           <table class="table newtable">
+                              <tbody>
+                                 <tr>
+                                    <td width="25%"><label class="ng-binding"> English</label></td>
+                                    <td ng-show="language.read"><i class="fa fa-book selected"></i></td>
+                                    <td ng-show="!language.read" class="ng-hide"><i class="fa fa-book not-selected"></i></td>
+                                    <td ng-show="language.write"><i class="fa fa-pencil selected"></i></td>
+                                    <td ng-show="!language.write" class="ng-hide"><i class="fa fa-pencil not-selected"></i></td>
+                                    <td ng-show="language.speak"><i class="fa fa-volume-up selected"></i></td>
+                                    <td ng-show="!language.speak" class="ng-hide"><i class="fa fa-volume-up not-selected"></i></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     <div>
+                        <div class="stepbar">
+                           <table class="table newtable">
+                              <tbody>
+                                 <tr>
+                                    <td width="25%"><label class="ng-binding"> Telugu</label></td>
+                                    <td ng-show="language.read"><i class="fa fa-book selected"></i></td>
+                                    <td ng-show="!language.read" class="ng-hide"><i class="fa fa-book not-selected"></i></td>
+                                    <td ng-show="language.write"><i class="fa fa-pencil selected"></i></td>
+                                    <td ng-show="!language.write" class="ng-hide"><i class="fa fa-pencil not-selected"></i></td>
+                                    <td ng-show="language.speak"><i class="fa fa-volume-up selected"></i></td>
+                                    <td ng-show="!language.speak" class="ng-hide"><i class="fa fa-volume-up not-selected"></i></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-12 pd-left-right-0">
+               <div class="panel shadownone heightlangcer">
+                  <div class="panel-heading deatilednew detailedpanelheading">Certifications
+                  </div>
+                  <div class="new-body">
+                     <!-- ngRepeat: certification in certifications -->
+                     <div >
+                        <!-- ngRepeat: certification in certifications -->
+                        <div >
+                           <div class="stepbar">
+                              <table class="table">
+                                 <tbody>
+																	 <h5 ng-if="detailsToPreview.Certification.length < 1 || detailsToPreview.Certification == ''">No Certifications Added</h5>
+																	 <tr ng-repeat="items in detailsToPreview.Certification" ng-if="detailsToPreview.Certification.length > 0">
+                                       <td width="25%"><label class="ng-binding">{{items.certifiedOn}}</label></td>
+                                       <td class="ng-binding">{{items.certificationName}}</td>
+                                    </tr>
+                                    <!--<tr>
+                                       <td width="25%"><label class="ng-binding"> 2015</label></td>
+                                       <td class="ng-binding"> MICROSOFT</td>
+                                    </tr>
+                                    <tr>
+                                       <td width="25%"><label class="ng-binding"> 2016</label></td>
+                                       <td class="ng-binding"> Java</td>
+                                    </tr>
+                                    <tr>
+                                       <td width="25%"><label class="ng-binding"> 2016</label></td>
+                                       <td class="ng-binding"> Android</td>
+                                    </tr>-->
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                        <!-- end ngRepeat: certification in certifications -->
+                     </div>
+                  </div>
+                  <!-- end ngRepeat: certification in certifications -->
+                  <!--
+                     <div >
+                       <span style="color:red">Not Updated</span>
+                     </div>
+                     -->
+               </div>
+            </div>
+         </div>
+         <div class="col-md-12 pd-left-right-0">
+            <div class="panel shadownone margin-bt-0">
+               <div class="panel-heading deatilednew detailedpanelheading">Work Experience
+               </div>
+               <div class="new-body">
+                  <div class="row">
+                     <div class="col-md-3 col-sm-3 col-xs-3">
+                        <i class="fa fa-graduation-cap emailicon newbbexp" aria-hidden="true">
+                        </i>
+                     </div>
+                     <div class="col-md-9 pd-0 col-sm-9">
+                        <label ng-show="personalDetails.expInYears!=100">
+                        <b class="ng-binding">1
+                        years 4 Months
+                        </b>
+                        </label> 
+                        <label ng-show="personalDetails.expInYears==100" class="ng-hide">
+                        <b>Fresher
+                        </b>
+                        </label>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-12 pd-left-right-0">
+            <div class="panel shadownone margin-bt-0">
+               <div class="panel-heading deatilednew detailedpanelheading">Acheivements
+               </div>
+               <div class="new-body">
+                  <div class="row">
+                     <ul>
+											 <h5 ng-if="detailsToPreview.Achievements.length < 1 || detailsToPreview.Achievements == ''">No Acheivements Added</h5>
+											 <li ng-repeat="items in detailsToPreview.Achievements" ng-if="detailsToPreview.Achievements.length > 0">
+                           {{items.name}}
+                        </li>
+                        <!--<li>
+                           Successfully completed major systems update within a tight one-month deadline.
+                        </li>
+                        <li>
+                           Efficiently resolved many client issues, often earning praise from clients for my efforts.
+                        </li>
+                        <li>
+                           Earned a promotion from an entry-level position to lead specialist for my department.
+                        </li>
+                        <li>
+                           Improved office efficiency by updating database.
+                        </li>-->
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!--- content start here-->
+</div>
+</div>

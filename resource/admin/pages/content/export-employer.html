@@ -1,0 +1,259 @@
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Export Employers
+    </h1>
+  </section>
+  <!-- Main content -->
+  <section class="content">
+    <!-- Info boxes -->
+    <div class="box">
+      <form class="form-horizontal ng-pristine ng-valid">
+        <div class="box-header">
+          <h3 class="box-title">Export Filter</h3>
+        </div>
+        <div class="box-body">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Email </label>
+            <div class="col-sm-7">
+              <input type="email" class="form-control" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Product </label>
+            <div class="col-sm-7">
+              <select class="form-control" id="sectors"> 
+                <option value="0">Free Job Posting</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Registration Date </label>
+            <div class="col-sm-7">
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="input-group date">
+                    <div class="input-group-addon">
+                      From <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right" id="registerfrom">
+                  </div>
+                </div>
+                <div class="col-xs-6">
+                  <div class="input-group date">
+                    <div class="input-group-addon">
+                      To &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right" id="registerto">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">&nbsp;</label>
+            <div class="col-sm-7">
+              <div class="table-responsive">
+                <table class="basetable table table-bordered table__export">
+                    <input type="hidden" name="action" value="export">
+                    <thead>
+                        <tr>
+                            <th colspan="6">User Properties to Export</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     <tr class="oddrow">
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[id]" value="1">
+                           <i class="fa"></i>
+                           id
+                           </label>
+                        </td>
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[product]" value="1">
+                           <i class="fa"></i>
+                           product
+                           </label>
+                        </td>
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[user_group]" value="1">
+                           <i class="fa"></i>
+                           user_group
+                           </label>
+                        </td>
+                     </tr>
+                     <tr class="evenrow">
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[active]" value="1">
+                           <i class="fa"></i>
+                           active
+                           </label>
+                        </td>
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[ip]" value="1">
+                           <i class="fa"></i>
+                           ip
+                           </label>
+                        </td>
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[registration_date]" value="1">
+                           <i class="fa"></i>
+                           registration_date
+                           </label>
+                        </td>
+                     </tr>
+                     <tr class="oddrow">
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[FullName]" value="1">
+                           <i class="fa"></i>
+                           Full Name
+                           </label>
+                        </td>
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[username]" value="1">
+                           <i class="fa"></i>
+                           Email
+                           </label>
+                        </td>
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[password]" value="1">
+                           <i class="fa"></i>
+                           Password
+                           </label>
+                        </td>
+                      </tr>
+                      <tr class="evenrow">
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[password]" value="1">
+                           <i class="fa"></i>
+                           Password
+                           </label>
+                        </td>
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[password]" value="1">
+                           <i class="fa"></i>   
+                           Company Name
+                           </label>
+                        </td>
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[password]" value="1">
+                           <i class="fa"></i>
+                           Website
+                           </label>
+                        </td>
+                      </tr>
+                      <tr class="oddrow">
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[password]" value="1">
+                           <i class="fa"></i>
+                           Phone
+                           </label>
+                        </td>
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[password]" value="1">
+                           <i class="fa"></i>
+                           Phone
+                           </label>
+                        </td>
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[password]" value="1">
+                           <i class="fa"></i>
+                           Location
+                           </label>
+                        </td>
+                      </tr>
+                      <tr class="evenrow">
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[password]" value="1">
+                           <i class="fa"></i>
+                           Logo
+                           </label>
+                        </td>
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[password]" value="1">
+                           <i class="fa"></i>
+                           Company Description
+                           </label>
+                        </td>
+                        <td colspan="2">
+                           <label class="cr-styled">
+                           <input type="checkbox" name="export_properties[password]" value="1">
+                           
+                           </label>
+                        </td>
+                     </tr>
+                     <tr class="oddrow">
+                        <td colspan="6">
+                           <a href="javascript::void(0);" onclick="check_all();return false;" class="check btn btn-default">Select All</a> 
+                        </td>
+                     </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-2 control-label">&nbsp; </label>
+            <div class="col-sm-7">
+              <button type="submit" class="btn btn-info">Export</button>
+            </div>
+          </div>
+        </div>
+        <!-- /.box-body -->
+      </form>
+      <!-- /.box-body -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+  <script>
+  $(document).ready(function ()
+   {
+    //bootstrap WYSIHTML5 - text editor
+   	$(".textarea").wysihtml5();
+  });
+  $(document).ready(function(){
+    $('.check:button').toggle(function(){
+        $('input:checkbox').attr('checked','checked');
+        //$(this).val('uncheck all')
+    },function(){
+        $('input:checkbox').removeAttr('checked');
+        $(this).val('check all');        
+    })
+})
+
+
+
+
+$(document).ready(function ()
+{ 
+  $('#registerfrom').datepicker(
+    {
+        autoclose: true
+    });
+
+  $('#registerto').datepicker(
+    {
+        autoclose: true
+    });
+});
+
+</script>

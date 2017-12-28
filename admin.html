@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="jobumesAdmin">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>RedGummi</title>
+
+  <!-- material icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="resource/css/vendor/bootstrap.min.css"/>
+  <link rel="stylesheet" href="resource/css/vendor/bootstrap-theme.css"/>
+  <link rel="stylesheet" href="resource/css/fonts/font-awesome/css/font-awesome.css"/>
+  <link rel="stylesheet" href="resource/css/vendor/datepicker3.css"/>
+  <link rel="stylesheet" href="resource/admin/css/vendor/bootstrap3-wysihtml5.css"/>
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="resource/admin/css/custom/Admin.css"/>
+  <link rel="stylesheet" href="resource/admin/css/custom/skins.css"/>
+  <link rel="stylesheet" href="resource/admin/css/custom/style.css"/>
+  <link rel="stylesheet" href="resource/admin/css/vendor/bootstrap3-wysihtml5.min.css"/>
+
+
+  <!-- Vendor JS -->
+  <script src="resource/js/vendor/jquery-3.1.1.min.js"></script>
+  <script src="resource/admin/js/custom/app.js"></script>
+  <script src="resource/js/vendor/bootstrap.js"></script>
+  <script src="resource/js/vendor/bootstrap-datepicker.js"></script>
+  <script src="resource/admin/js/vendor/bootstrap3-wysihtml5.all.js"></script>
+  <script src="resource/js/vendor/angular.min.js"></script>
+  <script src="resource/js/vendor/angular-route.js"></script>
+
+   <script src="resource/admin/js/vendor/bootstrap3-wysihtml5.all.min.js"></script>
+ <!--  <script src="resource/admin/js/vendor/jquery.dataTables.js"></script>
+  <script src="resource/js/vendor/jquery-ui.js"></script>-->
+
+  <!-- Custom Outside Controller JS -->
+  <script src="resource/admin/js/custom/env.js"></script>
+  <script src="resource/admin/js/custom/script.js"></script>
+  <script src="resource/admin/js/custom/adminLoginController.js"></script>
+  <script src="resource/admin/js/custom/adminDashboardController.js"></script>
+  <script src="resource/admin/js/custom/organisationController.js"></script>
+  <script src="resource/admin/js/custom/manageJobsController.js"></script>
+  <script src="resource/admin/js/custom/manageEmployerController.js"></script>
+  <script src="resource/admin/js/custom/manageResumesController.js"></script>
+  <script src="resource/admin/js/custom/manageJobseekerController.js"></script>
+  <script src="resource/admin/js/custom/jobAlertController.js"></script>
+  <script src="resource/admin/js/custom/emailTemplatesController.js"></script>
+  <script src="resource/admin/js/custom/manageInvoicesController.js"></script>
+  <script src="resource/admin/js/custom/employerProductsController.js"></script>
+  <script src="resource/admin/js/custom/jobseekerProductsController.js"></script>
+  <script src="resource/admin/js/custom/discountsController.js"></script>
+  <script src="resource/admin/js/custom/paymentGatewayController.js"></script>
+  <script src="resource/admin/js/custom/systemSettingsController.js"></script>
+  <script src="resource/admin/js/custom/siteAdminController.js"></script>
+  <script src="resource/admin/js/custom/addEmailTemplateController.js"></script>
+  <script src="resource/admin/js/custom/editEmailTemplateController.js"></script>
+  <script src="resource/admin/js/custom/industryTypeController.js"></script>
+  <script src="resource/admin/js/custom/functionalAreaController.js"></script>
+
+  <!--  End Js files -->
+
+  </head>
+  <body class="hold-transition skin-black sidebar-mini">
+    <div class="wrapper">
+      <div class="header">
+        <div ng-include="'resource/admin/pages/header/header.html'"></div>
+      </div>
+      <div class="content-wrapper">
+      	<div ng-view></div>
+      </div>
+
+      <div class="footercs">
+        <div ng-include="'resource/admin/pages/footer/footer.html'">
+        </div>
+      </div>
+
+    </div>
+  </body>
+
+</html>

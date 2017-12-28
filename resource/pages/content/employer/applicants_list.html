@@ -1,0 +1,474 @@
+<div class="container">
+  <!-- Container start here -->
+  <section class="content-header">
+    <h1>Applicants List
+    </h1>
+
+  </section>
+  <!-- Posted job list table start here -->
+  <div class="col-sm-12" style="overflow-x:auto;">
+    <div class="send_message">
+      <input type="button" name="active" value="Send message"  id="myBtn1" class="btn button save margin-2">
+    </div>
+    <table id="posted_job_list" class="table table-bordered table-hover dataTable">
+      <thead>
+        <tr role="row">
+          <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">
+            <input type="checkbox" id="checkAll">
+          </th>
+          <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Name
+          </th>
+          <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Send mail
+          </th>
+          <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Visa Status
+          </th>
+          <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Status
+          </th>
+          <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Skill Set
+          </th>
+          <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Location
+          </th>
+          <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Date
+          </th>
+          <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Add to Favorite
+          </th>
+          <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">
+            <i class="fa fa-smile-o" aria-hidden="true">
+            </i>
+          </th>
+        </tr>
+      </thead>
+      <br>
+      <tbody>
+        <tr role="row" class="odd" ng-repeat="items in applicantsList">
+          <td>
+            <input type="checkbox" name="chk" value="1" class="checkItem">
+          </td>
+          <td>
+            <div class="imgname">
+              <span class="imgclass">
+                <img src="resource/css/img/Employer/dinesh.jpg" alt="User Image" class="img-circle" height="64">
+              </span>
+              <span class="nameclass">
+                <div class="">
+                  <a href="" ng-click="gotoGraphicalResume(items)">
+                    {{items.jobApplicantDetails.firstName}} {{items.jobApplicantDetails.lastName}}
+                  </a>
+                  <!-- <br>
+                  <span class="skillset"> (Angularjs Developer)
+                  </span> -->
+                </div>
+              </span>
+            </div>
+          </td>
+          <td>
+            <div class="text-center email">
+              <a data-toggle="modal" data-target="#myModal12">
+                <i class="fa fa-envelope" aria-hidden="true">
+                </i>
+              </a>
+            </div>
+          </td>
+          <td>Citizen
+          </td>
+          <td style="color:green;">Active
+          </td>
+          <td>{{items.resume.skills | limitTo : '15'}}
+          </td>
+          <td>{{items.resume.location}}
+          </td>
+          <td>{{items.appliedOn | date}}
+          </td>
+          <td>
+            <div id="toggleclass" ng-click="addToFavourite(items)">
+              <div class="favorite">
+                <i class="fa fa-heart" aria-hidden="true">
+                </i>
+                <i class="fa fa-heart-o" aria-hidden="true" style="display:none">
+                </i>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="smilyicon">
+              <a>
+                <i class="fa fa-frown-o" aria-hidden="true">
+                </i>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <!-- <tr role="row" class="odd">
+          <td>
+            <input type="checkbox" name="chk" value="1" class="checkItem">
+          </td>
+          <td>
+            <div class="imgname">
+              <span class="imgclass">
+                <img src="resource/css/img/Employer/dinesh.jpg" alt="User Image" class="img-circle" height="64">
+              </span>
+              <span class="nameclass">
+                <div class="">
+                  Manjunathan
+                  <br>
+                  <span class="skillset"> (Angularjs Developer)
+                  </span>
+                </div>
+              </span>
+            </div>
+          </td>
+          <td>
+            <div class="text-center email">
+              <a data-toggle="modal" data-target="#myModal12">
+                <i class="fa fa-envelope" aria-hidden="true">
+                </i>
+              </a>
+            </div>
+          </td>
+          <td>Citizen
+          </td>
+          <td style="color:green;">Active
+          </td>
+          <td>Angular JS, Javascript
+          </td>
+          <td>Jubilee Hills, Hyderabad
+          </td>
+          <td>Oct 10
+          </td>
+          <td>
+            <div id="toggleclass">
+              <div class="favorite">
+                <i class="fa fa-heart" aria-hidden="true">
+                </i>
+                <i class="fa fa-heart-o" aria-hidden="true" style="display:none">
+                </i>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="smilyicon">
+              <a>
+                <i class="fa fa-frown-o" aria-hidden="true">
+                </i>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr role="row" class="even">
+          <td>
+            <input type="checkbox" name="chk" value="1" class="checkItem">
+          </td>
+          <td>
+            <div class="imgname">
+              <span class="imgclass">
+                <img src="resource/css/img/Employer/default-avatar.png" alt="User Image" class="img-circle" height="64">
+              </span>
+              <span class="nameclass">
+                <div class="">
+                  John
+                  <br>
+                  <span class="skillset"> (Java Developer)
+                  </span>
+                </div>
+              </span>
+            </div>
+          </td>
+          <td>
+            <div class="text-center email">
+              <a data-toggle="modal" data-target="#myModal12">
+                <i class="fa fa-envelope" aria-hidden="true">
+                </i>
+              </a>
+            </div>
+          </td>
+          <td>EAD
+          </td>
+          <td style="color:green;">Active
+          </td>
+          <td>JAVA, Angular JS, Javascript
+          </td>
+          <td>Banjara Hills, Hyderabad
+          </td>
+          <td>Oct 20
+          </td>
+          <td>
+            <div id="toggleclass">
+              <div class="favorite">
+                <i class="fa fa-heart" aria-hidden="true">
+                </i>
+                <i class="fa fa-heart-o" aria-hidden="true" style="display:none">
+                </i>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="smilyicon">
+              <a>
+                <i class="fa fa-frown-o" aria-hidden="true">
+                </i>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr role="row" class="odd">
+          <td>
+            <input type="checkbox" name="chk" value="1" class="checkItem">
+          </td>
+          <td>
+            <div class="imgname">
+              <span class="imgclass">
+                <img src="resource/css/img/Employer/dinesh.jpg" alt="User Image" class="img-circle" height="64">
+              </span>
+              <span class="nameclass">
+                <div class="">
+                  Mahesh
+                  <br>
+                  <span class="skillset"> (Android Developer)
+                  </span>
+                </div>
+              </span>
+            </div>
+          </td>
+          <td>
+            <div class="text-center email">
+              <a data-toggle="modal" data-target="#myModal12">
+                <i class="fa fa-envelope" aria-hidden="true">
+                </i>
+              </a>
+            </div>
+          </td>
+          <td>Citizen
+          </td>
+          <td style="color:green;">Active
+          </td>
+          <td>JAVA, Angular JS, Javascript
+          </td>
+          <td>Jubilee Hills, Hyderabad
+          </td>
+          <td>Oct 10
+          </td>
+          <td>
+            <div id="toggleclass">
+              <div class="favorite">
+                <i class="fa fa-heart" aria-hidden="true">
+                </i>
+                <i class="fa fa-heart-o" aria-hidden="true" style="display:none">
+                </i>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="smilyicon">
+              <a>
+                <i class="fa fa-frown-o" aria-hidden="true">
+                </i>
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr role="row" class="even">
+          <td>
+            <input type="checkbox" name="chk" value="1" class="checkItem">
+          </td>
+          <td>
+            <div class="imgname">
+              <span class="imgclass">
+                <img src="resource/css/img/Employer/default-avatar.png" alt="User Image" class="img-circle" height="64">
+              </span>
+              <span class="nameclass">
+                <div class="">
+                  Vinay
+                  <br>
+                  <span class="skillset"> (PHP Developer)
+                  </span>
+                </div>
+              </span>
+            </div>
+          </td>
+          <td>
+            <div class="text-center email">
+              <a data-toggle="modal" data-target="#myModal12">
+                <i class="fa fa-envelope" aria-hidden="true">
+                </i>
+              </a>
+            </div>
+          </td>
+          <td>Citizen
+          </td>
+          <td style="color:green;">Active
+          </td>
+          <td>PHP, Javascript, HTML, CSS
+          </td>
+          <td>Jubilee Hills, Hyderabad
+          </td>
+          <td>Oct 10
+          </td>
+          <td>
+            <div id="toggleclass">
+              <div class="favorite">
+                <i class="fa fa-heart" aria-hidden="true">
+                </i>
+                <i class="fa fa-heart-o" aria-hidden="true" style="display:none">
+                </i>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="smilyicon">
+              <a>
+                <i class="fa fa-frown-o" aria-hidden="true">
+                </i>
+              </a>
+            </div>
+          </td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+  <!-- Posted job list table end here-->
+</div>
+<!-- Container end here -->
+<!---Send message popup start here
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> -->
+  <div id="myModal12" class="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content signin">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;
+          </span>
+        </button>
+        <h4 class="modal-title text-center" id="myModalLabel">Send Message
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div class="tab-content">
+          <!-- Employee start-->
+          <div id="employee_signin" class="tab-pane fade in active">
+            <div class="box-body">
+              <div class="form-group">
+                <input class="form-control" placeholder="To:">
+              </div>
+              <div class="form-group">
+
+        <Select id="colorselector" name="templates"  class="form-control">
+          <option>Select Template</option>
+            <option value="template1">Template 1</option>
+            <option value="template2">Template 2</option>
+            <option value="template3">Template 3</option>
+        </Select>
+
+
+              </div>
+              <div class="form-group">
+                <textarea id="template" style="height: 300px;" class="colors form-control" Placeholder="Message"> Template message
+                </textarea>
+                <textarea id="template1" style="display:none; height: 300px;" class="colors form-control" Placeholder="Message"> Hi,
+
+This is test Message
+
+
+
+Thanks & Regards,
+HR
+                </textarea>
+                <textarea id="template2" style="display:none; height: 300px;" class="colors form-control" Placeholder="Message"> Hi,
+
+This is test Message
+
+
+
+Thanks & Regards,
+Human Resource
+                </textarea>
+                <textarea id="template3" style="display:none; height: 300px;" class="colors form-control" Placeholder="Message"> Hi,
+
+This is test Message
+
+
+
+Thanks & Regards,
+HR Manager
+                </textarea>
+              </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+              <div class="pull-right">
+                <button type="submit" class="btn button">
+                  <i class="fa fa-envelope-o">
+                  </i> Send
+                </button>
+                <button type="reset" class="btn btn-default" data-dismiss="modal" aria-label="Close">
+                  <i class="fa fa-times">
+                  </i> Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Employee end-->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!---Send message popup end here-->
+<script>
+  $(document).ready(function()
+    {
+      $(".send_message").hide();
+      $('#checkAll').click(function()
+        {
+          var checkbox = $('.checkItem');
+          checkbox.each(function()
+            {
+              if($(this).prop('checked')==true)
+              {
+                $(this).prop('checked',false);
+                $(".send_message").hide();
+              }
+              else
+              {
+                $(this).prop('checked',true);
+                $(".send_message").show();
+              }
+            });
+        });
+
+    });
+
+  $(".favorite").click(function()
+    {
+      $(this).find('i').toggle();
+    });
+
+  // Get the modal
+var modal = document.getElementById('myModal12');
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn1");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+    $(function() {
+        $('#colorselector').change(function(){
+            $('.colors').hide();
+            $('#' + $(this).val()).show();
+        });
+    });
+
+</script>

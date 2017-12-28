@@ -1,0 +1,128 @@
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Add New Discount Code
+    </h1>
+  </section>
+
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Info boxes -->
+    <div class="box">
+      <!-- /.box-header -->
+      <form class="form-horizontal ng-pristine ng-valid">
+        <div class="box-body">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Discount Code * </label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" value="">
+            </div>
+          </div>
+        
+            <div class="form-group">
+                <label class="col-md-2 control-label">Discount</label>
+                <div class="col-md-3"> 
+		               <input type="text" class="form-control" id="disccount" value="0.00">
+				</div>
+				<div class="col-md-3"> 
+		            <select class="form-control">
+		            	<option>Select Type</option>
+		            	<option>%</option>
+		            	<option>$</option>
+		            </select>
+				</div>
+          </div>
+         
+	        <div class="form-group">
+	            <label class="col-sm-2 control-label">Applies to</label>
+				<div class="col-sm-7">
+				   <select multiple="" class="form-control">
+		             <option>Free Resume Posting</option>
+		             <option>Free Job Posting</option>
+		           </select>
+		        </div>
+	         </div>
+         
+         <div class="form-group">
+            <label class="col-sm-2 control-label">Maximum Uses </label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" value="" id="maximum-uses">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Start Date </label>
+            <div class="col-sm-7">
+              <div class="input-group date">
+	               <div class="input-group-addon">
+	                 <i class="fa fa-calendar"></i>
+	               </div>
+	               <input type="text" class="form-control pull-right" id="datepickerfrom">
+	           </div>
+            </div>
+          </div>
+          
+           <div class="form-group">
+            <label class="col-sm-2 control-label">End Date </label>
+            <div class="col-sm-7">
+              <div class="input-group date">
+	               <div class="input-group-addon">
+	                 <i class="fa fa-calendar"></i>
+	               </div>
+	               <input type="text" class="form-control pull-right" id="datepickerto">
+	           </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+               <label class="col-sm-2 control-label">Active</label>
+               <div class="col-sm-7">
+                 <label class="cr-styled">
+					<input type="checkbox" id="is_active" checked>
+					<i class="fa"></i>
+				 </label>
+               </div>
+          </div>
+          
+          <div class="form-group">
+             <div class="col-sm-offset-3 col-sm-6">
+               <button type="submit" class="btn btn-primary">Submit</button>
+             </div>
+           </div>
+          
+        </div>
+        <!-- /.box-body -->
+      </form>
+
+      <!-- /.box-body -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+  <script>
+  $(document).ready(function ()
+   {
+   
+    //bootstrap WYSIHTML5 - text editor
+   	$(".textarea").wysihtml5();
+  });
+</script>
+<script>
+ 
+$(document).ready(function ()
+{
+
+  $('#datepickerfrom').datepicker(
+    {
+        autoclose: true
+    });
+
+  $('#datepickerto').datepicker(
+    {
+        autoclose: true
+    });
+});
+
+
+</script>

@@ -1,0 +1,642 @@
+<style>
+.headline-bg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 500px;
+  background: url(resource/css/img/767.jpg) no-repeat 50% top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.headline-bg.pricing-headline-bg {
+  background-image:url(resource/css/img/767.jpg);
+}
+.pricing {
+  padding:  0 0 30px;
+    margin-top: -6vw;
+}
+.highlight {
+  color: #000;
+}
+.section-on-bg .title {
+  color: #fff;
+}
+.section-on-bg .intro {
+  color: #fff;
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+.pricing .title {
+  font-size: 54px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #fff;
+}
+.pricing .intro {
+  color: #fff;
+  margin-bottom: 80px;
+}
+    .pricing .item .feature-list li {
+    border-bottom: 1px solid #f3f3f3;
+    padding: 10px;
+    font-size: 12px;
+}
+.pricing .item {
+  padding: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 1px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+.pricing .item.best-buy {
+    transform: scale(1.1) translateY(-5px);
+    z-index: 999;
+  position: relative;
+}
+
+.pricing .item.best-buy .content {
+  padding-bottom: 45px;
+}
+.pricing .item .item-inner {
+  background: #fff;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  position: relative;
+  border: 1px solid #eee;
+}
+
+.pricing .item .heading {
+  margin-top: 0;
+  padding: 30px 15px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-bottom:0px;
+}
+.pricing .item .heading .title {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  font-weight: 400;
+  font-size: 30px;
+  border-bottom: 1px dashed #eee;
+  color: #444;
+}
+.pricing .item .content {
+  padding: 30px 15px;
+  min-height:369px;
+  padding-top: 0;
+  font-size: 14px;
+  width:100%;
+  box-shadow:0 1px 6px rgba(0, 0, 0, 0), 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+.pricing .item .price-figure {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin: 0 auto;
+}
+.pricing .item .price-figure .number {
+  font-size: 42px;
+  font-weight: bold;
+}
+.pricing .item .price-figure .unit {
+  font-weight: 400;
+  color: #b3b3b3;
+}
+.pricing .item .price-figure .currency {
+  top: -12px;
+  right: 2px;
+  position: relative;
+  font-family: arial, sans-serif;
+  color: #666;
+  font-size: 18px;
+}
+.pricing .item .ribbon {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+}
+.pricing .item .ribbon .text {
+  position: relative;
+  left: -8px;
+  top: 18px;
+  width: 158px;
+  padding: 10px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #b92719;
+  -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
+  -moz-transform: rotate(45deg) translate3d(0, 0, 0);
+  -ms-transform: rotate(45deg) translate3d(0, 0, 0);
+  -o-transform: rotate(45deg) translate3d(0, 0, 0);
+}
+.pricing .item .ribbon .text:before,
+.pricing .item .ribbon .text:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  border-top: 5px solid #b92719;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.pricing .item .ribbon .text:before {
+  left: 0;
+}
+.pricing .item .ribbon .text:after {
+  right: 0;
+}
+    .item-inner p{
+        font-size: 14px;
+    }
+    .wrapper {
+    background-color: #fff !important;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset rgba(100, 100, 100, 0.25) 0 1px 1px;
+    text-align: center;
+    padding: 30px;
+        margin-bottom: 2vw;
+        margin-top: 3vw;
+}
+      .wrapper strong {
+    color: #b92917;
+}
+    .faq .panel .panel-title .fa {
+    font-size: 20px;
+    color: #b92917;
+    float: right;
+}
+    .faq .panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #b92917 !important;
+    font-weight: 600;
+            cursor: pointer;
+}
+    .faq .panel-body{
+         font-size: 14px;  
+    }
+    .wrapper h2{
+    font-weight: 300;
+    margin-bottom: 3vw;
+    }
+	.mainlayer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.68);
+    display: table;
+}
+#pricingpage {
+    position: relative;
+    background-image: url(resource/css/img/pic12.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 30vw;
+    background-attachment: fixed;
+}
+.maincaption h1 {
+    font-size: 5rem;
+    color: #fff;
+    letter-spacing: 1px;
+	}
+	.verticalmiddle {
+    vertical-align: middle;
+}
+.pricingbtn {
+    background: #b92719;
+    color: #fff;
+    padding: 10px 20px;
+    text-shadow: none;
+    transition: .2s;
+}
+.content .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 3vw;
+}
+.maincaption {
+    display: table-cell;
+    /* vertical-align: bottom; */
+    text-align: center;
+    padding-bottom: 60px;
+}
+.maincaption p {
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+section:nth-child(even) {
+    background: #f7f7f7;
+}
+.panel{
+min-height:0px;
+}
+.panel-body{
+background-color:#fff;
+padding:15px;
+}
+    .panel-heading {
+    background: #fff;
+        padding: 15px 30px;
+     
+}
+    
+</style>
+<section id="pricingpage">
+<div class="mainlayer">  
+<div class="maincaption verticalmiddle">
+<h1>Different plans for everyone!</h1>
+<p>Choose the pricing that fits your business needs.</p>
+</div>
+</div>
+</section>
+    
+    <!-- ******Pricing Section****** -->
+    <section class="pricing section section-on-bg">
+        <div class="container">
+    
+             <div class="price-cols row">
+                <div class="items-wrapper col-md-12 col-sm-12 col-xs-12 ">
+                    <div class="item price-1 col-md-3 col-sm-12 col-xs-12 text-center">
+                        <div class="item-inner">
+                            <div class="heading">
+                            <h3 class="title"><b>Small</b></h3>
+								<p>3 Job Posting </p>
+                                <p class="price-figure"><span class="price-figure-inner"><span class="currency">$</span><span class="number">5</span><br /><span class="unit"> per month</span></span></p>
+                            </div>
+                            <div class="content">
+                                <ul class="list-unstyled feature-list">
+                                    <li><i class="fa fa-check"></i>Full Customer Support</li>
+                                    <li><i class="fa fa-check"></i>UNLIMITED Candidates</li>
+                                    <li class="disabled"><i class="fa fa-times"></i>Branded Career Pages</li>
+                                    <li class="disabled"><i class="fa fa-times"></i>Social Network Integration</li>
+                                    <li class="disabled"><i class="fa fa-times"></i>New Candidate Alerts</li>
+									 <li class="disabled"><i class="fa fa-times"></i>Mobile Optimized Job Pages</li>
+									  <li class="disabled"><i class="fa fa-times"></i>Candidate Screening Interviews</li>
+									   <li class="disabled"><i class="fa fa-times"></i>Resume Database Alerts</li>
+                                </ul>
+                                <a class="pricingbtn" href="signup.html">Start free trial</a>
+   
+                            </div><!--//content-->
+                        </div><!--//item-inner-->
+                    </div><!--//item--> 
+                    
+                    <div class="item price-2 col-md-3 col-sm-12 col-xs-12 text-center best-buy">
+                        <div class="item-inner">
+                            <div class="heading">
+                            <h3 class="title"><b>Medium</b></h3>
+								<p> 10 Job Posting </p>
+                                <p class="price-figure"><span class="price-figure-inner"><span class="currency">$</span><span class="number">10</span><br /><span class="unit">per month</span></span></p>
+                            </div>
+                            <div class="content">
+                                <ul class="list-unstyled feature-list">
+                                    <li><i class="fa fa-check"></i>Full Customer Support</li>
+                                    <li><i class="fa fa-check"></i>UNLIMITED Candidates</li>
+                                    <li><i class="fa fa-check"></i>Candidate Screening Interviews</li>
+                                    <li><i class="fa fa-check"></i>Mobile Optimized Job Pages</li>
+									<li><i class="fa fa-check"></i>Branded Career Pages</li>
+									<li><i class="fa fa-check"></i>Social Network Integration</li>
+									<li><i class="fa fa-check"></i>New Candidate Alerts</li>
+									<li><i class="fa fa-check"></i>Resume Database Alerts</li>
+                                </ul>
+                                <a class="pricingbtn" href="signup.html">Start free trial</a>
+                            </div><!--//content-->
+                            <div class="ribbon">
+                                <div class="text">Popular</div>
+                            </div><!--//ribbon-->
+                        </div><!--//item-inner-->
+                    </div><!--//item-->  
+                    
+                    <div class="item price-3 col-md-3 col-sm-12 col-xs-12 text-center">
+                        <div class="item-inner">
+                            <div class="heading">
+                                <h3 class="title"><b>Large</b></h3>
+								<p>Customizable</p>
+                                <p class="price-figure"><span class="price-figure-inner"><span class="currency">$</span><span class="number">25</span><br /><span class="unit">per month</span></span></p>
+                            </div>
+                            <div class="content">
+                                <ul class="list-unstyled feature-list">
+                                    <li><i class="fa fa-check"></i>Full Customer Support</li>
+                                    <li><i class="fa fa-check"></i>UNLIMITED Candidates</li>
+                                    <li><i class="fa fa-check"></i>Candidate Screening Interviews</li>
+                                    <li><i class="fa fa-check"></i>Mobile Optimized Job Pages</li>
+									<li><i class="fa fa-check"></i>Branded Career Pages</li>
+									<li><i class="fa fa-check"></i>Social Network Integration</li>
+									<li><i class="fa fa-check"></i>New Candidate Alerts</li>
+									<li><i class="fa fa-check"></i>Resume Database Alerts</li>                                  
+                                </ul>
+                                <a class="pricingbtn" href="signup.html">Start free trial</a>
+                                
+                            </div><!--//content-->
+                        </div><!--//item-inner-->
+                    </div><!--//item--> 
+                                        <div class="item price-3 col-md-3 col-sm-12 col-xs-12 text-center">
+                        <div class="item-inner">
+                            <div class="heading">
+                                <h3 class="title"><b>Extra Large</b></h3>
+								<p>Customizable</p>
+                                <p class="price-figure"><span class="price-figure-inner"><span class="currency">$</span><span class="number">25</span><br /><span class="unit">per month</span></span></p>
+                            </div>
+                            <div class="content">
+                                <ul class="list-unstyled feature-list">
+                                    <li><i class="fa fa-check"></i>Full Customer Support</li>
+                                    <li><i class="fa fa-check"></i>UNLIMITED Candidates</li>
+                                    <li><i class="fa fa-check"></i>Candidate Screening Interviews</li>
+                                    <li><i class="fa fa-check"></i>Mobile Optimized Job Pages</li>
+									<li><i class="fa fa-check"></i>Branded Career Pages</li>
+									<li><i class="fa fa-check"></i>Social Network Integration</li>
+									<li><i class="fa fa-check"></i>New Candidate Alerts</li>
+									<li><i class="fa fa-check"></i>Resume Database Alerts</li>                                  
+                                </ul>
+                                <a class="pricingbtn" href="signup.html">Start free trial</a>
+                                
+                            </div><!--//content-->
+                        </div><!--//item-inner-->
+                    </div><!--//item-->  
+                </div><!--//items-wrapper-->                   
+            </div><!--//row-->
+        </div><!--//container-->
+    </section><!--//pricing-->
+    
+    <!-- ******FAQ Section****** --> 
+    <section class="faq section has-bg-color">
+        <div class="container">
+            
+            		<div class="wrapper clearfix">
+				<h4>
+				<i class="fa fa-phone"></i>
+              Unsure which plan is best for you? You can call our sales team any day at <strong>1-800-123-4567</strong>
+              
+				</h4>
+			</div>
+            <h2 class="title text-center">Frequently Asked Questions</h2>
+            <div class="row">
+                <div class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 col-xs-offset-0">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            
+                            <h4 class="panel-title acc-head"   data-headid="acclink1"><i class="fa fa-plus-square"></i>How many job boards do you post to?</h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="acclink1">
+                            <div class="panel-body">
+                                100+ top job boards and counting. Plus, distribution to millions in daily job alert emails.
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+            
+                    <div class="panel">
+                        <div class="panel-heading">
+                            
+                            <h4 class="panel-title acc-head"   data-headid="acclink2"><i class="fa fa-plus-square"></i>Can I cancel at anytime?</h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="acclink2">
+                            <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                accusamus terry richardson ad squid. 3 wolf moon officia
+                                aute, non cupidatat skateboard dolor brunch. Food truck
+                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                sunt aliqua put a bird on it squid single-origin coffee
+                                nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                helvetica, craft beer labore wes anderson cred nesciunt
+                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                Leggings occaecat craft beer farm-to-table, raw denim
+                                aesthetic synth nesciunt you probably haven't heard of them
+                                accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+            
+                    <div class="panel">
+                        <div class="panel-heading">
+                            
+                            <h4 class="panel-title acc-head"   data-headid="acclink3"><i class="fa fa-plus-square"></i>Can I add more people to my account?</h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="acclink3">
+                            <div class="panel-body">
+                               Yes! Depending on your plan, you may already have extra users included. You can also purchase additional users as you need them!.
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+                    
+                    <div class="panel">
+                        <div class="panel-heading">
+                            
+                            <h4 class="panel-title acc-head"   data-headid="acclink4"><i class="fa fa-plus-square"></i>Do I need a card to signup?</h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="acclink4">
+                            <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                accusamus terry richardson ad squid. 3 wolf moon officia
+                                aute, non cupidatat skateboard dolor brunch. Food truck
+                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                sunt aliqua put a bird on it squid single-origin coffee
+                                nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                helvetica, craft beer labore wes anderson cred nesciunt
+                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                Leggings occaecat craft beer farm-to-table, raw denim
+                                aesthetic synth nesciunt you probably haven't heard of them
+                                accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div><!--//panel--> 
+                    
+                   <div class="panel">
+                        <div class="panel-heading">
+                            
+                            <h4 class="panel-title acc-head"   data-headid="acclink5"><i class="fa fa-plus-square"></i>Can I change plans at any time?</h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="acclink5">
+                            <div class="panel-body">
+                                Sure thing. Simply click on the "Account" tab to see your options and either upgrade or downgrade your plan.
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+                    
+                    <div class="panel">
+                        <div class="panel-heading">
+                            
+                            <h4 class="panel-title acc-head"   data-headid="acclink6"><i class="fa fa-plus-square"></i>Is there a limit on candidates I can receive?</h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="acclink6">
+                            <div class="panel-body">
+                                No! Every plan we offer allows for unlimited responses.
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+                    
+                    <div class="panel">
+                        <div class="panel-heading">
+                            
+                            <h4 class="panel-title acc-head"   data-headid="acclink7"><i class="fa fa-plus-square"></i>What if I don't get any candidates?</h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="acclink7">
+                            <div class="panel-body">
+                                ZipRecruiter is the best way to get your job across the web, but we can't control the number of job seekers that apply.
+								We will do everything we can including distribution to 100+ job boards and promotion in daily job alert emails.
+								Plus, feel free to call us for feedback on your job ad.
+                            </div>
+                        </div>
+                    </div><!--//panel-->
+                    
+                    <div class="panel">
+                        <div class="panel-heading">
+                            
+                            <h4 class="panel-title acc-head"   data-headid="acclink8"><i class="fa fa-plus-square"></i>What is the commitment?</h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="acclink8">
+                            <div class="panel-body">
+                                Pay monthly or annually.
+								If you decide to cancel your subscription, it will be cancelled at the end of the subscription period that you chose and you won't be billed again.
+                            </div>
+                        </div>
+                    </div><!--//panel--> 
+					<div class="panel">
+                        <div class="panel-heading">
+                            
+                            <h4 class="panel-title acc-head"   data-headid="acclink9"><i class="fa fa-plus-square"></i>What happens if I downgrade my plan?</h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="acclink9">
+                            <div class="panel-body">
+                                Once the term of your current plan ends, your oldest jobs (over the allowed count) will automatically be removed from job boards.
+                            </div>
+                        </div>
+                    </div><!--//panel-->           
+					<div class="panel">
+                        <div class="panel-heading">
+                            
+                            <h4 class="panel-title acc-head"   data-headid="acclink10"><i class="fa fa-plus-square"></i>How can I pay for RedGummi?</h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="acclink10">
+                            <div class="panel-body">
+                                We accept Visa, Mastercard, Discover, or American Express. Invoicing is available for multi-month plans. Contact us to request invoicing.
+                            </div>
+                        </div>
+                    </div><!--//panel-->           
+					<div class="panel">
+                        <div class="panel-heading">
+                            
+                            <h4 class="panel-title acc-head"   data-headid="acclink11"><i class="fa fa-plus-square"></i>How can I imperdiet lorem sem non nisl?</h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="acclink11">
+                            <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                accusamus terry richardson ad squid. 3 wolf moon officia
+                                aute, non cupidatat skateboard dolor brunch. Food truck
+                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                sunt aliqua put a bird on it squid single-origin coffee
+                                nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                helvetica, craft beer labore wes anderson cred nesciunt
+                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                Leggings occaecat craft beer farm-to-table, raw denim
+                                aesthetic synth nesciunt you probably haven't heard of them
+                                accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div><!--//panel-->           
+					<div class="panel">
+                        <div class="panel-heading">
+                            
+                            <h4 class="panel-title acc-head"   data-headid="acclink12"><i class="fa fa-plus-square" id="icon" ></i>How can I imperdiet lorem sem non nisl?</h4>
+                        </div>
+            
+                        <div class="panel-collapse collapse" id="acclink12">
+                            <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                accusamus terry richardson ad squid. 3 wolf moon officia
+                                aute, non cupidatat skateboard dolor brunch. Food truck
+                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                sunt aliqua put a bird on it squid single-origin coffee
+                                nulla assumenda shoreditch et. Nihil anim keffiyeh
+                                helvetica, craft beer labore wes anderson cred nesciunt
+                                sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                Leggings occaecat craft beer farm-to-table, raw denim
+                                aesthetic synth nesciunt you probably haven't heard of them
+                                accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div><!--//panel-->           	
+                </div>
+            </div><!--//row-->
+      
+		
+	
+		</div>	
+      
+    </section><!--//faq-->
+	
+			
+			
+
+   <script>
+$(".acc-head").click(function(){
+	var id=$(this).attr("data-headid");
+	$("[id^='acclink']").removeClass("in");
+	$("#"+id).addClass("in");
+});
+</script>
+    
+    
+    
+            
+</body>
+</html> 
+

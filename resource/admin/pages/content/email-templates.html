@@ -1,0 +1,79 @@
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Email Templates
+    </h1>
+  </section>
+    
+  <!-- Main content -->
+  <section class="content">
+    <!-- Info boxes -->
+    <div class="box">
+      <div class="box-body">
+        <div id="emailtemplates" class="dataTables_wrapper dt-bootstrap">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="scroll-auto">
+                <table id="emailtemplate" class="table table-bordered table-hover dataTable" role="grid">
+                  <thead>
+                    <tr role="row">
+                      <th class="sorting">
+                         Template Name
+                      </th>
+                      <th class="sorting">
+                        Actions
+                      </th>
+                      <th class="sorting">
+                        <div style="float: right;">
+                          <a href="#/add-email-templates" title="Edit" class="btn btn-info">Add Template</a>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="items in templatesList">
+                      <td class="td-wide">
+                        {{items.title}}
+                      </td>
+                      <td class="td-wide">
+                        <a href="" ng-click="gotoEditEmailTemplate(items)" title="Edit" class="btn btn-info">Edit</a>
+                      </td>
+                    </tr>
+                    <!--<tr>
+                      <td class="td-wide">
+                        Application Email to Employer
+                      </td>
+                      <td class="td-wide">
+                        <a href="#/edit-email-templates" title="Edit" class="btn btn-info">Edit</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-wide">
+                        Employer Welcome Email
+                      </td>
+                      <td class="td-wide">
+                        <a href="#/edit-email-templates" title="Edit" class="btn btn-info">Edit</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-wide">
+                        Job Alert
+                      </td>
+                      <td class="td-wide">
+                        <a href="#/edit-email-templates" title="Edit" class="btn btn-info">Edit</a>
+                      </td>
+                    </tr>-->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- /.box-body -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+  

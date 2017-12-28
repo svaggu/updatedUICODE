@@ -1,0 +1,68 @@
+	<style>
+		.margintop-55 {
+    	margin-top: 65px;
+		}
+		.dummy {
+    vertical-align: middle;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+.display {
+    display: -webkit-inline-box;
+}
+	</style>
+
+		<div class="margintop-55">
+			<div class="container">
+				<div class="row">
+				    <!-- angular view start here-->
+				    <div id="main">
+					    <!-- ngView:  -->
+				    	<div>
+					        <section class="content-header ng-scope">
+					          <h1> Give Feedback
+					          </h1>
+					        </section>
+					        <!--- content start here -->
+					        <div class="col-md-12 col-sm-12 col-lg-12 ng-scope">
+					        	<div class="panel">
+						            <div class="panel-heading">
+						            	<div class="display">
+					                   		<img type="file" src="resource/css/img/Employer/dinesh.jpg" class="img-responsive img-circle" alt="" style="height: 90px;width: 90px;">
+					                   		<div class="dummy">	Harish <br>
+					                   		<small> worked at convergence</small>
+					                   		</div>
+										</div>
+						            </div>
+						            <div class="new-body">
+						      	        <div class="row">
+							              	<div class="col-md-12">
+							                    <div class="form-group col-md-12">
+												 	<label for="title">Give a feedback *:</label>
+												 	<textarea  class="form-control textarea" placeholder=""> </textarea>
+												</div>
+							                </div> 
+							                <div class="col-md-12 text-center">
+												<button type="submit" class="btn button save margin-2" ng-click="submitted=true">Submit</button>
+											</div>
+							    		</div>
+						    			<!-- angular view end here-->  
+						  			</div>
+						  
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	
+<script>
+  $(document).ready(function ()
+   {
+   
+    //bootstrap WYSIHTML5 - text editor
+   	$(".textarea").wysihtml5();
+  });
+</script>

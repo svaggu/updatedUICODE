@@ -1,0 +1,420 @@
+<style>
+.listing-title {
+    padding-bottom: 10px;
+    width: 746px;
+}
+</style>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-12 form-group">&nbsp;</div>
+    <div class="col-md-12 form-group">&nbsp;</div>
+    <div class="clearfix"> </div>
+                  
+              <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+      <!-- Search Jobs starts here -->
+                <div class="searchjob">
+                  <form id="frm_jobs_filtration" action="#" method="get" class="search-area search-bg">
+                    <div class="col-lg-6 col-md-6 col-sm-5 pad_0">
+                      <div class="search-input search-icon" >
+                        <span class="icon-search" style="background-image:url(resource/css/img/chair.png)">
+                        </span>
+
+                        <input type="text" placeholder="Company Name or Job Title or Key word" name="job_title" >
+
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 pad_0">
+                      <div class="search-input">
+                        <i class="icon-search7">
+                        </i>
+                        <input type="text" id="location" placeholder="Preferred Locations" name="locations">
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-3 pad_0">
+                      <div class="search-btn">
+                        <input type="submit" class="btncss" name="cs_" value="Search All Jobs">
+                      </div>
+                       <div id="searchadvance" class="pull-right">
+                        <a href="#advance-search"><i class="fa fa-search-plus" aria-hidden="true"></i> Advanced Search</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                
+      <!-- Search Jobs End Here -->
+      
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bhoechie-tab-container padd-l-0">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-1 bhoechie-tab-menu" style="margin-bottom:20px;">
+        <div class="list-group">
+          <a href="#" id="searchJobsInMenu" class="list-group-item text-left" style="display: none">
+            <i class="fa fa-search" title="Search Jobs" aria-hidden="true"></i> <span class="hidden-xs" > Search Jobs</span>
+          </a>
+          <a href="#" id="recommendedJobsInMenu" class="list-group-item text-left">
+            <i class="fa fa-thumbs-up" title="Recommended Jobs"  aria-hidden="true"></i> <span class="hidden-xs"> Recommended Jobs</span>
+          </a>
+          <a href="#" id="appliedJobsInMenu" class="list-group-item text-left">
+            <i class="fa fa-share" title="Applied Jobs" aria-hidden="true"></i> <span class="hidden-xs"> Applied Jobs</span>
+          </a>
+          <a href="#" id="savedJobsInMenu" class="list-group-item text-left">
+            <i class="fa fa-floppy-o" title="Saved Jobs" aria-hidden="true"></i> <span class="hidden-xs"> Saved Jobs</span>
+          </a>
+		 
+        </div>
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-10 col-xs-11 bhoechie-tab">
+          <!-- Search job section -->
+          <div id="searchJobId" class="bhoechie-tab-content">
+            <div class="new-body">
+              <div class="row">
+                
+              </div>
+            </div>
+            <!-- search_jobs end here-->
+            <div> <!-- ng-show="searchedJobs.length==0 &amp;&amp; status=='YES'" class="ng-hide"
+              <span>No Jobs found..
+              </span> -->
+            </div>
+          </div>
+          <!-- recommendedjob section -->
+          <div id="recommendedJobsId" class="bhoechie-tab-content">
+            <div  class="appliedJobs">
+              <div class="">
+
+              <div class="listing-section search-result" ng-repeat="items in recommendedJobs">
+                <div class=" row listing-info">
+                  <div class="col-sm-12 col-md-3 col-lg-2 col-xs-12">
+                    <div class="right-side2">
+                      <a href="">
+                        <center>
+                          <!-- <img src="resource/css/img/red_gummi_logo.jpg" class="img-responsive" style="width:140px; padding: 8px; margin-top: 25px;" /> -->
+                          <img src="{{defaultImgPath.path}}" class="img-responsive img-forJobsLogo" />
+                        </center>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-9 col-lg-10 col-xs-12">
+                    <div class="row">
+                      <div class="left-side1">
+                        <div class="listing-title">
+                          <div class="job-title">
+                            <a href="">{{items.title}}
+                            </a>
+                            <span class="activatedate">
+                              <span class="captions-field">{{items.postedOn}}
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="locationcss">
+                          <ul class="list-inline" style="text-align:left">
+                            <li>
+                              <i class="fa fa-suitcase" aria-hidden="true"></i>
+                              <span class="ng-binding"> {{items.company}}
+                              </span>
+                            </li>
+                            <li>
+                              <i class="fa fa-map-marker" aria-hidden="true"></i>
+                              <span class="ng-binding"> {{items.location}}
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="show-brief">
+                          <div class="description">
+                            {{items.description}}
+                          </div>
+                        </div>
+                        <br>
+                        <div class="locationcss">
+                          <ul class="list-inline" style="text-align:left">
+                            <li>
+                              <i class="fa fa-usd" aria-hidden="true"></i>
+                              <span class="ng-binding"> 10k
+                              </span>
+                            </li>
+                            <li>
+                              <i class="fa fa-home" aria-hidden="true"></i>
+                              <span class="ng-binding"> Management
+                              </span>
+                            </li>
+                            <li>
+                              <i class="fa fa-thermometer-full" aria-hidden="true"></i>
+                              <span class="ng-binding"> Hot Job
+                              </span>
+                            </li>
+                            <li>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <span class="ng-binding"> Full time
+                              </span>
+                            </li>
+                            <li>
+                              <i class="fa fa-graduation-cap" aria-hidden="true">
+                              </i>
+                              <span class="ng-binding">Graduate
+                              </span>
+                            </li>
+                            <a href="#">
+                              <li class="pull-right">
+                                <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                                <span class="ng-binding">Save job</span>
+                              </li>
+                            </a>
+                          </ul>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        
+			 </div>
+           </div>
+         </div>
+          <!-- appliedJobs section -->
+          <div id="appliedJobsId" class="bhoechie-tab-content">
+            <div  class="appliedJobs">
+              <div class="">
+
+              <div ng-hide="!showAppliedEmptyMsg" style="padding: 25px;">
+                <h5>No Applied Jobs</h5>
+              </div>
+              <div class="listing-section search-result" ng-repeat="items in appliedJobs | orderBy: 'jobDetails.updateParsedJson.JobData.ParsingDate[0]': true" ng-click="gotoSingleJobDetails(items)" ng-hide="!showAppliedJobsList">
+                <div class=" row listing-info">
+                  <div class="col-sm-12 col-md-3 col-lg-2 col-xs-12">
+                    <div class="right-side2">
+                      <a href="">
+                        <center>
+                          <!-- <img src="resource/css/img/red_gummi_logo.jpg" class="img-responsive" style="width:140px; padding: 8px; margin-top: 25px;" /> -->
+                          <img src="{{defaultImgPath.path}}" class="img-responsive img-forJobsLogo" />
+                        </center>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-9 col-lg-10 col-xs-12">
+                    <div class="row">
+                      <div class="left-side1">
+                        <div class="listing-title">
+                          <div class="job-title">
+                            <a href="">
+                              {{items.jobDetails.updateParsedJson.JobData.JobProfile[0]}}
+                            </a>
+                            <span class="activatedate">
+                                <span class="captions-field">{{items.appliedOn | date}}
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="locationcss">
+                          <ul class="list-inline" style="text-align:left">
+                            <li>
+                              <i class="fa fa-suitcase" aria-hidden="true"></i>
+                              <span class="ng-binding">
+                                {{items.jobDetails.updateParsedJson.JobData.Organization[0]}}
+                              </span>
+                            </li>
+                            <li>
+                              <i class="fa fa-map-marker" aria-hidden="true"></i>
+                              <span class="ng-binding">
+                                {{items.jobDetails.updateParsedJson.JobData.Location[0]}}
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="show-brief">
+                          <div class="description">
+                          Required {{items.jobDetails.updateParsedJson.JobData.ExperienceRequired[0]}} experienced candidate, as {{items.jobDetails.updateParsedJson.JobData.JobProfile[0]}}
+                            in skills like -- {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[0].name}}, {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[1].name}}...
+                          </div>
+                        </div>
+                        <br>
+                        <div class="locationcss">
+                          <ul class="list-inline" style="text-align:left">
+                            <li>
+                              <i class="fa fa-usd" aria-hidden="true"></i>
+                              <span class="ng-binding"> 10k
+                              </span>
+                            </li>
+                            <li>
+                              <i class="fa fa-home" aria-hidden="true"></i>
+                              <span class="ng-binding"> Management
+                              </span>
+                            </li>
+                            <li>
+                              <i class="fa fa-thermometer-full" aria-hidden="true"></i>
+                              <span class="ng-binding"> Hot Job
+                              </span>
+                            </li>
+                            <li>
+                              <i class="fa fa-star" aria-hidden="true"></i>
+                              <span class="ng-binding"> Full time
+                              </span>
+                            </li>
+                            <li>
+                              <i class="fa fa-graduation-cap" aria-hidden="true">
+                              </i>
+                              <span class="ng-binding">Graduate
+                              </span>
+                            </li>
+                            <!-- <a href="">
+                              <li class="pull-right">
+                                <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                                <span class="ng-binding">Save job</span>
+                              </li>
+                            </a> -->
+                          </ul>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+              </div>
+            </div>
+          </div>
+          <!-- savedjobs section -->
+          <div id="savedJobsId" class="bhoechie-tab-content">
+            <div  class="savedjobs">
+              <div class="">
+				<ul id="sortable_all" class="row">
+          <div ng-hide="!showSavedEmptyMsg" style="padding: 25px;">
+            <h5>No Saved Jobs</h5>
+          </div>
+            <div class="listing-section search-result" ng-repeat="items in savedJobs | orderBy: 'jobDetails.updateParsedJson.JobData.ParsingDate[0]' : true" ng-click="gotoSingleJobDetails(items)" ng-hide="!showSavedJobsList">
+              <div class=" row listing-info">
+                <div class="col-sm-12 col-md-3 col-lg-2 col-xs-12">
+                  <div class="right-side2">
+                    <a href="">
+                      <center>
+                        <!-- <img src="resource/css/img/red_gummi_logo.jpg" class="img-responsive" style="width:140px; padding: 8px; margin-top: 25px;" /> -->
+                        <img src="{{defaultImgPath.path}}" class="img-responsive img-forJobsLogo" />
+                      </center>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-9 col-lg-10 col-xs-12">
+                  <div class="row">
+                    <div class="left-side1">
+                      <div class="listing-title">
+                        <div class="job-title">
+                          <a href="">
+                            {{items.jobDetails.updateParsedJson.JobData.JobProfile[0]}}
+                          </a>
+                          <span class="activatedate">
+                              <span class="captions-field">{{items.savedOn | date}}
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="locationcss">
+                        <ul class="list-inline" style="text-align:left">
+                          <li>
+                            <i class="fa fa-suitcase" aria-hidden="true"></i>
+                            <span class="ng-binding">
+                              {{items.jobDetails.updateParsedJson.JobData.Organization[0]}}
+                            </span>
+                          </li>
+                          <li>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span class="ng-binding">
+                              {{items.jobDetails.updateParsedJson.JobData.Location[0]}}
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="show-brief">
+                        <div class="description">
+                        Required {{items.jobDetails.updateParsedJson.JobData.ExperienceRequired[0]}} experienced candidate, as {{items.jobDetails.updateParsedJson.JobData.JobProfile[0]}}
+                          in skills like -- {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[0].name}}, {{items.jobDetails.updateParsedJson.JobData.Skills[0].Skill[1].name}}...
+                        </div>
+                      </div>
+                      <br>
+                      <div class="locationcss">
+                        <ul class="list-inline" style="text-align:left">
+                          <li>
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                            <span class="ng-binding"> 10k
+                            </span>
+                          </li>
+                          <li>
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <span class="ng-binding"> Management
+                            </span>
+                          </li>
+                          <li>
+                            <i class="fa fa-thermometer-full" aria-hidden="true"></i>
+                            <span class="ng-binding"> Hot Job
+                            </span>
+                          </li>
+                          <li>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span class="ng-binding"> Full time
+                            </span>
+                          </li>
+                          <li>
+                            <i class="fa fa-graduation-cap" aria-hidden="true">
+                            </i>
+                            <span class="ng-binding">Graduate
+                            </span>
+                          </li>
+						  <li class="pull-right">
+                                <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                                <span class="ng-binding">Remove job</span>
+                              </li>
+                          
+                        </ul>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+<script>
+$(document).ready(function()
+{
+  $('ul li').click(function()
+  {
+    $('li').removeClass("active");
+    $(this).addClass("active");
+  });
+});
+
+$(document).ready(function()
+{
+  $("#searchjobs").hide();
+    $("#searchadvance").click(function(){
+        $("#searchjobs").toggle();
+    });
+});
+
+
+$.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?')
+ .done (function(location)
+ {
+    var country=location.country_name;
+    var state=location.state;
+    var city=location.city;
+  $("#location").val(city+", "+state+", "+country);
+ });
+
+$(document).ready(function()
+{
+  $("div.bhoechie-tab-menu>div.list-group>a").click(function(e)
+  {
+    e.preventDefault();
+    $(this).siblings('a.active').removeClass("active");
+    $(this).addClass("active");
+    var index = $(this).index();
+    $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+    $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+  });
+});
+</script>

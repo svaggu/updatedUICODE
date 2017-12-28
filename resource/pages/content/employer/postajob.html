@@ -1,0 +1,270 @@
+<div class="container">
+  <div class="row">
+    <section class="content-header">
+     
+    </section>
+
+    <!-- Content start here -->
+
+    <div class="col-md-12">
+            <div class="panel shadownone">
+        <div class="panel-heading deatilednew ">Upload job description</div>
+        <div class="new-body">
+          <div class="row">
+            <form name="jobseekersOther" ng-submit="jobseekersOther.$valid &amp;&amp; savePersonalData('98')" novalidate="" class="ng-pristine ng-invalid-required ng-valid-maxlength ng-submitted ng-invalid">
+
+              <div class="form-group col-md-12">
+                <label for="title">Attach file</label>
+                <input id="postJobFile" type="file" file-model="jobDesFile" accept=".txt, .doc, .docx" name="jobDesFile" required>
+              </div>
+
+              <div class="col-md-12 text-center">
+                <button type="submit" class="btn button save margin-2" ng-click="uploadJobDesFile()">Upload</button>
+              </div>
+          </form>
+         </div>
+          </div>
+      </div>
+      </div>
+      <div class="form-group col-md-12 text-center orclass">
+        - OR -
+      </div>
+
+
+    <div class="col-md-12">
+      <div class="panel shadownone">
+        <div class="panel-heading deatilednew ">Advanced edit option</div>
+        <div class="new-body">
+          <div class="row">
+            <form name="jobseekersOther" ng-submit="jobseekersOther.$valid &amp;&amp; savePersonalData('98')" novalidate="" class="ng-pristine ng-invalid-required ng-valid-maxlength ng-submitted ng-invalid">
+
+            <div class="form-group col-md-4 ">
+              <label for="title">Title </label>
+              <input required= "required" type="text" name="title" ng-model="editJobs.title" class="form-control" placeholder="e.g.: Software Engineer" cols="3" rows="3"  id="title" maxlength="250" required="">
+            </div>
+			<div class="form-group col-md-4 ">
+                <label for="title">Company Name </label>
+                <input required="required" type="text" name="companyName" ng-model="editJobs.companyName" class="form-control" cols="3" rows="3" maxlength="250" required="" placeholder="e.g.: Company Name">
+              </div>
+              <div class="form-group col-md-4 ">
+                <label for="title">Email </label>
+                <input required="required" type="email" name="email" ng-model="editJobs.email" class="form-control" cols="3" rows="3" maxlength="250" placeholder="e.g.: hr@redgummi.com" required="">
+              </div>
+			  <div class="form-group col-md-12 ">
+                <label for="title">Skills</label>
+                <textarea class="form-control" ng-model="editJobs.jobRequirements" cols="3" rows="3" maxlength="250" required=""></textarea>
+              </div>
+
+            <div class="form-group col-md-12 ">
+              <label for="title">Description</label>
+              <textarea class="form-control" cols="3" rows="15" ng-model="editJobs.description" name="description" id="description" maxlength="250" placeholder="e.g.: Job Description"></textarea>
+            </div>
+
+            <div class="form-group col-md-12 ">
+              <div id="morefields" class="pull-right">
+                    <a href="javascript:void(0)"><i class="fa fa-plus-circle" aria-hidden="true"></i> More fields</a>
+                  </div>
+                </div>
+
+            <div id="postajob">
+
+
+              
+               <div class="form-group col-md-4 ">
+                <label for="title">Qualification (Highest Degree)</label>
+                <input required="required" type="text" name="qualification" ng-model="editJobs.qualifications" placeholder="e.g.: Bachelors in Technology" class="form-control" required="">
+              </div>
+              <div class="form-group col-md-4 ">
+                <label for="title">Salary (Per Annum)</label>
+                <input required="required" type="text" name="salaryOffered" ng-model="editJobs.salaryOffered" class="form-control" placeholder="e.g.: 5.0L" required="">
+              </div>
+              <div class="form-group col-md-4 ">
+                <label for="title">Job Type</label>
+                 <select class="form-control" name="status" ng-model="editJobs.jobType">
+                  <option value="">Select</option>
+                  <option value="Part Time">Part Time</option>
+                  <option value="Full Time">Full Time</option>
+                </select>
+              </div>
+			     <div class="form-group col-md-4 ">
+                <label for="title">Number of vacancies </label>
+                <input required="required" type="text" name="numberOfVacanies" ng-model="editJobs.numberOfVacanies" class="form-control" placeholder="e.g.: 5" value="3" required="">
+              </div>
+              <div class="form-group col-md-4 ">
+                <label for="title">Industry Type </label>
+                <select class="form-control" ng-model="editJobs.industryType" id="courseType" name="industrytype" required="">
+                  <option value="">Select Industry Type</option>
+                  <option ng-repeat="items in industryTypeList" ng-value="items.uuid">{{items.name}}</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4 ">
+                <label for="title">Functional Area  </label>
+                <select class="form-control" ng-model="editJobs.functionalArea" id="courseType" name="industrytype" required="">
+                    <option value="">Select Functional Area</option>
+                    <option ng-repeat="items in functionalAreaList" ng-value="items.uuid">{{items.name}}</option>
+                    <!--<option ng-value="editJobs.functionalArea">{{editJobs.functionalAreaName}}</option>-->
+                </select>
+              </div>
+			  <div class="form-group col-md-4 ">
+                <label for="title">Location </label>
+                <input required="required" type="text" name="location" ng-model="editJobs.location" class="form-control" placeholder="Portland,Usa" required="">
+              </div>
+
+            
+                <div class="form-group col-md-4 ">
+								<label for="title">State</label>
+									<select class="form-control" ng-model="editJobs.country" name="country" required="">
+										<option value="">Select State</option>
+										<option value="state" selected="">Alabama</option>
+										<option value="state" selected="">Alaska</option>
+										<option value="state" selected="">Arizona</option>
+										<option value="state" selected="">Arkansas</option>
+										<option value="state" selected="">California</option>
+										<option value="state" selected="">Colorado</option>
+										<option value="state" selected="">Connecticut</option>
+										<option value="state" selected="">Delaware</option>
+										<option value="state" selected="">Florida</option>
+										<option value="state" selected="">Georgia</option>
+										<option value="state" selected="">Hawaii</option>
+										<option value="state" selected="">Idaho</option>
+										<option value="state" selected="">Illinois</option>
+										<option value="state" selected="">Indiana</option>
+										<option value="state" selected="">Iowa</option>
+										<option value="state" selected="">Kansas</option>
+										<option value="state" selected="">Kentucky</option>
+										<option value="state" selected="">Louisiana</option>
+										<option value="state" selected="">Maine</option>
+										<option value="state" selected="">Maryland</option>
+										<option value="state" selected="">Massachusetts</option>
+										<option value="state" selected="">Michigan</option>
+										<option value="state" selected="">Minnesota</option>
+										<option value="state" selected="">Mississippi</option>
+										<option value="state" selected="">Missouri</option>
+										<option value="state" selected="">Montana</option>
+										<option value="state" selected="">Nebraska</option>
+										<option value="state" selected="">Nevada</option>
+										<option value="state" selected="">New Hampshire</option>
+										<option value="state" selected="">New Jersey</option>
+										<option value="state" selected="">New Mexico</option>
+										<option value="state" selected="">New York</option>
+										<option value="state" selected="">North Carolina</option>
+										<option value="state" selected="">North Dakota</option>
+										<option value="state" selected="">Ohio</option>
+										<option value="state" selected="">Oklahoma</option>
+										<option value="state" selected="">Oregon</option>
+										<option value="state" selected="">Pennsylvania</option>
+										<option value="state" selected="">Rhode Island</option>
+										<option value="state" selected="">South Carolina</option>
+										<option value="state" selected="">South Dakota</option>
+										<option value="state" selected="">Tennessee</option>
+										<option value="state" selected="">Texas</option>
+										<option value="state" selected="">Utah</option>
+										<option value="state" selected="">Vermont</option>
+										<option value="state" selected="">Virginia</option>
+										<option value="state" selected="">Washington</option>
+										<option value="state" selected="">West Virginia</option>
+										<option value="state" selected="">Wisconsin</option>
+										<option value="state" selected="">Wyoming</option>
+										
+										
+									</select>
+							</div>
+			  <div class="form-group col-md-4 ">
+                <label for="title">ZIP Code </label>
+                <input type="text" name="number_of_vacanies" class="form-control" cols="3" rows="3" id="title" maxlength="250" value="Enter ZIP Code" required="">
+              </div>
+                
+                 <div class="form-group col-md-12 ">
+                <label for="title">Notes (Optional)</label>
+                <textarea class="form-control" ng-model="editJobs.notes" id="notesField" cols="3" rows="3" maxlength="250" placeholder="e.g.: Notes"></textarea>
+              </div>
+
+              
+              
+
+             
+
+              
+			  <div class="form-group col-md-6">
+                <label for="title">Job Status</label>
+                <select class="form-control" name="status" ng-model="jobStatus">
+                  <option value="">Select</option>
+                  <option value="active">Active</option>
+                  <!--<option value="inactive">Inactive</option>-->
+                  <option value="hold">Hold</option>
+                  <option value="closed">Closed</option>
+                </select>
+              </div>
+
+              
+
+              <div class="form-group col-md-6 ">
+                <label for="title">Hot or Cool Job</label>
+                 <select class="form-control" name="status" ng-model="editJobs.hotCool">
+                  <option value="">Select</option>
+                  <option value="Hot">Hot</option>
+                  <option value="Cool">Cool</option>
+                </select>
+              </div>
+              
+
+              <!-- <div class="form-group col-md-4 ">
+                <label for="title">Country *:</label>
+                <select class="form-control" ng-model="editJobs.country" name="country" required="">
+                  <option value="">Select Country</option>
+                  <option value="india" selected>India</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-4 ">
+                <label for="title">State *:</label>
+                <select class="form-control" ng-model="editJobs.state" name="state" required="">
+                  <option value="">Select State</option>
+                  <option value="telangana" selected>Telangana</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-4 ">
+                <label for="title">City *:</label>
+                <select class="form-control" ng-model="editJobs.city" id="city" name="city" required="">
+                  <option value="">Select City</option>
+                  <option value="hyderabad"selected>Hyderabad</option>
+                </select>
+              </div> -->
+
+            </div>
+            <div class="form-group col-md-12 ">
+              <div id="lessfields" class="pull-right">
+                    <a href="javascript:void(0)"><i class="fa fa-minus-circle" aria-hidden="true"></i> Less fields</a>
+                  </div>
+                </div>
+
+            <div class="col-md-12 text-center">
+              <button type="submit" class="btn button save margin-2" ng-click="editJob()">Submit</button>
+            </div>
+          </form>
+         </div>
+          </div>
+      </div>
+    </div>
+    <!-- Content start here -->
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#postajob").hide();
+  $("#lessfields").hide();
+    $("#morefields").click(function(){
+      $("#lessfields").show();
+      $("#morefields").hide();
+        $("#postajob").toggle();
+    });
+
+    $("#lessfields").click(function(){
+      $("#morefields").show();
+      $("#lessfields").hide();
+        $("#postajob").toggle();
+    });
+});
+</script>

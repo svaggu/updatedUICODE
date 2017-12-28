@@ -1,0 +1,278 @@
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      System Settings 
+    </h1>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Info boxes -->
+    <div class="box">
+      
+      <!-- /.box-header -->
+      <div class="box-body">
+        <div id="invoices" class="dataTables_wrapper dt-bootstrap">
+          <div class="row">
+            <div class="col-sm-12">
+              <ul class="nav nav-tabs">
+			    <li class="active"><a data-toggle="tab" href="system-settings/#general">General</a></li>
+			    <li><a data-toggle="tab" href="system-settings/#jobboard">Job Board</a></li>
+			    <li><a data-toggle="tab" href="system-settings/#ecommerce">Ecommerce</a></li>
+			    <li><a data-toggle="tab" href="system-settings#seo">SEO</a></li>
+			  </ul>
+			
+			  <div class="tab-content">
+			   <div id="general" class="tab-pane fade in active">
+			    <div class="col-sm-9">
+			      <h3>General Settings</h3>
+			      <form class="form-horizontal">
+	                  <div class="form-group">
+	                    <label for="inputName" class="col-sm-3 control-label">Site Name</label>
+	
+	                    <div class="col-sm-9">
+	                      <input type="text" class="form-control" id="inputName" placeholder="Site Name" value="Jobumes">
+	                    </div>
+	                  </div>
+	                  <div class="form-group">
+	                    <label for="inputEmail" class="col-sm-3 control-label">Site Email</label>
+	                    <div class="col-sm-9">
+	                      <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="dineshwalas@gmail.com">
+	                    </div>
+	                  </div>
+	                  <div class="form-group">
+	                    <label for="inputName" class="col-sm-3 control-label">Custom Domain Name</label>
+	                    <div class="col-sm-9">
+	                      <input type="text" class="form-control" id="inputName" placeholder="Name">
+	                    </div>
+	                  </div>
+	                  <div class="form-group">
+	                    <label for="inputExperience" class="col-sm-3 control-label">Enable Maintenance Mode</label>
+	                    <div class="col-sm-9">
+	                      <label class="cr-styled">
+							<input type="checkbox" id="maintenance">
+							<i class="fa"></i>
+						</label>
+	                    <input type="text" class="form-control" id="inputSkills" placeholder="">
+	                    </div>
+	                  </div>
+	                  <div class="form-group">
+	                    <label for="inputSkills" class="col-sm-3 control-label">Timezone</label>
+	                    <div class="col-sm-9">
+	                      <select class="form-control" id="inputSkills">
+	                      	<option>America</option>
+	                      	<option>india</option>
+	                      </select>
+	                    </div>
+	                  </div>
+	                  <div class="form-group">
+	                    <label for="inputSkills" class="col-sm-3 control-label">Date Format</label>
+	                    <div class="col-sm-9">
+	                      <select class="form-control" id="inputSkills">
+	                      	<option>Jan 04</option>
+	                      	<option>Mar 21</option>
+	                      </select>
+	                    </div>
+	                  </div>
+	                  <div class="form-group">
+	                    <label for="inputName" class="col-sm-3 control-label">Google Analytics Id</label>
+	                    <div class="col-sm-9">
+	                      <input type="text" class="form-control" id="inputName" placeholder="">
+	                    </div>
+	                  </div>
+	                  	<div class="form-group">
+	                    <div class="col-sm-offset-3 col-sm-10">
+	                      <div class="checkbox">
+	                      	<label class="cr-styled">
+								<input type="checkbox" id="isAgree">
+								<i class="fa"></i>I agree to the <a href="#">terms and conditions</a>
+							</label>
+	                        
+	                      </div>
+	                      
+	                    </div>
+	                  </div>
+	                  <div class="form-group">
+	                    <div class="col-sm-offset-3 col-sm-9">
+	                      <button type="submit" class="btn btn-primary">Submit</button>
+	                    </div>
+	                  </div>
+	                </form>
+			    </div>
+			   </div>
+			    <div id="jobboard" class="tab-pane fade">
+			  		<div class="col-sm-9">
+					      <h3>Jobboard Settings</h3>
+					      <form class="form-horizontal">
+			                  <div class="form-group">
+			                    <label class="col-sm-3 control-label">Enable Public Resume Access</label>
+			                    <div class="col-sm-9">
+			                      <label class="cr-styled">
+									<input type="checkbox" checked id="resumeaccess">
+									<i class="fa"></i>
+								</label>
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="col-sm-3 control-label">Only registered job seekers can apply</label>
+			                    <div class="col-sm-9">
+			                      <label class="cr-styled">
+									<input type="checkbox" id="jobkeepers">
+									<i class="fa"></i>
+								</label>
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="col-sm-3 control-label">Require Employer Approval</label>
+			                    <div class="col-sm-9">
+			                      <label class="cr-styled">
+									<input type="checkbox" id="empapproval">
+									<i class="fa"></i>
+								</label>
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="col-sm-3 control-label">Require Job Approval</label>
+			                    <div class="col-sm-9">
+			                      <label class="cr-styled">
+									<input type="checkbox" id="jobapproval">
+									<i class="fa"></i>
+								</label>
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="col-md-3 control-label">Delete Expired Listings</label>
+			                    <div class="col-md-1"> 
+		                              <label class="cr-styled">
+										<input type="checkbox" checked id="jobapproval">
+										<i class="fa"></i>
+									</label>
+								</div>
+								<div class="col-md-1">
+								After 
+								</div>
+								<div class="col-md-2">
+									<input type="text" class="form-control" id="expiredays" placeholder="10">
+								</div>
+								<div class="col-md-1">
+								Days
+								</div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="col-sm-3 control-label">Search by location</label>
+			                    <div class="col-sm-9">
+			                      <label class="cr-styled">
+									<input type="checkbox" checked id="searchlocation">
+									<i class="fa"></i>
+								</label>
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="col-sm-3 control-label">Display radius in</label>
+			                    <div class="col-sm-9">
+			                      <select class="form-control" id="radius">
+			                      	<option>Miles</option>
+			                      	<option>Kilometers</option>
+			                      </select>
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <label class="col-sm-3 control-label">Limit location selection to</label>
+			                    <div class="col-sm-9">
+			                      <select class="form-control" id="location">
+			                      	<option>Any Country</option>
+			                      	<option>India</option>
+			                      	<option>Andorra</option>
+			                      	<option>Austria</option>
+			                      	<option>Australia</option>
+			                      </select>
+			                    </div>
+			                  </div>
+			                  <div class="form-group">
+			                    <div class="col-sm-offset-3 col-sm-9">
+			                      <button type="submit" class="btn btn-primary">Submit</button>
+			                    </div>
+			                  </div>
+			                </form>
+					    </div>
+			    </div>
+			    <div id="ecommerce" class="tab-pane fade">
+				    <div class="col-sm-9">
+				      <h3>Ecommerce Settings</h3>
+				      <form class="form-horizontal">
+		                  <div class="form-group">
+		                    <label class="col-sm-3 control-label">Currency</label>
+		                    <div class="col-sm-9">
+		                      <select class="form-control" id="currency">
+		                      	<option>AUD - Australian Dollar</option>
+		                      	<option>BRD - Brazil Dollar</option>
+		                      	<option>INR - Indian Rupee</option>
+		                      </select>
+		                    </div>
+		                  </div>
+		                  <div class="form-group">
+		                  	<label for="inputName" class="col-sm-3 control-label">Tax</label>
+			                <div class="col-sm-9">   
+			                   <div class="input-group">
+				                <input type="text" class="form-control">
+				                <span class="input-group-addon">%</span>
+				              </div>
+				            </div>
+		                  </div>
+		                  <div class="form-group">
+		                    <label 	class="col-sm-3 control-label">Billing Address</label>
+		                    <div class="col-sm-9">
+		                      <textarea class="form-control" rows="5" id="billaddress">Jobumes</textarea>
+		                    </div>
+		                  </div>
+		                  <div class="form-group">
+		                    <div class="col-sm-offset-3 col-sm-9">
+		                      <button type="submit" class="btn btn-primary">Submit</button>
+		                    </div>
+		                  </div>
+		                </form>
+				    </div>
+				</div>
+			    <div id="seo" class="tab-pane fade">
+			       <div class="col-sm-9">
+				      <h3>SEO Settings</h3>
+				      <form class="form-horizontal">
+		                  <div class="form-group">
+		                    <label class="col-sm-3 control-label">Homepage Title</label>
+		                    <div class="col-sm-9">
+		                      <input type="text" class="form-control" id="title" placeholder="">
+		                    </div>
+		                  </div>
+		                  <div class="form-group">
+		                    <label 	class="col-sm-3 control-label">Meta Description</label>
+		                    <div class="col-sm-9">
+		                      <textarea class="form-control" rows="5" id="metadesc"></textarea>
+		                    </div>
+		                  </div>
+		                  <div class="form-group">
+		                    <label class="col-sm-3 control-label">Meta Keywords</label>
+		                    <div class="col-sm-9">
+		                      <input type="text" class="form-control" id="metakeywords" placeholder="">
+		                    </div>
+		                  </div>
+		                  <div class="form-group">
+		                    <div class="col-sm-offset-3 col-sm-9">
+		                      <button type="submit" class="btn btn-primary">Submit</button>
+		                    </div>
+		                  </div>
+		                </form>
+				    </div>
+			    </div>
+			  </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+
+      <!-- /.box-body -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+  

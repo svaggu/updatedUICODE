@@ -1,0 +1,448 @@
+
+
+<style>
+@import "compass/css3";
+
+$gray: #dddddd;
+
+
+
+.grapicpad {
+    background: #222d32;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.grapicpad .right-side2 img {
+    height: 100px;
+}
+.grapicpad .ng-binding {
+    color: #fff;
+}
+.grapicpad i {
+    color: #fff;
+}
+.grapicpad .right-side2 {
+    margin-top: 5px;
+}
+h2.graphtitle {
+    font-weight: bold;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#selected-state {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+#selected-state > span {
+ font-style: normal;
+  font-size: 0.75em;
+}
+
+#map {width: 570px; height: 350px; ;}
+
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+ float: right;
+}
+
+#hor-timeline {
+  list-style: none;
+  width: 100%;
+  height: 200px;
+  margin: 200px 0 0;
+  border-top: 6px solid #3c8dbc;
+  display: table;
+  border-spacing: 30px 0;
+  font-weight:bold;
+}
+#hor-timeline li {
+  display: table-cell;
+  position: relative;
+  min-width: 100px;
+}
+
+.timeline-circle {
+  margin: 0 auto;
+  top: -14px;
+  left: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: #3c8dbc;
+  border: 6px solid #00284d;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+}
+
+.timeline-content {
+  text-align: center;
+  position: relative;
+  font-weight:bold;
+}
+
+.avatar {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  border: 1px solid #3c8dbc;
+  border-radius: 30px;
+  height: 30px;
+  width: 200px;
+  top: -19px;
+  position: relative;
+  background: #fffff0;
+  line-height: 30px;
+  text-align: center;
+  font-weight:bold;
+}
+
+.timeline-content:before {
+  content: '';
+  width: 50px;
+  height: 100px;
+  left: 50%;
+  margin-left: -2px;
+  position: absolute;
+  font-weight:bold;
+}
+
+li.down .timeline-content:before {
+  border-left: 4px solid #3c8dbc;
+  border-bottom: 4px solid #3c8dbc;
+  -webkit-border-radius: 0 20px;
+  -moz-border-radius: 0 20px;
+  border-radius: 0 20px;
+  font-weight:bold;
+}
+li.down .avatar {
+  top: 80px;
+  left: 8px;
+  font-weight:bold;
+}
+
+li.up .timeline-content {
+  margin-top: -106px;
+  font-weight:bold;
+}
+li.up .timeline-content:before {
+  border-left: 4px solid #3c8dbc;
+}
+li.up .date {
+  margin-top: 100px;
+  font-weight:bold;
+
+}
+li.up .avatar {
+  background: #fffff0;
+  margin-top: -30px;
+}
+
+    .years{
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+.bg-resume{
+background-color: #f7f7f7;
+   
+}
+.embed-container {
+	margin-top:18px;
+						 position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; }
+				.embed-container iframe, .embed-container object, .embed-container embed { 
+				position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+				.af{
+				font-size: 20px;
+    background-color: #b92719;
+    color: #fff;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    text-align:center;
+    padding-top: 6px;
+				}
+				.upload-btn{ 
+				margin-top: 18px;
+    margin-bottom: 26px;
+    margin-left: 50px;
+    width: 129px;
+    padding: 6px;
+				 } 
+				
+				.video-resume{
+				height: 166px;
+				background-color: #f7f7f7;
+				}
+				.icon-fa{
+				margin-top:30px;
+				margin-bottom:30px;
+				}
+				.panel-heading {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #999;
+}
+    
+    i.fa.fa-star {
+    color: #b92917;
+}
+</style>
+
+<div class="col-md-12 form-group">&nbsp;</div>
+<div class="container">
+<a class="btn button editpadding pull-right" ng-click="gotoEditResume(graphResume)" ng-if="userRole == 'jobseeker'">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+        Edit
+	    </a>
+      <a class="btn button editpadding pull-right" ng-click="addToFavourite()" ng-if="userRole == 'recruiter' || userRole == 'recruiterAdmin'">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        Add to Favourite
+	    </a>
+		</div>
+<div class="container panel">
+  <div class="row">
+    <section class="content-header">
+      <h1></h1>
+      
+    </section>
+    <!--- Content start here-->
+	<div class="col-lg-12 col-md-12 bg-resume panel-body">	
+      <div class="col-md-12 col-sm-12 col-lg-12">
+      <div class="grapicpad">
+        <div class="row">
+          <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12">
+               <a href="#">
+                 <center>
+                   <!-- <img src="resource/css/img/Employer/dinesh.jpg" class="img-responsive img-circle" alt=""> -->
+                   <img src="resource/css/img/default_user.png" class="img-circle" style="max-height:160px;" alt="User Image">
+                 </center>
+               </a>
+          </div>
+          <div class="col-md-10 col-lg-10 col-sm-10 col-xs-10">
+	          <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                <h2 style="font-weight: bold;color: #fff;"> {{graphResume.FullName}}
+                </h2>
+                 <!-- {{graphResume}}-->
+				<ul class="list-inline" style="color:#fff; text-align: left">
+              		<li style="color:#b92719;">
+              			{{graphResume.JobProfile}}
+              		</li>
+                    <li>
+              			{{graphResume.ExecutiveSummary}}
+              		</li>
+              	</ul>
+	          </div>
+            
+
+            </div>
+          </div>
+        </div>
+      </div>
+	   <div class="col-md-12 pd-0 col-sm-12 col-xs-12 pd-lg-12 icon-fa ">	
+	                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
+	                	<i class="fa fa-phone af" aria-hidden="true"></i>
+	                	
+	                	<label
+		                  class="ng-binding">{{graphResume.Phone}}
+		                 
+		                </label>
+						</div>
+	                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+	                
+	                	<i class="fa fa-envelope-o af" aria-hidden="true"></i>
+		                
+		                <label
+		                   class="ng-binding">{{graphResume.Email}}
+		                  
+		                </label>
+	                </div>
+	                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	                	<i class="fa fa-home af" aria-hidden="true"></i>
+		               
+		                <label
+		                  class="ng-binding">{{graphResume.FormattedAddress}}
+		                  
+		                </label>
+	               
+						</div>
+              	
+              </div>
+      
+
+	
+		 
+
+		<div class="col-md-12 col-lg-12 ">
+	        <div class="row" id="media">
+		          <div class="panel-heading"><i class="fa fa-suitcase af" aria-hidden="true"></i> Work Experience
+		          </div>
+		          <div class="new-body headline-sty">
+			    	<div id="visualization" ng-hide="!hideGraph"></div>
+            <div ng-hide="!showNoGraph" style="padding-left: 5%;"><p>No Experience Added</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-12 col-lg-12  pd-0 ">
+        <div class="" id="media">
+			  <div class="panel-heading"><i class="fa fa-user af" aria-hidden="true"></i> Education
+		          </div>
+		          <div class="new-body headline-sty">
+		          	 <div class="row">
+		          	 	<ul>
+                    <!-- {{graphResume.Qualification}} -->
+                    <li ng-repeat="items in graphResume.SegregatedQualification.EducationSplit">
+  		          	 	     <b>{{items.EndDate | limitTo: '4' : '6'}} </b>- {{items.Degree}}
+  		          	 	</li>
+		          	 	
+		          	 	</ul>
+		          	 </div>
+		          	 
+		            </div>
+		      </div>
+		    </div>
+
+      <div class="col-md-6 col-lg-6 pd-l-0">
+        <div class="" id="media">
+          <div class="panel-heading"><i class="fa fa-bar-chart af" aria-hidden="true"></i> Skills
+          </div>
+          <div class="new-body headline-sty">
+            <div class="col-md-12">
+                 
+                    <div class="progress-group" ng-repeat="items in skillsArrToGoal | limitTo: '10'">
+                        <div class="col-md-9 padd-0">
+                    <span class="progress-text">{{items.Skill}} <span class="years">({{items.ExperienceInMonths/12 | number : 1 }}Years)</span></span>
+                    </div>
+                            <div class="col-md-3 padd-0">
+                        <span ng-repeat="i in [0,1,2,3,4]" >
+                        <span   ><i ng-class="i>items.Others.Rating ? 'fa fa-star-o' : 'fa fa-star'"></i></span>
+               
+                        </span>
+                        </div>
+                  <!--  <div class="progress sm">
+                      <div class="progress-bar progress-bar-aqua" style="width:{{items.Others.Rating*20}}%;"></div>
+                    </div>-->
+                        </div>
+              </div>
+
+                  
+       
+			
+       
+        </div>
+      </div>
+        </div>
+
+
+      <div class="col-md-6 col-lg-6 pd-l-0 pd-r-0">
+        <div class="" id="media">
+          <div class="panel-heading"><i class="fa fa-map-marker af" aria-hidden="true">
+                        </i> Worked Places
+          </div>
+          <div class="new-body headline-sty">
+
+            <div id="selected-state"> 
+            </div>
+            <div id="chartdiv" style="height:
+                          400px;" ></div>
+          </div>
+        </div>
+      </div>
+             
+      <div class="col-md-12 col-lg-12 pd-l-0 pd-r-0">
+        <div class="" id="media">
+          <div class="panel-heading"><i class="fa fa-certificate af" aria-hidden="true"></i> Certificates
+          </div>
+          <div class="new-body headline-sty">
+            <div class="ng-binding">
+            <ul>
+             
+             <li ng-repeat="items in graphResume.Certification">{{items.certificationName}}</li>
+               <div ng-if="graphResume.Certification.length < 1">
+                 <p>No Certifications Added</p>
+               </div>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 col-lg-12 pd-l-0 pd-r-0">
+        <div class="" id="media">
+          <div class="panel-heading"><i class="fa fa-trophy af" aria-hidden="true"></i> Achievement
+          </div>
+          <div class="new-body headline-sty">
+            <div class="ng-binding">
+            <ul>
+              <!--<div ng-if="graphResume.Achievements.length > 0">
+                {{graphResume.Achievements}}
+              </div>-->
+             <!-- <li> Successfully completed major systems update within a tight one-month deadline. </li>
+             <li> Efficiently resolved many client issues, often earning praise from clients for my efforts. </li>
+             <li> Earned a promotion from an entry-level position to lead specialist for my department. </li>
+             <li> Improved office efficiency by updating database. </li> -->
+               <!--<div ng-if="graphResume.Achievements.length < 0">
+                 <p>No Achievements Added</p>
+               </div>-->
+               <div>
+                 <p>No Achievements Added</p>
+               </div>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+
+  </div>
+</div>
+
+
+
+
+
+<script>
+
+</script>
+
+
+

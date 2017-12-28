@@ -1,0 +1,808 @@
+<div class="container">
+   <div class="row">
+      <!-- angular view start here-->
+      <!-- ngView:  -->
+      <section class="content-header ng-scope">
+         <h1> Profile Settings
+         </h1>
+      </section>
+      <div class="col-md-12 col-sm-12 col-lg-12 ng-scope">
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bhoechie-tab-container">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 bhoechie-tab-menu">
+               <div class="list-group">
+                 <!-- only for job Seeker -->
+                  <!-- <a href="#" class="list-group-item" id="profileJSkId">
+	                  <i class="fa fa-user" aria-hidden="true">
+	                  </i>
+	                  <span class="hidden-xs">Profile</span>
+                  </a> -->
+                  <!-- for recruiter and recruiterAdmin -->
+                 <!--  <a href="#" class="list-group-item" id="profileRecId">
+	                  <i class="fa fa-user" aria-hidden="true">
+	                  </i>
+	                  <span class="hidden-xs">Profile</span>
+                  </a> -->
+                  <!-- for recruiter and jobseeker -->
+                  <!-- <a href="#" class="list-group-item" id="editUserProfileId">
+	                  <i class="fa fa-user" aria-hidden="true">
+	                  </i>
+	                  <span class="hidden-xs">Edit Profile</span>
+                  </a> -->
+                  <!-- only for recruiterAdmin -->
+                  <!-- <a href="#" class="list-group-item" id="editProfileRAdmId">
+	                  <i class="fa fa-user" aria-hidden="true">
+	                  </i>
+	                  <span class="hidden-xs">Edit Profile</span>
+                  </a> -->
+                  <!-- only for recruiterAdmin -->
+                  <!-- <a href="#" class="list-group-item" id="usersRAdmId">
+	                  <i class="fa fa-user" aria-hidden="true">
+	                  </i>
+	                  <span class="hidden-xs">Users</span>
+                  </a> -->
+                  <!-- only for jobSeeker -->
+                  <a href="#" class="list-group-item" id="alertsId">
+	                  <i class="fa fa-comment" aria-hidden="true">
+	                  </i>
+	                  <span class="hidden-xs">Alerts</span>
+                  </a>
+                  <!-- only for jobSeeker -->
+                  <!--<a href="#" class="list-group-item" id="coverLettersId">
+	                  <i class="fa fa-envelope" aria-hidden="true">
+	                  </i>
+	                  <span  class="hidden-xs">Cover Letters</span>
+                  </a>-->
+                  <!-- for all -->
+                  <a href="#" class="list-group-item" id="settingsId">
+	                  <i class="fa fa-cog" aria-hidden="true">
+	                  </i>
+	                  <span  class="hidden-xs">Settings</span>
+                  </a>
+               </div>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 bhoechie-tab">
+               <!-- flight section -->
+               <!-- <div class="bhoechie-tab-content" id="profileDataId">
+                  <div ng-if="resumesList.resumes.length < 1" style="padding: 2%;"><h5>No Resumes Uploaded</h5></div>
+                  <div class="panel" ng-repeat="items in resumesList.resumes | orderBy: 'timestamp': true" ng-if="resumesList.resumes.length > 0">
+                     <div class="panel-heading">
+                        {{items.jobProfile}}
+                        <div class="pull-right">
+                           <a class="btn button editpadding pull-right" ng-click="gotoEditResume(items)"> <i class="fa fa-pencil" aria-hidden="true"></i>
+                           Edit
+                           </a>
+                           <input type="radio" name="default" value="default_resume"><small> Default Resume</small>
+                        </div>
+                     </div>
+                     <div class="new-body">
+                        <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12">
+                           <a href="#">
+                              <center>
+                                 <img src="resource/css/img/default_user.png" class="img-responsive img-circle" >
+                              </center>
+                           </a>
+                        </div>
+                        <div class="col-md-10 col-lg-10 col-sm-12 col-xs-12">
+                           <div>
+                              <h2>{{items.fullname}}</h2>
+                           </div>
+                           <div>
+                              <i class="fa fa-phone" aria-hidden="true"></i>
+                              <label>
+                              <b class="ng-binding">{{items.mobile}} &nbsp;&nbsp; {{items.phone}}
+                              </b>
+                              </label>
+                           </div>
+                           <div>
+                              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                              </i>
+                              <label>
+                              <b class="ng-binding">{{userobj.userName}}
+                              </b>
+                              </label>
+                           </div>
+                           <div>
+                              <i class="fa fa-home" aria-hidden="true"></i>
+                              </i>
+                              <label>
+                              <b class="ng-binding">{{items.address}}
+                              </b>
+                              </label>
+                           </div>
+                        </div>
+                        <div class="clearfix"></div>
+                     </div>
+                  </div>
+                  <div class="clearfix"></div> -->
+                  <!-- <div class="panel">
+                     <div class="panel-heading">PHP DEVLEOPER
+                     	<div class="pull-right">
+                      	<a class="btn button editpadding pull-right" href="#edit_profile"> <i class="fa fa-pencil" aria-hidden="true"></i> Edit
+                     </a>
+                     <input type="radio" name="default" value="default_resume"><small> Default Resume</small>
+                     </div>
+                     </div>
+                      <div class="new-body">
+                     <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12">
+                     <a href="#">
+                       <center>
+                         <img type="file" src="resource/css/img/Employer/dinesh.jpg" class="img-responsive img-circle" alt="">
+                       </center>
+                     </a>
+
+
+                     </div>
+                     <div class="col-md-10 col-lg-10 col-sm-12 col-xs-12">
+                     <div><h2>John Anderson</h2></div>
+                     <div>
+                     <i class="fa fa-phone" aria-hidden="true"></i>
+                     		</i>
+                      	<label>
+                         <b class="ng-binding">9876543210
+                         </b>
+                       </label>
+                      </div>
+                     <div>
+                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                       </i>
+                       <label>
+                         <b class="ng-binding">testing@gmail.com
+                         </b>
+                       </label>
+                     </div>
+                     <div>
+                     <i class="fa fa-home" aria-hidden="true"></i>
+                       </i>
+                       <label>
+                         <b class="ng-binding">350 Fifth Avenue, 34th floor. New York, NY 10118-3299
+                         </b>
+                       </label>
+                     </div>
+                        </div>
+                     <div class="clearfix">
+                     		</div>
+                     </div>
+                     </div>
+                     <div class="clearfix">
+                     </div>
+                     <div class="panel">
+                     <div class="panel-heading">WEB DEVLEOPER
+                     	<div class="pull-right">
+                      	<a class="btn button editpadding pull-right" href="#edit_profile"> <i class="fa fa-pencil" aria-hidden="true"></i> Edit
+                     </a>
+                     <input type="radio" name="default" value="default_resume"><small> Default Resume</small>
+                     </div>
+                     </div>
+                      <div class="new-body">
+                     <div class="col-md-2 col-lg-2 col-sm-12 col-xs-12">
+                     <a href="#">
+                       <center>
+                         <img type="file" src="resource/css/img/Employer/dinesh.jpg" class="img-responsive img-circle" alt="">
+                       </center>
+                     </a>
+                     </div>
+                     <div class="col-md-10 col-lg-10 col-sm-12 col-xs-12">
+                     <div><h2>John Anderson</h2></div>
+                     <div>
+                     <i class="fa fa-phone" aria-hidden="true"></i>
+                     		</i>
+                      	<label>
+                         <b class="ng-binding">9876543210
+                         </b>
+                       </label>
+                      </div>
+                     <div>
+                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                       </i>
+                       <label>
+                         <b class="ng-binding">testing@gmail.com
+                         </b>
+                       </label>
+                     </div>
+                     <div>
+                     <i class="fa fa-home" aria-hidden="true"></i>
+                       </i>
+                       <label>
+                         <b class="ng-binding">350 Fifth Avenue, 34th floor. New York, NY 10118-3299
+                         </b>
+                       </label>
+                     </div>
+                        </div>
+                        <div class="clearfix">
+                     		</div>
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-right">
+                     <a class="btn button" href="#register"> CREATE A NEW PROFILE
+                     </a>
+                     </div>
+                     </div>
+                     <div class="clearfix">
+                     		</div>
+                     </div> --
+               </div>-->
+               <!-- <div class="bhoechie-tab-content" id="profileRecDataId">
+								 <div class="row" style="padding-left: 8%;">
+									 <form name="myform" novalidate="" class="ng-pristine ng-invalid ng-invalid-required">
+                     <div class="row">
+                       <div class="col-md-12">
+                         <div class="col-md-5">
+ 												 	<div class="form-group has-feedback">
+ 														<h5>First Name</h5>
+ 														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-value="getProfileDetails.firstName" placeholder="First Name" required disabled="" />
+ 													</div>
+ 												</div>
+ 												<div class="col-md-1"></div>
+ 												<div class="col-md-5">
+ 													<div class="form-group has-feedback">
+ 														<h5>Last Name</h5>
+ 														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-value="getProfileDetails.lastName" placeholder="Last Name" required disabled="" />
+ 													</div>
+ 												</div>
+                        <div class="col-md-5">
+												 	<div class="form-group has-feedback">
+														<h5>Email</h5>
+														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-value="userobj.userName" placeholder="Email" disabled="" />
+													</div>
+												</div>
+												<div class="col-md-1"></div>
+												<div class="col-md-5">
+													<div class="form-group has-feedback">
+														<h5>Phone Number</h5>
+														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-value="getProfileDetails.phoneNumber" placeholder="Phone Number" required disabled="" />
+													</div>
+												</div>
+												 <div class="col-md-8">
+													 <h5>Company Name</h5>
+													 <div class="form-group has-feedback">
+														 <input type="text" minlength=4 name="name" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" ng-value="getOrgDetails.name" placeholder="Company Name" required disabled="" />
+													 </div>
+												 </div>
+												 <div class="col-md-12">
+													 <h5>Address</h5>
+													 <div class="form-group has-feedback">
+														 <textarea row="5" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="addressLine1" ng-value="getOrgDetails.address.line1" placeholder="Address" required disabled="" />
+													 </div>
+												 </div>
+												 <div class="col-md-5">
+												 	<div class="form-group has-feedback">
+														<h5>Contact Number</h5>
+														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-value="getOrgDetails.phone[0].number" placeholder="Contact Number" required disabled="" />
+													</div>
+												</div>
+												<div class="col-md-1"></div>
+												<div class="col-md-5">
+													<div class="form-group has-feedback">
+														<h5>City</h5>
+														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="city" ng-value="getOrgDetails.address.city" placeholder="City" required disabled="" />
+													</div>
+												</div>
+												<div class="col-md-5">
+												 	<div class="form-group has-feedback">
+														<h5>State</h5>
+														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="state" ng-value="getOrgDetails.address.state" placeholder="State" required disabled="" />
+													</div>
+												</div>
+												<div class="col-md-1"></div>
+												<div class="col-md-5">
+													<div class="form-group has-feedback">
+														<h5>Country</h5>
+														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="country" ng-value="getOrgDetails.address.country" placeholder="Country" required disabled="" />
+													</div>
+												</div>
+												<div class="col-md-8">
+													<h5>Logo</h5>
+													<img src="" alt="">
+												</div>
+                       </div>
+                     </div>
+
+                     <p></p>
+                   </form>
+								 </div>
+							 </div> -->
+               <!-- <div class="bhoechie-tab-content" id="editUserProfileDataId">
+                 <div class="row" style="padding-left: 8%;">
+                   <form name="editProfileForm" novalidate="" class="ng-pristine ng-invalid ng-invalid-required">
+                     <div class="row">
+                       <div class="col-md-12">
+                         <div class="col-md-12">
+                           <div class="col-md-5">
+                             <div class="form-group has-feedback">
+                               <h5>First Name</h5>
+                               <input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-model="getProfileDetailsToEdit.firstName" placeholder="First Name" required />
+                             </div>
+                           </div>
+                           <div class="col-md-1"></div>
+                           <div class="col-md-5">
+                             <div class="form-group has-feedback">
+                               <h5>Last Name</h5>
+                               <input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-model="getProfileDetailsToEdit.lastName" placeholder="Last Name" required />
+                             </div>
+                           </div>
+                           <div class="col-md-5">
+                              <div class="form-group has-feedback">
+                                <h5>Email</h5>
+                                <input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-model="userobj.userName" placeholder="Email" required disabled/>
+                              </div>
+                            </div>
+                           <div class="col-md-1"></div>
+                           <div class="col-md-5">
+                           <div class="form-group has-feedback">
+                             <h5>Phone Number</h5>
+                             <input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-model="getProfileDetailsToEdit.phoneNumber" placeholder="Phone Number" required />
+                           </div>
+                         </div>
+                          </div>
+                       </div>
+                     </div>
+                    <br><br>
+                     <div class="">
+                       <div class="row">
+                         <div class="col-xs-12 form-group text-center">
+                           <button ng-disabled="!editProfileForm.$valid" type="submit" class="btn button text-center" ng-click="editProfile()">Update</button>
+                         </div>
+                       </div>
+                     </div>
+                     <p></p>
+                    </form>
+                  </div>
+                </div> -->
+							 <!-- <div class="bhoechie-tab-content" id="editProfileDataId">
+								 <div class="row" style="padding-left: 8%;">
+									 <form name="myform" novalidate="" class="ng-pristine ng-invalid ng-invalid-required">
+                     <div class="row">
+                       <div class="col-md-12">
+                         <div class="col-md-12">
+                           <div class="col-md-5">
+   												 	<div class="form-group has-feedback">
+   														<h5>First Name</h5>
+   														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-model="getProfileDetailsToEdit.firstName" placeholder="First Name" required />
+   													</div>
+   												</div>
+   												<div class="col-md-1"></div>
+   												<div class="col-md-5">
+   													<div class="form-group has-feedback">
+   														<h5>Last Name</h5>
+   														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-model="getProfileDetailsToEdit.lastName" placeholder="Last Name" required />
+   													</div>
+   												</div>
+                          <div class="col-md-5">
+  												 	<div class="form-group has-feedback">
+  														<h5>Email</h5>
+  														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-model="userobj.userName" placeholder="Email" disabled/>
+  													</div>
+  												</div>
+  												<div class="col-md-1"></div>
+  												<div class="col-md-5">
+  													<div class="form-group has-feedback">
+  														<h5>Phone Number</h5>
+  														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-model="getProfileDetailsToEdit.phoneNumber" placeholder="Phone Number" required />
+  													</div>
+  												</div>
+												 <div class="col-md-8">
+													 <h5>Company Name</h5>
+													 <div class="form-group has-feedback">
+														 <input type="text" minlength=4 name="name" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" ng-model="getOrgDetailsToEdit.name" placeholder="Company Name" required>
+													 </div>
+												 </div>
+												 <div class="col-md-12">
+													 <h5>Address</h5>
+													 <div class="form-group has-feedback">
+														 <textarea row="5" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="email" ng-model="addressToEdit.line1" placeholder="Address" required />
+													 </div>
+												 </div>
+												 <div class="col-md-5">
+												 	<div class="form-group has-feedback">
+														<h5>Contact Number</h5>
+														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-model="getOrgDetailsToEdit.phone[0].number" placeholder="Contact Number" required>
+													</div>
+												</div>
+												<div class="col-md-1"></div>
+												<div class="col-md-5">
+													<div class="form-group has-feedback">
+														<h5>City</h5>
+														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="city" ng-model="addressToEdit.city" placeholder="City" required>
+													</div>
+												</div>
+												<div class="col-md-5">
+												 	<div class="form-group has-feedback">
+														<h5>State</h5>
+														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="state" ng-model="addressToEdit.state" placeholder="State" required>
+													</div>
+												</div>
+												<div class="col-md-1"></div>
+												<div class="col-md-5">
+													<div class="form-group has-feedback">
+														<h5>Country</h5>
+														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="country" ng-model="addressToEdit.country" placeholder="Country" required>
+													</div>
+												</div>
+                        <div class="col-md-5">
+												 	<div class="form-group has-feedback">
+														<h5>Zip Code</h5>
+														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="zipcode" ng-model="addressToEdit.zip" placeholder="Zip Code" required>
+													</div>
+												</div>
+												<div class="col-md-8">
+													<h5>Logo</h5>
+													<input type="file" name="" value="">
+												</div>
+                       </div>
+                     </div>
+										 <br><br>
+                     <div class="">
+                       <div class="row">
+                         <div class="col-xs-12 form-group text-center">
+                           <button ng-disabled="!myform.$valid" type="submit" class="btn button text-center" ng-click="editProfile()">Update</button>
+                         </div>
+                       </div>
+                     </div>
+
+                       <p></p>
+                     </form>
+  								 </div>
+  							 </div>
+               </div>
+               <div class="bhoechie-tab-content" id="usersRAdminDataId">
+                 <div class="panel">
+                   <div class="panel-heading">Add Recruiter</div>
+  								 <div class="row" style="padding-left: 8%;">
+  									 <form name="userForm" novalidate="" class="ng-pristine ng-invalid ng-invalid-required">
+                       <div class="row">
+                         <div class="col-md-12">
+                           <div class="col-md-12">
+                             <div class="col-md-5">
+                               <div class="form-group has-feedback">
+                                 <h5>First Name</h5>
+                                 <input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="firstName" ng-model="addUser.firstName" placeholder="First Name" required />
+                               </div>
+                              </div>
+       												<div class="col-md-1"></div>
+       												<div class="col-md-5">
+       													<div class="form-group has-feedback">
+       														<h5>Last Name</h5>
+       														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="lastName" ng-model="addUser.lastName" placeholder="Last Name" required />
+       													</div>
+       												</div>
+                             <div class="col-md-5">
+                               <div class="form-group has-feedback">
+                                 <h5>Email</h5>
+                                 <input type="email" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-model="addUser.email" placeholder="Email" required />
+                               </div>
+                              </div>
+       												<div class="col-md-1"></div>
+       												<div class="col-md-5">
+       													<div class="form-group has-feedback">
+       														<h5>Password</h5>
+       														<input type="password" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-model="addUser.password" placeholder="Password" required />
+       													</div>
+       												</div>
+                              <div class="col-md-5">
+      												 	<div class="form-group has-feedback">
+      														<h5>Phone Number</h5>
+      														<input type="text" minlength=4 class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="phoneNumber" ng-model="addUser.phoneNumber" placeholder="Phone Number" required />
+      													</div>
+      												</div>
+                            </div>
+                          </div>
+  										 <br><br>
+                       <div class="">
+                         <div class="row">
+                           <div class="col-xs-12 form-group text-center">
+                             <button ng-disabled="!userForm.$valid" type="submit" class="btn button text-center" ng-click="addRecruiter()">Add</button>
+                           </div>
+                         </div>
+                       </div>
+
+                       <p></p>
+                      </div>
+                     </form>
+  								 </div>
+  							 </div>
+               </div> -->
+               <div class="bhoechie-tab-content" id="alertsDataId">
+                 <div class="panel">
+                     <div class="panel-heading">Alerts
+                     </div>
+                     <div class="new-body">
+                      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="overflow-x:auto;">
+                        <div ng-if="alertsList.length < 1" style="padding: 2%;"><h5>No Alerts</h5></div>
+                        <table ng-if="alertsList.length > 0" id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                            <thead>
+                              <tr role="row">
+                                  <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Alert Title
+                                  </th>
+                                  <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Date Updated
+                                  </th>
+                                  <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Notification
+                                  </th>
+                                  <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Remove
+                                  </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr role="row" class="odd" ng-repeat="items in alertsList">
+                                  <td class="sorting_1">{{items.title}}</td>
+                                  <td>{{items.created.timestamp | date}}</td>
+                                  <td>Daily</td>
+                                  <td><span class="glyphicon glyphicon-trash"  style="color:red;"></span></td>
+                              </tr>
+                              <!--<tr role="row" class="odd">
+                                  <td class="sorting_1">PHP DEVELOPER</td>
+                                  <td>01-12-2016</td>
+                                  <td>Daily</td>
+                                  <td><span class="glyphicon glyphicon-trash"  style="color:red;"></span></td>
+                              </tr>
+                              <tr role="row" class="even">
+                                  <td class="sorting_1">WEB DEVELOPER</td>
+                                  <td>06-01-2017</td>
+                                  <td>Daily</td>
+                                  <td><span class="glyphicon glyphicon-trash" style="color:red;"></span></td>
+                              </tr>-->
+                            </tbody>
+                        </table>
+                      </div>
+                     </div>
+                 </div>
+               </div>
+               <!--start of cover letters-->
+               <!--<div class="bhoechie-tab-content" id="coverLettersDataId">
+                  <div class="panel">
+                     <div class="panel-heading">Cover Letters
+                     </div>
+                     <div class="new-body">
+                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="overflow-x:auto;">
+                          <div ng-if="coverLetterArr.length < 1" style="padding: 2%;"><h5>No Cover Letters Added</h5></div>
+                           <table ng-if="coverLetterArr.length > 0" id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+                              <tbody>
+                                 <tr role="row" class="odd" ng-repeat="items in coverLetterArr">
+                                    <td class="sorting_1">{{items}}</td>
+                                    <td>01-12-2016</td>
+                                    <td>Daily</td>
+                                    <td>
+                                       <a class="btn button" data-toggle="modal" data-target="#coverletter_preview" ng-click="toDisplayCoverLetter(items)">PREVIEW
+                                       </a>
+                                    </td>
+                                    <td><span class="glyphicon glyphicon-trash"  style="color:red;"></span></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>-->
+                        <!--<div>
+                           <a class="btn button" data-toggle="modal" data-target="#coverletter">Add Cover Letter
+                           </a>
+                        </div>-->
+                     <!--</div>
+                  </div>
+               </div>-->
+               <!--end of cover letters-->
+               <div class="bhoechie-tab-content" id="settingsDataId">
+                  <div class="panel">
+                     <div class="panel-heading">Change Password
+                     </div>
+                     <div class="new-body">
+                        <form name="chnPwd">
+                           <div class="row">
+                              <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                 Current Password
+                              </div>
+                              <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                 <input type="password" placeholder="Current Password" minlength=4 class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="newPassword" name="currPassword" ng-model="currPassword" required >
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                 New Password
+                              </div>
+                              <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                 <input type="password" placeholder="New Password" minlength=4 class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="newPassword" name="newPassword" ng-model="newPassword" required >
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                 Retype New Password
+                              </div>
+                              <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                                 <input type="password" placeholder="Retype Password" minlength=4 class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="newPassword" name="newPassword" ng-model="reTypePassword" required >
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="form-group" align="center">
+                                 <button ng-disabled="!chnPwd.$valid" ng-click="changePwd()" type="submit" class="btn button save margin-2" ng-click="submitted=true">SUBMIT</button>
+                                 <!-- <a class="btn button" ng-click="changePwd()">Update Password
+                                    </a> -->
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+                  <!-- <div class="panel">
+                     <div class="panel-heading">Change Password
+                     </div>
+                     <div class="new-body">
+                     <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                       <input type="text" placeholder="New Password" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="newPassword" name="newPassword" required="">
+                     </div>
+                     <div class="form-group col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                       <input type="text" placeholder="Retype Password" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" id="newPassword" name="newPassword" required="">
+                     </div>
+                     <div class="form-group" align="center">
+                     <a class="btn button">Update Password
+                     </a>
+                     </div>
+                     </div>
+                     </div> -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--- content start here
+         <div class="col-md-12 col-sm-12 col-lg-12 ng-scope">
+         	<div class="panel">
+              <div class="panel-heading new-panel-heading"> Profile Setting
+              </div>
+              <div class="new-body">
+                 <div class="row">
+                 	<div class="col-md-4">
+                    	<div class="border-top imgcolor">
+          							<img ng-src="resource/css/img/Employer/dinesh.jpg" alt="" title="Click to edit your picture" class="img-responsive img-circle" style="height: 200px;width:65%; margin:0px auto;" src="resource/css/img/Employer/dinesh.jpg">
+
+         			</div>
+         <form name="uploadForm" ng-submit="uploadDocument(doctypeId,'98','YIN16JNWN3B11893')" class="ng-pristine ng-invalid ng-invalid-required ng-valid">
+          <div class="form-group col-md-12">
+          	<div class="row">
+             <br>
+             <div class="form-group col-md-12 ">
+               <label for="title">Upload Profile Image:
+               </label>
+               <input type="file" name="keyword" class="form-control">
+             </div>
+             <div class="th-error ng-hide" ng-show="submitted &amp;&amp; uploadForm.doctype.$error.required">This field is required
+             </div>
+         </div>
+          </div>
+          <div class="col-md-12  ng-hide">
+            <div class="form-group  ">
+              <input type="file" id="file" name="file" class="upload" onchange="javascript: document.getElementById ('fileName').value = this.value">
+            </div>
+            <div class="col-md-12">
+              <span class="help-inline" id="uploadDivError" style="display:none;">Select file to upload
+              </span>
+              <span class="help-inline" id="extensionDivError" style="display:none;">only jpeg,png,gif formats are allowed
+              </span>
+            </div>
+          </div>
+          <br>
+          <div class="form-group text-center col-md-12 ">
+            <button class="btn button save margin-2" type="submit">Upload
+            </button>
+          </div>
+         </form>
+
+
+
+                   </div>
+                   <div class="col-md-8 col-sm-12 pd-l-0">
+                   	<div class="col-md-12 ng-scope">
+               <div class="panel shadownone">
+         	<div class="panel-heading deatilednew">Personal Details</div>
+         		<div class="new-body">
+         			<div class="row">
+         			  <form name="jobseekersOther" ng-submit="jobseekersOther.$valid &amp;&amp; savePersonalData('98')" novalidate="" class="ng-pristine ng-invalid-required ng-valid-maxlength ng-submitted ng-invalid">
+
+
+         				<div class="form-group col-md-12">
+         				  <label for="title">First Name :</label>
+         				  <input type="text" name="firstname" class="form-control" id="title" maxlength="250" required="">
+         				</div>
+         				<div class="form-group col-md-12">
+         				  <label for="title">Last Name :</label>
+         				  <input type="text" name="lastname" class="form-control" id="title" maxlength="250" required="">
+         				</div>
+
+         				<div class="form-group col-md-12">
+         				  <label for="title">Old Password :</label>
+         				  <input type="text" name="oldpassword" class="form-control" id="title" maxlength="250" required="">
+         				</div>
+
+
+
+         				<div class="form-group col-md-12">
+         				  <label for="title">New Password :</label>
+         				   <input type="text" name="jobtitle" class="form-control" id="title" maxlength="250" required="">
+         				</div>
+
+
+         				<div class="form-group col-md-12">
+         				  <label for="title">Confirm Password :</label>
+         				   <input type="text" name="workemail" class="form-control" id="title" maxlength="250" required="">
+         				</div>
+
+         				<div class="form-group col-md-12">
+         				  <label for="title">Phone Number :</label>
+         				   <input type="text" name="phonenumber" class="form-control" id="title" maxlength="250" required="">
+         				</div>
+
+         				<div class="form-group col-md-12">
+         				  <label for="title">Alternate Phone Number:</label>
+         				   <input type="text" name="phonenumber" class="form-control" id="title" maxlength="250" required="">
+         				</div>
+
+
+         				<div class="col-md-12 text-center">
+         					<button type="submit" class="btn button save margin-2" ng-click="submitted=true">Update</button>
+         				</div>
+         			</form>
+         		 </div>
+         	  </div>
+         </div>
+         </div>
+         				</div>
+         </div>
+         </div>
+
+         </div>
+         </div>-->
+   </div>
+</div>
+<div class="modal fade" id="coverletter" role="dialog">
+   <div class="modal-dialog margin-top-90">
+      <!-- Modal content-->
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-center">Add Cover Letter</h4>
+         </div>
+         <div class="modal-body">
+            <form name="coverletter" class="form-horizontal" id="coverLetter_1">
+               <div class="form-group">
+                  <div class="col-sm-12">
+                     <textarea class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength" cols="3" rows="3"  name="acheivements" id="acheivements" maxlength="250" required="">
+                     </textarea>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div class="modal-footer">
+            <div class="col-xs-12 form-group text-center">
+               <button type="button" class="btn button" data-dismiss="modal"> Save Cover Letter</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="modal fade" id="coverletter_preview" role="dialog">
+   <div class="modal-dialog margin-top-90">
+      <!-- Modal content-->
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-center">Cover Letter</h4>
+         </div>
+         <div class="modal-body">
+            <form name="coverletter" class="form-horizontal" id="coverLetter_1">
+               <div class="form-group">
+                  <div class="col-sm-12">
+                     <span>Dear Hiring Manager,
+                     <br>
+                     <br>
+                     {{displayCoverLetter}}
+                     </span>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+<script>
+   $(document).ready(function() {
+       $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+           e.preventDefault();
+           $(this).siblings('a.active').removeClass("active");
+           $(this).addClass("active");
+           var index = $(this).index();
+           $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+           $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+       });
+   });
+</script>

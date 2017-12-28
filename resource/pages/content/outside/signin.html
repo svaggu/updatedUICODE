@@ -1,0 +1,473 @@
+<style>
+
+.button {
+    background: #999;
+.modal-content{
+width:500px;
+border-radius:25px;
+-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125);
+    border: 2px solid #f7f7f7;
+}
+.modal-header {
+    padding: 10px 10px;
+    border-bottom: 0px solid #e5e5e5;
+    color: #fff !important;
+    border-radius: 25px;
+    border: 1px solid #999;
+	width:111px;
+	margin-top:20px;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    
+    background-color: #999 !important;
+    margin-top: 0px !important;
+    border-radius: 25px;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+   background-color: transparent !important; 
+}
+.button:hover {
+background: #fff;
+    color: #b92917 !important;
+    border-radius: 25px;
+    border: 1px solid #b92917;
+    transition: .2s;
+
+}
+.btn {
+   
+    border-radius: 25px;
+    width: 126px;
+}
+.btn-facebook:hover {
+    color: #ffffff;
+    background-color: #2d4373;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+.modal-dialog {
+    margin-top: 122px;
+}
+li.mar-top-15 {
+    margin-top: 15px;
+}
+
+select.form-control {
+    color: rgb(153, 153, 153);
+    padding-left: 7px;
+}
+.checkbox, .radio{
+margin-top: 0px;
+ padding-left: 0px;
+    padding-right: 0px;}
+</style>
+  
+<!---Sign In start here-->
+
+<div ng-controller='signinController' ng-hide='isLoggedin' tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+   <div class="" style="
+    width: 500px;
+	margin-left:-55px;
+    border: 2px solid #f7f7f7;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.23);
+">
+      <div class="">
+        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+        <h4 class="modal-title text-center" id="myModalLabel" style="
+    padding: 15px;
+    color: #b92917;
+   ">Sign In</h4>
+<!---Sign Up end here-->
+<div  tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog margin-top-90" role="document">
+    <div class="modal-content signup">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+        <h4 class="modal-title text-center" id="myModalLabel">Signin
+        </h4>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-pills">
+          <li id="employee_signin_page_tab" class="active"><a data-toggle="tab" href="javascript:void(0);">Employee</a></li>
+          <li id="employer_signin_page_tab" class=""><a data-toggle="tab" href="javascript:void(0);">Employer</a></li>
+          <li id="employee_signup_tab" class="active">
+            <a data-toggle="tab" href="javascript:void(0);">Employee
+            </a>
+          </li>
+          <li id="employer_signup_tab" class="">
+            <a data-toggle="tab" href="javascript:void(0);">Employer
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <!-- Employee start-->
+              <div id="employee_signin_page" class="tab-pane fade in active">
+                <div class="register-box-body">
+                      <span class='error'>{{loginMessage}}</span>
+                      <form name = "myform" novalidate>
+                        <div class="form-group has-feedback">
+                          <input type="text" name="username" class="form-control" ng-model="userName" placeholder="Email"  required>
+                          <span class="glyphicon glyphicon-envelope form-control-feedback">
+                          </span>
+                           <span ng-show="myform.username.$touched &&myform.username.$invalid">user name is required</span>
+                        </div>
+                        <div class="form-group has-feedback">
+                          <input type="password" class="form-control" name="pword" ng-model="pass" placeholder="Password" required>
+                          <span class="glyphicon glyphicon-lock form-control-feedback">
+                          </span>
+                          
+                        <span ng-show="myform.pword.$touched && myform.pword.$invalid">password is required</span>
+                        </div>
+                        <div class="">
+                          <div class="row">
+               
+							<!---<div class="col-xs-5 pad_0">
+                               <div class="g-recaptcha" data-sitekey="6Lc_0f4SAAAAAF9ZA_d7Dxi9qRbPMMNW-tLSvhe6">
+							   </div>---->
+                            
+                            <!-- /.col -->
+                            <div class="col-xs-7">
+                              <div class="checkbox icheck">
+                                <div class="checkbox">
+                                  <a href="#/forgot-password">Forgot Password?
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+							<div style="text-align: center; padding:15px;">
+                          <font color="#728dca">Captcha : </font>
+                          <span id="txtCaptchaDiv" style="background-color:#A51D22;color:#FFF;padding:5px"></span>
+                          <input type="hidden" id="txtCaptcha" ng-model="txtCaptcha" />
+                          <input type="text" placeholder="Enter Captcha here" name="txtInput" ng-model="txtInput" id="txtInput" autocomplete="off"/>
+                          <!--<input type="submit" value="Submit" ng-click="checkform()"/>-->
+                        </div>
+                            <div class="col-xs-12 form-group text-center">  
+                               <a href="#/employee-dashboard">
+                              <button type="submit"  class="btn button text-center">Sign In</button> 
+							  </a>
+                            </div>
+                          </div>
+          <div id="employee_signup_page" class="tab-pane fade in active" ng-controller='signupController'>
+            <div class="register-box-body">
+              <form name="signUp" method="post" novalidate>
+                <div class="form-group has-feedback">
+                  <input type="email" minlength=4 name="email" id="email" class="form-control" ng-model="userName" placeholder="Email or Username" required />
+                  <span class="glyphicon glyphicon-envelope form-control-feedback">
+                  </span>
+
+                </div>
+                <div class="form-group has-feedback">
+                  <input type="password" minlength=4 class="form-control" name="pword" ng-model="password" placeholder="Password" required>
+                  <span class="glyphicon glyphicon-lock form-control-feedback">
+                  </span>
+                </div>
+                <!-- <div class="form-group has-feedback">
+                  <input type="password" class="form-control" name="pword" ng-model="password" placeholder="Confirm Password" required>
+                  <span class="glyphicon glyphicon-check form-control-feedback">
+                  </span>
+                </div> -->
+
+                <div class="form-group has-feedback">
+                  <input type="text" minlength=4 class="form-control" placeholder="Phone Number" ng-model='mobile' required>
+                  <span class="glyphicon glyphicon-earphone form-control-feedback">
+                  </span>
+                </div>
+                <!-- role dropdown -->
+                <!-- <div class="form-group has-feedback">
+                  <select class="form-control" ng-model="role" id="RadialLocation" required>
+                    <option value="">Select a Role</option>
+                    <option ng-repeat="items in getRoles" ng-value="items.uuid">{{items.name}}</option>
+                  </select>
+                </div> -->
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="checkbox icheck">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" ng-model="iAgree"> I agree to the
+                          <a>terms</a>
+                        </label>
+
+
+
+
+
+
+
+
+
+
+
+                      </div>
+                        <!-- <input type="text" name="username"> ENTER PASSWORD <input type="password" name="pword"> -->
+                        </p>
+                      </form>
+                      <div class="social-auth-links text-center">
+                        <p>- OR -
+                        </p>
+                        <a class="btn btn-social-icon btn-facebook">
+                          <i class="fa fa-facebook">
+                          </i>
+                        </a>
+                        <a class="btn btn-social-icon btn-google">
+                          <i class="fa fa-google-plus">
+                          </i>
+                        </a>
+                      </div>
+                      <div class="col-sm-12 text-center">
+                        <!--<a href="javascript::void();" data-toggle="modal" data-target="#myModal" class="text-center already_emp_employer">I already have a Employee / Employer</a>-->
+                        <a href="#/signup"  class="text-center">Register a new Employee / Employer
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="text-align: center; padding:15px;">
+                    <font color="#728dca">Captcha : </font>
+                    <span id="txtCaptchaDiv3" style="background-color:#A51D22;color:#FFF;padding:5px"></span>
+                    <input type="hidden" id="txtCaptcha3" ng-model="txtCaptcha2" />
+                    <input type="text" placeholder="Enter Captcha here" name="txtInput" ng-model="txtInput2" id="txtInput3" autocomplete="off"/>
+                    <!--<input type="submit" value="Submit" ng-click="checkform()"/>-->
+                  </div>
+
+                  <div class="col-xs-12 text-center">
+                    <button type="submit" class="btn button text-center" ng-disabled="!signUp.$valid" ng-click="signUpUser()">
+                      Sign Up
+                    </button>
+                  </div>
+
+
+
+
+
+
+
+                </div>
+              </form>
+              <div class="social-auth-links text-center">
+                <p>- OR -
+                </p>
+                <!-- <a class="btn btn-social-icon btn-linkedin">
+                  <i class="fa fa-linkedin">
+                  </i>
+                </a> -->
+                <a class="btn btn-social-icon btn-facebook" ng-click="myFacebookRegistration()">
+                  <i class="fa fa-facebook">
+                  </i>
+                </a>
+                <a class="btn btn-social-icon btn-google" ng-click="renderSignInButton('jobSeeker')">
+                  <span id="signInButton">
+                    <i class="fa fa-google-plus">
+                    </i>
+                  </span>
+                </a>
+              </div>
+                <!-- Employee end-->
+                <!-- Employer start-->
+              <div id="employer_signin_page" class="tab-pane fade in">
+                <div class="register-box-body">
+                  <form action="#" method="post" name="singinform" novalidate>
+                    <div class="form-group has-feedback">
+                        <input type="text" class="form-control" name="username" ng-model="userName" placeholder="Email" required>
+                        <span class="glyphicon glyphicon-envelope form-control-feedback">
+                        </span>
+                       
+                    </div>
+                    <div class="form-group has-feedback">
+                        <input type="password" class="form-control" name="password" placeholder="Password" ng-model="pass" required>
+                        <span class="glyphicon glyphicon-lock form-control-feedback">
+                        </span>
+                        
+                    </div>
+                      <div class="">
+                      <div class="row">
+                        <!---<div class="col-xs-5">
+                         <div class="g-recaptcha" data-sitekey="6LdtPiUUAAAAABR8ho-cztrIoyDTPRWSbYCuuxPr">
+						 </div>
+                        </div>---->
+                        <!-- /.col -->
+                        <div class="col-xs-7">
+                          <div class="checkbox icheck">
+                            <div class="checkbox">
+                              <a href="#/forgot-password"> Forgot Password?
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 form-group text-center"> 
+							 <a href="#/employer-home">
+                          <button type="submit"   class="btn button text-center">Sign In
+                          </button>
+						  </a>
+                        </div>
+                        <!-- /.col -->
+              <div class="col-sm-12 text-center">
+                <!--<a href="javascript::void();" data-toggle="modal" data-target="#myModal" class="text-center already_emp_employer">I already have a Employee / Employer</a>-->
+                <a href="#/employee-home"  class="text-center">I already have a Employee / Employer
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Employee end-->
+          <!-- Employer start-->
+          <div id="employer_signup_page" class="tab-pane fade in">
+            <div class="register-box-body">
+              <form method="post" name="signUpRec" novalidate>
+                <div class="form-group has-feedback">
+                  <input type="email" minlength=4 name="email" id="email" class="form-control" ng-model="userNameRec" placeholder="Email" required />
+                  <span class="glyphicon glyphicon-envelope form-control-feedback">
+                  </span>
+
+                </div>
+                <div class="form-group has-feedback">
+                  <input type="password" minlength=4 class="form-control" name="pword" ng-model="passwordRec" placeholder="Password" required>
+                  <span class="glyphicon glyphicon-lock form-control-feedback">
+                  </span>
+                </div>
+                <!-- <div class="form-group has-feedback">
+                  <input type="password" class="form-control" name="pword" ng-model="pass" placeholder="Confirm Password" required>
+                  <span class="glyphicon glyphicon-check form-control-feedback">
+                  </span>
+                </div> -->
+                <div class="form-group has-feedback">
+                  <input type="text" minlength=4 class="form-control" placeholder="Phone Number" ng-model="mobileRec" required>
+                  <span class="glyphicon glyphicon-earphone form-control-feedback">
+                  </span>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="checkbox icheck">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" ng-model="iAgreeRec"> I agree to the
+                          <a>terms
+                          </a>
+                        </label>
+
+
+
+
+
+
+
+
+
+
+
+
+                      </div>
+                    </div>
+                  </form>
+                  <div class="col-sm-12 text-center">
+                    <!--<a href="javascript::void();" data-toggle="modal" data-target="#myModal" class="text-center">I already have a Employee / Employer</a>-->
+                    <a href="#/signup"  class="text-center">Register a new Employee / Employer
+                    </a>
+
+
+
+
+
+
+
+
+                  </div>
+
+                  <div style="text-align: center; padding:15px;">
+                    <font color="#728dca">Captcha : </font>
+                    <span id="txtCaptchaDiv4" style="background-color:#A51D22;color:#FFF;padding:5px"></span>
+                    <input type="hidden" id="txtCaptcha4" ng-model="txtCaptcha2" />
+                    <input type="text" placeholder="Enter Captcha here" name="txtInput" ng-model="txtInput2" id="txtInput4" autocomplete="off"/>
+                    <!--<input type="submit" value="Submit" ng-click="checkform()"/>-->
+                  </div>
+
+                  <div class="col-xs-12 form-group text-center">
+                    <button type="submit" class="btn button text-center" ng-disabled="!signUpRec.$valid" ng-click="signUpRecruiter()">
+                      Sign in
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <!--<div class="social-auth-links text-center">
+                <p>- OR -
+                </p>
+                <a class="btn btn-social-icon btn-facebook" ng-click="myFacebookRegistrationRec()">
+                  <i class="fa fa-facebook">
+                  </i>
+                </a>
+                <a class="btn btn-social-icon btn-google" ng-click="renderSignInButton('jobRecruiter')">
+                  <span id="signInButton2">
+                    <i class="fa fa-google-plus">
+                    </i>
+                  </span>
+                </a>
+              </div>-->
+              <div class="col-sm-12 text-center">
+                <!--<a href="javascript::void();" data-toggle="modal" data-target="#myModal" class="text-center">I already have a Employee / Employer</a>-->
+                <a href="#/employer-home" class="text-center">I already have a Employee / Employer
+                </a>
+              </div>
+              <!-- Employer end-->
+            </div>
+          </div>
+          <!-- Employer end-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---Sign In end here-->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<!---Sign Up end here-->
+<script>
+$(document).ready(function()
+    {
+      $("#employee_signin_page_tab").show();
+      //$("#employer_signin_page_tab").hide();
+          
+      $("#employee_signin_page_tab").click(function()
+
+      $("#employee_signin_tab").show();
+      //$("#employer_signin_tab").hide();
+
+      $("#employee_signin_tab").click(function()
+      {
+        $("#employee_signin_page").show();
+        $("#employer_signin_page").hide();
+        
+        
+        $('#employee_signin_page_tab').addClass('active');
+        $('#employer_signin_page_tab').removeClass('active');
+        
+
+
+        $('#employee_signin_tab').addClass('active');
+        $('#employer_signin_tab').removeClass('active');
+
+      });
+
+      $("#employer_signin_page_tab").click(function()
+      $("#employer_signin_tab").click(function()
+      {
+        $("#employee_signin_page").hide();
+        $("#employer_signin_page").show();
+        
+        
+        $('#employee_signin_page_tab').removeClass('active');
+        $('#employer_signin_page_tab').addClass('active');
+        
+
+
+        $('#employee_signin_tab').removeClass('active');
+        $('#employer_signin_tab').addClass('active');
+
+      });
+    });
+
+
+</script>
+</script>

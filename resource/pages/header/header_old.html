@@ -1,0 +1,634 @@
+
+
+<header class="main-header" ng-controller='signinController'>
+  <nav class="navbar defaultheader navbar-static-top">
+    <div class="container">
+      <!--
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand"> 
+          <b>Jobumes
+          </b>
+        </a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <i class="fa fa-bars">
+          </i>
+        </button>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+   
+
+    <div id="employeeheader" style="display:none;">
+      <div class="navbar-header">
+        <div class="navbar-brand">
+          <b>Jobumes
+          </b>
+        </div>
+
+        <!--<a href="#/" class="navbar-brand">
+          
+        <b>Jobumes
+          </b>  
+        </a>
+         -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse2">
+          <i class="fa fa-bars">
+          </i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse pull-left" id="navbar-collapse2">
+        <ul class="nav navbar-nav">
+          <li class="emp_dashboard">
+            <a href="#/employee-dashboard">
+              <span> Dashboard 
+              </span>
+            </a>
+          </li>
+          <li class="myjobs">
+            <a href="#/my-jobs">
+              <span>My Jobs
+              </span>
+            </a>
+          </li>
+          <!--
+          <li class="graphsume">
+            <a href="#/graphsume">
+              <span>Graphsume
+              </span>
+            </a>
+          </li>
+          -->
+          <li class="graphical_resume">
+            <a href="#/graphical-resume">
+              <span>My Profile
+              </span>
+            </a>
+          </li>
+          
+          <li class="my_documents">
+            <a href="#/my-video">
+              <span> My Video
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="employerheader" style="display:none;">
+      <div class="navbar-header">
+        <div class="navbar-brand">
+          <b>Jobumes
+          </b>
+        </div>
+          <!--
+        <a href="#/" class="navbar-brand">
+          
+        </a>
+      -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse3">
+          <i class="fa fa-bars">
+          </i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse pull-left" id="navbar-collapse3">
+        <ul id="nav" class="nav navbar-nav">
+          <li class="employer_dashboard active">
+            <a href="#/employer-dashboard">
+              <span> Dashboard 
+              </span>
+            </a>
+          </li>
+
+          <li class="posted_jobs">
+            <a href="#/posted-jobs">
+              <span> Posted Jobs 
+              </span>
+            </a>
+          </li>
+          <li class="postajob">
+            <a href="#postajob">
+              <span>Post a Job 
+              </span>
+            </a>
+          </li>
+          <li class="boolean_search">
+            <a href="#boolean-search">
+              <span>Boolean Search
+              </span>
+            </a>
+          </li>
+          <li class="my_favorites">
+            <a href="#my-favourite">
+              <span>My Favorites
+              </span>
+            </a>
+          </li>
+          <li class="saved_search">
+            <a href="#saved-search">
+              <span>Saved Search
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="signinheader" style="display:none;">
+      <div class="navbar-header">
+        <div class="navbar-brand">
+          <b>Jobumes
+          </b>
+        </div>
+        <!--
+        <a href="#/" class="navbar-brand">
+          <b>Jobumes
+          </b>
+        </a>
+        -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <i class="fa fa-bars">
+          </i>
+        </button>
+      </div>
+
+      <div class="">
+        <div id="homeheader" style="display:none;">
+        
+          <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+            <ul class="nav navbar-nav floatright">
+              <li class="">
+                <a href="#/employee-home">
+                  <span> Apply Jobs 
+                  </span>
+                </a>
+              </li>
+              <li class="">
+                <a href="#/employer-home">
+                  <span>Post Jobs
+                  </span>
+                </a>
+              </li>
+				  
+									 
+								
+						 
+					
+				   
+              <li class="getdemo">
+                <a href="#/get-demo">
+                  <span>Get Demo
+                  </span>
+                </a>
+              </li>
+              <li class="signin">
+                <a href="javascript::void(0);" id="myBtn">
+                  <span> Sign In
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="signoutheader" style="display:none;">
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu">
+            <a href="javascript::void(0);" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="resource/css/img/Employer/dinesh.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">John
+              </span>
+            </a> 
+            <ul class="dropdown-menu">
+              <li class="user-header">
+                <img src="resource/css/img/Employer/dinesh.jpg" class="img-circle" alt="User Image">
+                <p>
+                  Dinesh - Web Developer
+                  <small>dineshwalas@gmail.com
+                  </small>
+                  <small>8973721526
+                  </small>
+                </p>
+              </li>
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#/profile-settings" class="btn btn-default line-height-30 btn-flat">Profile
+                  </a>
+                </div>
+                <div class="pull-right signout">
+                  <a href="#" class="btn btn-default line-height-30 btn-flat" onClick="window.location.reload()">Sign out
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+   </div>
+  </nav>
+</header>
+<script type="text/javascript">
+  $(document).ready(function()
+  {
+    $(".posted_jobs").removeClass("active");
+    $(".postajob").removeClass("active");
+    $(".boolean_search").removeClass("active");
+    $(".my_favorites").removeClass("active");
+    $(".saved_search").removeClass("active");
+
+    $(".employer_dashboard").click(function()
+    {
+      $(".employer_dashboard").addClass("active");                      
+      $(".posted_jobs").removeClass("active");
+      $(".postajob").removeClass("active");
+      $(".boolean_search").removeClass("active");
+      $(".my_favorites").removeClass("active");
+      $(".saved_search").removeClass("active");
+    });
+
+    $(".posted_jobs").click(function()
+    {
+      $(".posted_jobs").addClass("active");
+      $(".employer_dashboard").removeClass("active");                      
+      $(".postajob").removeClass("active");
+      $(".boolean_search").removeClass("active");
+      $(".my_favorites").removeClass("active");
+      $(".saved_search").removeClass("active");
+    });
+
+    $(".postajob").click(function()
+   {
+      //e.preventDefault();
+      $(".postajob").addClass("active");
+      $(".employer_dashboard").removeClass("active");                      
+      $(".posted_jobs").removeClass("active");
+      $(".boolean_search").removeClass("active");
+      $(".my_favorites").removeClass("active");
+      $(".saved_search").removeClass("active");
+    });
+
+    $(".boolean_search").click(function()
+    {
+      //e.preventDefault();
+      $(".boolean_search").addClass("active");
+      $(".employer_dashboard").removeClass("active");                      
+      $(".posted_jobs").removeClass("active");
+      $(".postajob").removeClass("active");
+      $(".my_favorites").removeClass("active");
+      $(".saved_search").removeClass("active");
+    });
+
+    $(".my_favorites").click(function()
+    {
+      //e.preventDefault();
+      $(".my_favorites").addClass("active");
+      $(".employer_dashboard").removeClass("active");                      
+      $(".posted_jobs").removeClass("active");
+      $(".postajob").removeClass("active");
+      $(".boolean_search").removeClass("active");
+      $(".saved_search").removeClass("active");
+    });
+
+    $(".saved_search").click(function()
+    {
+      //e.preventDefault();
+      $(".saved_search").addClass("active");
+      $(".employer_dashboard").removeClass("active");                      
+      $(".posted_jobs").removeClass("active");
+      $(".postajob").removeClass("active");
+      $(".boolean_search").removeClass("active");
+      $(".my_favorites").removeClass("active");
+    });
+
+
+    $(".dropdown .user .user-menu").click(function()
+    {
+      //e.preventDefault();
+      $(".dropdown .user .user-menu").addClass("open");
+
+    });
+
+  });
+
+
+
+  $(document).ready(function()
+  {  
+
+    $(".emp_dashboard").addClass("active");
+    $(".myjobs").removeClass("active");
+    $(".graphsume").removeClass("active");
+    $(".detailed_resume").removeClass("active");
+    $(".my_documents").removeClass("active");
+          
+    $(".emp_dashboard").click(function()
+    {
+      $(".emp_dashboard").addClass("active");
+      $(".myjobs").removeClass("active");
+      $(".graphsume").removeClass("active");
+      $(".detailed_resume").removeClass("active");
+      $(".my_documents").removeClass("active");
+    });
+
+     $(".myjobs").click(function()
+    {
+      $(".myjobs").addClass("active");
+      $(".emp_dashboard").removeClass("active");
+      $(".graphsume").removeClass("active");
+      $(".detailed_resume").removeClass("active");
+      $(".my_documents").removeClass("active");
+    });
+
+     $(".graphsume").click(function()
+    {
+      $(".graphsume").addClass("active");
+      $(".emp_dashboard").removeClass("active");
+      $(".myjobs").removeClass("active");
+      $(".detailed_resume").removeClass("active");
+      $(".my_documents").removeClass("active");
+    });
+      $(".detailed_resume").click(function()
+    {
+      $(".detailed_resume").addClass("active");
+      $(".emp_dashboard").removeClass("active");
+      $(".myjobs").removeClass("active");
+      $(".graphsume").removeClass("active");
+      $(".my_documents").removeClass("active");
+    });
+      $(".my_documents").click(function()
+    {
+      $(".my_documents").addClass("active");
+      $(".emp_dashboard").removeClass("active");
+      $(".myjobs").removeClass("active");
+      $(".graphsume").removeClass("active");
+      $(".detailed_resume").removeClass("active");
+    });
+  });
+
+  $(document).ready(function(){
+    $("#employeeheader").hide();
+      $("#signoutheader").hide();
+      $("#homeheader").show();
+      $("#employerheader").hide();
+      $("#signinheader").show();
+      $("#footersection").show();
+      
+    $(".applyjob").click(function(){
+        $("#employeeheader").show();
+        $("#signoutheader").show();
+        $("#homeheader").hide();
+        $("#employerheader").hide();
+        $("#signinheader").hide();
+        $("#footersection").hide();
+        $(".hideclass").hide();
+        $(".navbar-custom-menu").addClass("margin-top-65");
+    });
+    $(".postjobs").click(function(){
+        $("#employerheader").show();
+        $("#signoutheader").show();
+        $("#homeheader").hide();
+        $("#employeeheader").hide();
+        $("#signinheader").hide();
+        $("#footersection").hide();
+        $(".hideclass").hide();
+        $(".navbar-custom-menu").addClass("margin-top-115");
+    });
+    $(".signout").click(function(){
+        $("#employerheader").hide();
+        $("#homeheader").show();
+        $("#employeeheader").hide();
+        $("#signinheader").show();
+        $("#signoutheader").hide();
+        $("#footersection").show();
+    });
+
+     $(".registerlink").click(function(){
+        $(".hideclass").hide();
+    });
+
+
+});
+
+
+</script>
+
+<div class="hideclass">
+  <div id="myModal" class="modal">
+    
+    <div class="modal-dialog margin-top-90" role="document" ng-controller='signinController' ng-hide='isLoggedin'>
+        <!-- Modal content -->
+      <div class="modal-content signin">
+          <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;
+                  </span>
+                </button>
+                <h4 class="modal-title text-center" id="myModalLabel">SIGN IN
+                </h4>
+          </div>
+          <div class="modal-body">
+              <ul class="nav nav-pills">
+                <li id="employee_signin_tab" class="active">
+                  <a data-toggle="tab" href="javascript:void(0);">Employee
+                  </a>
+                </li>
+                <li id="employer_signin_tab" class="">
+                  <a data-toggle="tab" href="javascript:void(0);">Employer
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <!-- Employee start-->
+                <div id="employee_signin" class="tab-pane fade in active">
+                  <div class="register-box-body">
+                        
+                        <form name = "myform" novalidate>
+                          <div class="form-group has-feedback">
+                            <input type="text" name="username" class="form-control" ng-model="userName" placeholder="Email"  required="required">
+                            <span class="glyphicon glyphicon-envelope form-control-feedback">
+                            </span>
+                          </div>
+                          <div class="form-group has-feedback">
+                            <input type="password" class="form-control" name="pword" ng-model="pass" placeholder="Password" required="required">
+                            <span class="glyphicon glyphicon-lock form-control-feedback">
+                            </span>
+                          </div>
+                          <div class="">
+                            <div class="row">
+                              <div class="col-xs-5 pad_0">
+                                <div class="checkbox icheck">
+                                  <div class="checkbox pad_remember">
+                                    <label>
+                                      <input type="checkbox"> Remember me
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- /.col -->
+                              <div class="col-xs-7">
+                                <div class="checkbox icheck">
+                                  <div class="checkbox text-right">
+                                    <a href="#/forgot-password">I forgot my password
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xs-12 form-group text-center"> 
+                                <a href="#/employee-dashboard">
+                                  <input class="btn button text-center applyjob" type="button" value="Sign In" name="Submit">
+                                </a>
+                                <!--
+                                <button type="submit" onclick="validate();" class="btn button text-center">Sign In</button> -->
+                              </div>
+                            </div>
+                          </div>
+                          <!-- <input type="text" name="username"> ENTER PASSWORD <input type="password" name="pword"> -->
+                          </p>
+                        </form>
+                        <div class="social-auth-links text-center">
+                          <p>- OR -
+                          </p>
+                          <a class="btn btn-social-icon btn-linkedin">
+                            <i class="fa fa-linkedin">
+                            </i>
+                          </a>
+                          <a class="btn btn-social-icon btn-google">
+                            <i class="fa fa-google-plus">
+                            </i>
+                          </a>
+                        </div>
+                        <div class="col-sm-12 text-center">
+                          <!--<a href="javascript::void();" data-toggle="modal" data-target="#myModal" class="text-center already_emp_employer">I already have a Employee / Employer</a>-->
+                          <a href="#/signup"  class="text-center registerlink">Register a new Employee / Employer
+                          </a>
+                        </div>
+                  </div>
+                </div>
+                  <!-- Employee end-->
+                  <!-- Employer start-->
+                <div id="employer_signin" class="tab-pane fade in">
+                  <div class="register-box-body">
+                    <form action="#" method="post" novalidate>
+                      <div class="form-group has-feedback">
+                          <input type="text" class="form-control" ng-model="userName" placeholder="Email">
+                          <span class="glyphicon glyphicon-envelope form-control-feedback">
+                          </span>
+                      </div>
+                      <div class="form-group has-feedback">
+                          <input type="password" class="form-control" placeholder="Password" ng-model="pass">
+                          <span class="glyphicon glyphicon-lock form-control-feedback">
+                          </span>
+                      </div>
+                        <div class="">
+                        <div class="row">
+                          <div class="col-xs-5 pad_0">
+                            <div class="checkbox icheck">
+                              <div class="checkbox pad_remember">
+                                <label>
+                                  <input type="checkbox"> Remember me
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /.col -->
+                          <div class="col-xs-7">
+                            <div class="checkbox icheck">
+                              <div class="checkbox text-right">
+                                <a href="#/forgot-password">I forgot my password
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xs-12 form-group text-center">  
+                            <a href="#/employer-dashboard">
+                              <button type="submit" class="btn button text-center postjobs">Sign In
+                              </button>
+                            </a>
+                          </div>
+                          <!-- /.col -->
+                        </div>
+                      </div>
+                    </form>
+                    <div class="col-sm-12 text-center">
+                      <!--<a href="javascript::void();" data-toggle="modal" data-target="#myModal" class="text-center">I already have a Employee / Employer</a>-->
+                      <a href="#/signup"  class="text-center registerlink">Register a new Employee / Employer
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Employer end-->
+              </div>
+        </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+$(document).ready(function()
+    {
+      
+      $("#employee_signin").show();
+      $("#employer_signin").hide();
+          
+      $("#employee_signin_tab").click(function()
+      {
+        $("#employee_signin").show();
+        $("#employer_signin").hide();
+        
+        
+        $('#employee_signin_tab').addClass('active');
+        $('#employer_signin_tab').removeClass('active');
+        
+      });
+
+      $("#employer_signin_tab").click(function()
+      {
+        $("#employee_signin").hide();
+        $("#employer_signin").show();
+        
+        $('#employee_signin_tab').removeClass('active');
+        $('#employer_signin_tab').addClass('active');
+
+      });
+    });
+
+$('.nav a').on('click', function(){
+    //$('.btn-navbar').click(); //bootstrap 2.x
+ 
+    
+       $('.navbar-collapse').removeClass('in');
+});
+
+  $('html body').on('click', function(){
+      //$('.btn-navbar').click(); //bootstrap 2.x
+     $('.navbar-collapse').removeClass('in');
+  });
+
+
+</script>

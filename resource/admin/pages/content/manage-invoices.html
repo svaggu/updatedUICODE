@@ -1,0 +1,290 @@
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Orders 
+    </h1>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Info boxes -->
+    <div class="box">
+      <div class="box-header">
+        <h3 class="box-title">0 invoices found</h3>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+        <div id="invoices" class="dataTables_wrapper dt-bootstrap">
+          <div class="row">
+            <div class="col-sm-4">
+              <div id="actions" class="form-group" style="display:none;">
+                <div class="bulk inline-block">
+                  <button class="btn btn-default bulk-action" name="selectedAction_header" data-action="activate">
+                    Mark paid
+                  </button>
+                  <button class="btn btn-default bulk-action" name="selectedAction_header" data-action="deactivate">
+                    Mark unpaid
+                  </button>
+                  <button class="btn btn-default bulk-action" name="selectedAction_header" data-action="delete">
+                    <i class="fa fa-trash-o" aria-hidden="true">
+                    </i> Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">                                      
+              <div class="dropdown form-group">
+                <a class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-search" aria-hidden="true"></i> Click to modify search criteria       
+                  <span class="caret">
+                  </span>
+                </a>
+                <div class="dropdown-menu">
+                  <form method="post" name="search_form" class="panel-body">
+                    <div class="form-group col-xs-12">
+                      <div class="input-group date">
+                        <div class="input-group-addon">
+                          From <i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" class="form-control pull-right" id="datepickerfrom">
+                      </div>
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <div class="input-group date">
+                        <div class="input-group-addon">
+                          To &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" class="form-control pull-right" id="datepickerto">
+                      </div>
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <input type="email" class="form-control" placeholder="Email" value="" name="email" id="email">
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <input type="text" class="form-control" placeholder="Invoice#" value="" name="invoice" id="invoice">
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <select name="product_info_sid" class="form-control">
+                        <option value="">Any Payment Method
+                        </option>
+                        <option value="13">Paypal
+                        </option>
+                      </select>
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <select name="active" class="form-control">
+                        <option value="">Any Invoice Status
+                        </option>
+                        <option value="1">Paid
+                        </option>
+                        <option value="2">Unpaid
+                        </option>
+                        <option value="0">pending
+                        </option>
+                      </select>
+                    </div>
+                    <div class="form-group col-xs-12 text-center">
+                      <button type="submit" value="Find" class="btn btn-info">Search
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="dataTables_length text-right" id="length">
+                <label> 
+                  <select name="example1_length" aria-controls="example1" class="form-control input-sm">
+                    <option value="10">10
+                    </option>
+                    <option value="25">25
+                    </option>
+                    <option value="50">50
+                    </option>
+                    <option value="100">100
+                    </option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="scroll-auto">
+                <table id="invoice" class="table table-bordered table-hover dataTable" role="grid">
+                  <thead>
+                    <tr role="row">
+             
+                      <th class="text-center">
+                        <label class="cr-styled">
+                          <input type="checkbox" class="checks" id="checkall">
+                          <i class="fa"></i>
+                        </label>
+                      </th>
+                      <th class="sorting">
+                        <a href="#"> Invoice #
+                          <div class="sorting-icons">
+                            <i class="fa fa-long-arrow-down" aria-hidden="true">
+                            </i>
+                            <i class="fa fa-long-arrow-up" aria-hidden="true">
+                            </i>
+                          </div>
+                        </a>
+                      </th>
+                      <th class="sorting">
+                        <a href="#">
+                          Customer Name
+                          <div class="sorting-icons">
+                            <i class="fa fa-long-arrow-down" aria-hidden="true">
+                            </i>
+                            <i class="fa fa-long-arrow-up" aria-hidden="true">
+                            </i>
+                          </div>
+                        </a>
+                      </th>
+                      <th class="sorting">
+                        <a href="">
+                          Date
+                          <div class="sorting-icons">
+                            <i class="fa fa-sort-amount-desc" aria-hidden="true">
+                            </i>
+                          </div>
+                        </a>
+                      </th>
+                      <th class="sorting">
+                        <a href="">
+                          Payment Method
+                          <div class="sorting-icons">
+                            <i class="fa fa-sort-amount-desc" aria-hidden="true">
+                            </i>
+                          </div>
+                        </a>
+                      </th>
+                      <th class="sorting">
+                        <a href="">                  
+                          Total 
+                          <div class="sorting-icons">
+                            <i class="fa fa-sort-amount-desc" aria-hidden="true">
+                            </i>
+                          </div>
+                        </a>
+                      </th>
+                      <th class="sorting">
+                        Status
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!--
+                    <tr>
+                      <td class="text-center">
+                        <label class="cr-styled">
+                          <input type="checkbox" class="checks" name="listings[22]" value="1" id="checkbox_1">
+                          <i class="fa">
+                          </i>
+                        </label>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#">John Alexander
+                        </a>
+                      </td>
+                      <td class="td-wide">
+                        <a href="#">
+                          john@gmail.com
+                        </a>
+                      </td>
+                      <td>Jan 24, 2017 09:57
+                      </td>
+                      <td>
+                        <span class="label label--active">Active
+                        </span>
+                      </td>
+                    </tr>
+                    -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="dataTables_info pagination" id="example1_info" role="status" aria-live="polite">Showing 1 to 5 of 10 entries
+              </div>
+            </div>
+            <div class="col-sm-7">
+              <div class="dataTables_paginate paging_simple_numbers pull-right" id="example1_paginate">
+                <ul class="pagination">
+                  <li class="paginate_button previous disabled" id="example1_previous">
+                    <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0">Previous
+                    </a>
+                  </li>
+                  <li class="paginate_button active">
+                    <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0">1
+                    </a>
+                  </li>
+                  <li class="paginate_button ">
+                    <a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0">2
+                    </a>
+                  </li>
+                  <li class="paginate_button ">
+                    <a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0">3
+                    </a>
+                  </li>
+                  <li class="paginate_button ">
+                    <a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0">4
+                    </a>
+                  </li>
+                  <li class="paginate_button ">
+                    <a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0">5
+                    </a>
+                  </li>
+                  <li class="paginate_button ">
+                    <a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0">6
+                    </a>
+                  </li>
+                  <li class="paginate_button next" id="example1_next">
+                    <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0">Next
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- /.box-body -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+  
+<script>
+ 
+$(document).ready(function ()
+{
+  $('#checkall').click(function () 
+  {    
+   $('.checks').prop('checked', this.checked);    
+    var $checks = $('.checks').change(function () 
+    {
+      var flag = $checks.filter(':checked').length == 0;
+      $("#actions").toggle(!flag);
+    }); 
+
+      $checks.first().change();
+  });
+
+  $('#datepickerfrom').datepicker(
+    {
+        autoclose: true
+    });
+
+  $('#datepickerto').datepicker(
+    {
+        autoclose: true
+    });
+});
+
+
+</script>

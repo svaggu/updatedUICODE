@@ -1,0 +1,256 @@
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Export Jobs
+    </h1>
+  </section>
+  <!-- Main content -->
+  <section class="content">
+    <!-- Info boxes -->
+    <div class="box">
+      <form class="form-horizontal ng-pristine ng-valid">
+        <div class="box-header">
+          <h3 class="box-title">Export Filter</h3>
+        </div>
+        <div class="box-body">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Activation Date </label>
+            <div class="col-sm-7">
+              <div class="form-group col-xs-6">
+                <div class="input-group date">
+                  <div class="input-group-addon">
+                    From <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="activefrom">
+                </div>
+              </div>
+              <div class="form-group col-xs-6">
+                <div class="input-group date">
+                  <div class="input-group-addon">
+                    To &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="activeto">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Expiration Date </label>
+            <div class="col-sm-7">
+              <div class="form-group col-xs-6">
+                <div class="input-group date">
+                  <div class="input-group-addon">
+                    From <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="expiryfrom">
+                </div>
+              </div>
+              <div class="form-group col-xs-6">
+                <div class="input-group date">
+                  <div class="input-group-addon">
+                    To &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="expiryto">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Featured </label>
+            <div class="col-sm-7">
+              <label class="cr-styled">
+                <input type="checkbox" class="" name="featured" id="featured" checked="checked" value="1">
+                <i class="fa"></i>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">&nbsp;</label>
+            <div class="col-sm-7">
+              <div class="table-responsive">
+                <table class="basetable table table-bordered table__export">
+                    <input type="hidden" name="action" value="export">
+                    <thead>
+                        <tr>
+                            <th colspan="6">Listing Properties To Export</th>
+                        </tr>
+                    </thead>
+                    <tbody class="listings-properties">
+                        <tr class="oddrow">
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[id]" value="1">
+                                    <i class="fa"></i> id
+                                </label>
+                            </td>
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[listing_type]" value="1">
+                                    <i class="fa"></i> listing_type
+                                </label>
+                            </td>
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[username]" value="1">
+                                    <i class="fa"></i> username
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="evenrow">
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[active]" value="1">
+                                    <i class="fa"></i> active
+                                </label>
+                            </td>
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[keywords]" value="1">
+                                    <i class="fa"></i> keywords
+                                </label>
+                            </td>
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[featured]" value="1">
+                                    <i class="fa"></i> featured
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="oddrow">
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[views]" value="1">
+                                    <i class="fa"></i> views
+                                </label>
+                            </td>
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[activation_date]" value="1">
+                                    <i class="fa"></i> activation_date
+                                </label>
+                            </td>
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[expiration_date]" value="1">
+                                    <i class="fa"></i> expiration_date
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="evenrow">
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[JobCategory]" value="1">
+                                    <i class="fa"></i> Categories
+                                </label>
+                            </td>
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[EmploymentType]" value="1">
+                                    <i class="fa"></i> Job Type
+                                </label>
+                            </td>
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[GooglePlace]" value="1">
+                                    <i class="fa"></i> Location
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="oddrow">
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[Title]" value="1">
+                                    <i class="fa"></i> Job Title
+                                </label>
+                            </td>
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[JobDescription]" value="1">
+                                    <i class="fa"></i> Job Description
+                                </label>
+                            </td>
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[ApplicationSettings]" value="1">
+                                    <i class="fa"></i> How to Apply
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="evenrow">
+                            <td colspan="2">
+                                <label class="cr-styled">
+                                    <input type="checkbox" name="export_properties[expiration_date]" value="1">
+                                    <i class="fa"></i> Expiration Date
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="oddrow">
+                            <td colspan="6">
+                                <a href="javascript::void(0);" class="check btn btn-default">Select All</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-2 control-label">&nbsp; </label>
+            <div class="col-sm-7">
+              <button type="submit" class="btn btn-info">Export</button>
+            </div>
+          </div>
+        </div>
+        <!-- /.box-body -->
+      </form>
+      <!-- /.box-body -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+  <script>
+  $(document).ready(function ()
+   {
+    //bootstrap WYSIHTML5 - text editor
+   	$(".textarea").wysihtml5();
+  });
+  $(document).ready(function(){
+    $('.check:button').toggle(function(){
+        $('input:checkbox').attr('checked','checked');
+        //$(this).val('uncheck all')
+    },function(){
+        $('input:checkbox').removeAttr('checked');
+        $(this).val('check all');        
+    })
+})
+
+
+
+
+$(document).ready(function ()
+{
+ 
+  $('#activefrom').datepicker(
+    {
+        autoclose: true
+    });
+
+  $('#activeto').datepicker(
+    {
+        autoclose: true
+    });
+  $('#expiryfrom').datepicker(
+    {
+        autoclose: true
+    });
+
+  $('#expiryto').datepicker(
+    {
+        autoclose: true
+    });
+});
+
+
+
+</script>

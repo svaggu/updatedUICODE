@@ -1,0 +1,388 @@
+<style>
+.modal-content{
+width:500px;
+border-radius:25px;
+}
+.modal-header h4, .modal-content .paneldeleteheading {
+    color: #b92917 !important;
+}
+.close {
+    color: #b92917 !important;
+    opacity: .8 !important;
+    margin-top: 8px !important;
+}
+.btn {
+    border-radius: 25px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
+.button:hover {
+    background: #fff;
+    color: #b92917 !important;
+    border-radius: 25px;
+    border: 1px solid #b92917;
+    transition: .2s;
+}
+
+.user-png,.img-circle{
+width:50px;
+height:50px;
+margin-top:10px;
+}
+.user-name{
+margin-left:30px;
+}
+.user-name h2{
+margin-top:5px;
+margin-bottom:0px;}
+    .check-btn .btn{
+        width: 63px;
+        
+    }
+</style>
+<div class="container">
+  <div class="row">
+    <section class="content-header ">
+        <h1></h1>
+    </section>
+    <div class="col-md-9">
+      <table class="table bordertable newtable">
+        <tbody>
+          <tr>
+            <td>
+              <b class="newheadingjob ng-binding">{{jobDetails.JobProfile[0]}} &nbsp; &nbsp; {{jobDetails.ExperienceRequired[0]}}
+              </b>
+              <!-- <span class="pull-right"> No of view : <span class="viewscount">2036</span></span> -->
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="list-inline" style="text-align:left">
+                <li>
+                  <i class="fa fa-suitcase" aria-hidden="true">
+                  </i><a href="#"> <span class="ng-binding">{{jobDetails.Organization[0]}}
+                  </span> </a>
+                </li>
+                <li>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span class="ng-binding">{{jobDetails.Location[0]}}
+                  </span>
+                </li>
+                  <span class="ng-binding">{{jobDetails.SalaryOffered[0]}}
+                  </span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="col-md-2 padding-0 " style="width: 12%; margin-bottom: 36px;">
+                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                <span class="viewscount">Skills :
+                </span>
+              </div>
+              <div class="col-md-12">
+                <div ng-repeat="skill in jobDetails.Skills[0].Skill" class="col-md-2 col-sm-3 col-xs-5 label label-default newskillwidth ng-scope">
+                  <div class="wrapnew  ng-binding">{{skill.name}}
+                  </div>
+                </div>
+              </div>
+              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul class="list-inline" style="text-align:left">
+                <li>
+                  <i class="fa fa-home" aria-hidden="true"></i> <span class="ng-binding">Management
+                  </span>
+                </li>
+                <li>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <span class="ng-binding">Full time
+                  </span>
+                </li>
+                <li>
+                  <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                  <span class="ng-binding">Graduate
+                  </span>
+                </li>
+				<li>
+            <td align="right">
+              <span class="colorpoast">Posted : {{jobDetails.ParsingDate[0] | limitTo: '10'}}
+              </span>
+            </td>
+          </li>
+              </ul>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <div class="panel" id="tabcontent1">
+        <div class="panel-heading">Job Description</div>
+          <div class="panel-body">
+            <!-- <div ng-bind-html="jobDetails.jobDec" class="ng-binding new-body"> -->
+              <p style="padding: 5%;">{{jobDetails.JobDescription[0]}}</p>
+              
+          </div>
+      </div>
+
+      <div class="col-md-12 text-center form-group" ng-hide="!checkUser">
+        <button type="button" class="btn button apply" ng-disabled="!checkUser" data-toggle="modal" data-target="#applynow">Apply Now</button>
+      </div>
+
+    </div>
+
+    <div class="col-md-3">
+      <div class="text-center applysec margin-bottom-25" ng-hide="!checkUser">
+        <button type="button" ng-disabled="!checkUser" class="btn button apply" data-toggle="modal" data-target="#applynow">Apply Now</button>
+        <button type="button" ng-disabled="!checkUser" class="btn button" data-toggle="modal" data-target="#createalert">Create Alert</button>
+        
+      </div>
+      <div class="panel">
+        <div class="panel-heading shareheading">Share Job 
+          media</div>
+        <div class="new-body panel-body text-center">
+          <ul class="list-inline check-btn">
+		  <button type="button" ng-disabled="!checkUser" class="btn button" id="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
+            <li><a class="btn btn-social-icon btn-google"><i class="fa fa-google-plus"></i></a></li>
+            <li><a class="btn btn-social-icon btn-linkedin"><i class="fa fa-facebook"></i></a></li>
+
+          </ul>
+        </div>
+      </div>
+	<div class="panel ">
+        <div class="panel-heading shareheading fsize-14px"> Jobs Posted By</div>
+          <div class=" panel-body ">
+             <div class=" col-md-6 col-sm-6 col-xs-6 user-png">
+			 <img src="resource/css/img/dinesh.png" class="img-circle"  alt="User Image">
+			 </div>
+			 <div class=" col-md-7 col-sm-6 col-xs-6 user-name">
+			 <h2>
+                              John  </h2>
+							  <small > Senior HR </small>
+                              <small >employee@rg.com</small>
+                              <small >+919848012345</small>
+                           </p>
+			 </div>
+			 
+          </div>
+      </div>
+      <div class="panel">
+        <div class="panel-heading shareheading fsize-14px">Similar Jobs</div>
+          <div class="new-body panel-body padding-0">
+              No jobs found
+          </div>
+      </div>
+	   
+
+
+    </div>
+  </div>
+  <br/>
+ 
+</div>
+<div class="modal fade" id="createalert" role="dialog">
+  <div class="modal-dialog margin-top-90">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center">Create an alert</h4>
+      </div>
+      <div class="modal-body">
+        <form name="jobAlert" class="form-horizontal" id="CreateAlertForm_1">
+            <div class="form-group">
+              <div class="col-sm-2">
+                <label class="control-label">Title</label>
+              </div>
+              <div class="col-sm-10">
+                <input type="text" placeholder="Enter a title" value="" maxlength="100" ng-model="alertTitle" name="name" id="alertname" class="form-control">
+                <div class="help-block hidden validTitle">Please enter a title.</div>
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+              <div class="col-sm-2">
+                <label class="control-label" for="">Email</label>
+              </div>
+              <div class="col-sm-10">
+                <input type="text" placeholder="Enter an email" ng-model="alertEmail" value="" name="email" id="alertEmail" class="form-control">
+                <input type="text" class="form-control hidden" id="alertDisabled" name="disabled" value="false">
+                <input type="text" class="form-control hidden" id="emailFrequency" name="emailFrequency" value="never">
+                <div class="help-block hidden validEmail">Please enter a valid email (email@domain.com).</div>
+              </div>
+            </div>
+          </form>
+      </div>
+
+
+      <div class="modal-footer">
+        <div class="col-xs-12 form-group text-center">
+        <button type="button" class="btn button" ng-click="createJobAlert()" data-dismiss="modal"> Create Alert</button>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="applynow" role="dialog">
+  <div class="modal-dialog margin-top-90 width-600">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center">Easy Apply</h4>
+      </div>
+      <div class="modal-body">
+          <form name="jobAlert" class="form-horizontal" id="CreateAlertForm_1">
+            <div class="form-group">
+              <div class="col-sm-3">
+                <label class="control-label">Name</label>
+              </div>
+              <div class="col-sm-9">
+                <input type="text" placeholder="Enter your name" ng-value="userobj.userName" maxlength="100" name="name" id="alertname" class="form-control" disabled="">
+                <div class="help-block hidden validTitle">Please enter your Name.</div>
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0px;">
+              <div class="col-sm-3">
+                <label class="control-label" for="">Resume</label>
+              </div>
+              <div class="col-sm-9">
+                <div class="">
+                  <select class="form-control" ng-model="resumeId" id="resumeselect">
+                    <option value="">Choose</option>
+                    <option ng-value="items.uuid" ng-repeat="items in resumesList.resumes">{{items.jobProfile}}</option>
+                    <!-- <option value="1">Team Leader(Last Updated: 01/28/2017)</option>
+                    <option value="3">Web developer(Last Updated: 01/28/2017)</option> -->
+                  </select>
+                </div>
+              </div>
+              <!-- resume upload - commented -->
+              <!-- <div class="col-sm-9">
+                <div class="radio">
+                  <label>
+                    <input id="resume-radio" type="radio" name="resumeRadios" checked="" value="select"> Select a resume
+                  </label>
+                </div>
+                <div id="resume-select-group" class="radio-form-input-group has-feedback">
+                  <div class="">
+                    <select class="form-control" id="resumeselect">
+                      <option value="">Choose</option>
+                      <option value="1">Team Leader(Last Updated: 01/28/2017)</option>
+                      <option value="3">Web developer(Last Updated: 01/28/2017)</option>
+                    </select>
+                  </div>
+
+                  <span id="resume-choose-glyph" class="form-control-feedback glyphicon bfh-selectbox-glyph"></span>
+                  <span class="help-block" id="resume-feedback-message" style="display: none;">Choose one Resume</span>
+                  <span class="help-block"><a href="#" target="_blank">Manage your Resume at Jobumes.com</a></span>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input id="upload-resume-radio" type="radio" name="resumeRadios" value="upload"> Upload a resume
+                  </label>
+                </div>
+                <div id="upload-resume-group" style="display: none;" class="has-feedback radio-form-input-group">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <input id="upload-resume-file-input" class="form-control file-form-control" name="resumeFile" type="file" required="">
+                      <span id="upload-resume-glyph" class="form-control-feedback glyphicon"></span>
+                    </div>
+                  </div>
+                  <div class="help-block">
+                    <span id="upload-resume-feedback-message" style="display: none;">Your resume is required.&nbsp;</span>
+                    <span class="resume-format-support">We support .doc, .docx, .pdf, .txt, .rtf, up to 2MB</span>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            <!-- select cover letter - commented -->
+             <div class="form-group" style="margin-bottom: 0px;">
+              <div class="col-sm-3">
+                <label class="control-label" for="">Cover Letter</label>
+              </div>
+              <div class="col-sm-9">
+                <div class="radio">
+                  <label>
+                    <input id="cl-radio" type="radio" name="resumeRadios" checked value="select"> Select a cover letter
+                  </label>
+                </div>
+                <div id="cl-select-group" class="radio-form-input-group has-feedback">
+                  <div class="">
+                    <select class="form-control" id="cl-select">
+                      <option value="">Choose</option>
+                      <option ng-repeat="items in coverLetterArr2" ng-value="items.uuid">{{items.title}}(Last Updated: {{items.lastModified.timestamp | date}})</option>
+                    </select>
+                  </div>
+
+                  <!--<span class="help-block" id="resume-feedback-message" style="display: none;">Choose one cover letter</span>
+                  <span class="help-block"><a href="#" target="_blank">Manage your cover letter at Jobumes.com</a></span>-->
+                </div>
+                <!--<div class="radio" style="padding-left: 0px;" id="cover">
+                  <label>
+                    <a href="javascript::void(0);" id="compose-cl-link" class="btn-valign">Compose a cover letter</a>
+                  </label>
+                  <textarea id="cl-textarea" class="form-control" style="display: none;height: 185px;">Dear Hiring Manager,
+
+                    I feel that my skills and experience are a great fit for this position. Please feel free to contact me to arrange an interview. I look forward to learning more about this opportunity.
+                  </textarea>
+                </div>-->
+              </div>
+            </div> 
+          </form>
+      </div>
+
+
+      <div class="modal-footer">
+        <div class="col-xs-12 form-group text-center">
+        <button type="button" ng-click="applyJob()" class="btn button" data-dismiss="modal"> Apply now</button>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+$("html,body").scrollTop(0);
+</script>
+
+<script>
+$(document).ready(function()
+{
+  $("#upload-resume-group").hide();
+
+  $('#resume-radio').click(function()
+  {
+    $("#resume-select-group").show();
+    $('#upload-resume-group').hide();
+  });
+
+  $('#upload-resume-radio').click(function()
+  {
+    $('#resume-select-group').hide();
+    $('#upload-resume-group').show();
+  });
+
+  $('#cl-radio').click(function()
+  {
+    $('#cl-select-group').show();
+    $('#cl-textarea').hide();
+  });
+
+
+  $('#compose-cl-link').click(function()
+  {
+    $('#cl-select-group').hide();
+    $('#cl-textarea').show();
+  });
+
+
+});
+</script>
